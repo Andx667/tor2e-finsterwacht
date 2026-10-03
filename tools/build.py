@@ -8,6 +8,7 @@ Schritte:
   2. src/finsterwacht.md -> build/body.tex (pandoc + filters/finsterwacht.lua)
   3. src/cards.toml -> build/cards.tex
   4. LuaLaTeX (latexmk) -> build/Die-Finsterwacht-TOR2e-DE.pdf
+  5. Kopie mit Version im Namen -> build/Die-Finsterwacht-TOR2e-DE-v2.0.pdf
 
 Benötigt: pandoc, LuaLaTeX mit latexmk (TeX Live), Python 3.11+.
 Ohne luaotfload wird ersatzweise XeLaTeX genutzt (FW_ENGINE=… erzwingt eine Engine).
@@ -40,17 +41,24 @@ def git(*args):
 
 # ------------------------------------------------------------------ 1. Version
 def version():
-    """v2.0 auf dem getaggten Commit -> „2.0“; drei Commits danach -> „2.0+3 (abc1234)“."""
+    """v2.0 auf dem getaggten Commit -> „2.0“; drei Commits danach -> „2.0+3 (abc1234)“.
+
+    Dritter Rückgabewert ist dieselbe Version für den Dateinamen: „v2.0“ bzw. „v2.0+3-abc1234“.
+    """
     desc = git("describe", "--tags", "--long", "--match", "v*")
     m = re.match(r"v(.+)-(\d+)-g([0-9a-f]+)$", desc)
     if m:
         ver = m[1] if m[2] == "0" else f"{m[1]}+{m[2]} ({m[3]})"
+        slug = "v" + (m[1] if m[2] == "0" else f"{m[1]}+{m[2]}-{m[3]}")
     else:
-        ver = "0.0 (" + (git("rev-parse", "--short", "HEAD") or "ohne git") + ")"
+        commit = git("rev-parse", "--short", "HEAD")
+        ver = "0.0 (" + (commit or "ohne git") + ")"
+        slug = "v0.0" + ("-" + commit if commit else "")
     if git("status", "--porcelain", "--untracked-files=no"):
         ver += ", lokal geändert"
+        slug += "-lokal"
     stand = git("log", "-1", "--format=%cd", "--date=format:%d.%m.%Y") or datetime.date.today().strftime("%d.%m.%Y")
-    return ver, stand
+    return ver, stand, slug
 
 
 def tex_escape(s):
@@ -99,7 +107,7 @@ def cards_tex():
 # ------------------------------------------------------------------ Ablauf
 def main():
     os.makedirs(BUILD, exist_ok=True)
-    ver, stand = version()
+    ver, stand, slug = version()
     with open(os.path.join(BUILD, "version.tex"), "w") as f:
         f.write("\\def\\fwversion{%s}\n\\def\\fwstand{%s}\n" % (tex_escape(ver), stand))
     print(f"Version {ver} · Stand {stand}")
@@ -125,7 +133,13 @@ def main():
     else:  # ohne latexmk: drei Läufe reichen für Seitenverweise und Lesezeichen
         for _ in range(3):
             run([engine, *tex, "-output-directory=build", "-jobname=" + JOB, "latex/finsterwacht.tex"], env=env)
-    print("fertig:", os.path.join("build", JOB + ".pdf"))
+    # Kopie mit Version im Dateinamen – diese Datei veröffentlicht die CI
+    pdf = os.path.join("build", f"{JOB}-{slug}.pdf")
+    shutil.copyfile(os.path.join(BUILD, JOB + ".pdf"), os.path.join(ROOT, pdf))
+    if os.environ.get("GITHUB_OUTPUT"):
+        with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+            f.write("pdf=" + pdf.replace(os.sep, "/") + "\n")
+    print("fertig:", pdf)
 
 
 if __name__ == "__main__":

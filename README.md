@@ -4,7 +4,8 @@ Ein Abenteuer für *The One Ring, 2nd Edition* · Eriador, Frühjahr TA 2965.
 
 Dieses Repository enthält den Text des Abenteuers und die Pipeline, die daraus die
 Druckfassung baut. Bei jedem Commit baut GitHub Actions das PDF
-(Reiter **Actions** → letzter Lauf → Artefakt **Die-Finsterwacht-PDF**).
+(Reiter **Actions** → letzter Lauf → Artefakt `Die-Finsterwacht-TOR2e-DE-v….pdf`,
+direkt als PDF, ohne ZIP).
 
 ## Aufbau
 
@@ -47,6 +48,8 @@ Version und Datum in der Fußzeile kommen aus git:
 - Commits danach erscheinen als **Version 2.1+3 (abc1234)**.
 - Uncommittete Änderungen werden als „lokal geändert“ markiert.
 - „Stand“ ist das Datum des letzten Commits.
+- Dieselbe Version steht im Dateinamen: `Die-Finsterwacht-TOR2e-DE-v2.1.pdf` bzw.
+  `…-v2.1+3-abc1234.pdf` (lokal geändert: Zusatz `-lokal`).
 
 Neue Version veröffentlichen:
 
@@ -65,7 +68,8 @@ Voraussetzungen: TeX Live mit LuaLaTeX und `latexmk`, `pandoc`, Python 3.11+.
 make            # oder: python3 tools/build.py
 ```
 
-Das PDF liegt danach in `build/Die-Finsterwacht-TOR2e-DE.pdf`. Fehlt LuaLaTeX
+Das PDF liegt danach in `build/Die-Finsterwacht-TOR2e-DE.pdf`, dazu eine Kopie mit der
+Version im Namen (`build/Die-Finsterwacht-TOR2e-DE-v2.1.pdf`). Fehlt LuaLaTeX
 (`luaotfload`), nimmt das Skript ersatzweise XeLaTeX. Fehlen die deutschen Trennmuster,
 setzt es Flattersatz. Maßgeblich ist der CI-Build.
 
