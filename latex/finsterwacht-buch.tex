@@ -1,0 +1,17 @@
+% Die Finsterwacht – Buchfassung: Buchblock zum Binden. Wird von tools/build.py aufgerufen
+% (LuaLaTeX, Arbeitsverzeichnis = Projektwurzel).
+% Doppelseitig mit Bundsteg innen, Titelblatt, alle Seiten A4 hoch (Querseiten gedreht),
+% Seitenzahl durch 4 teilbar. Einzelseiten in Lesereihenfolge, nicht ausgeschossen.
+\documentclass[10pt,twoside]{article}
+\usepackage[buch]{finsterwacht}
+\input{build/version.tex}
+
+\begin{document}
+
+\fwbooktitle{Die Finsterwacht}{Ein Abenteuer für The One Ring, 2nd Edition · Eriador, Frühjahr TA 2965}
+
+\input{latex/inhalt.tex}
+
+\fwfillsheets
+
+\end{document}

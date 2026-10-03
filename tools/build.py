@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """Baut die Druckfassung von „Die Finsterwacht“.
 
-    python3 tools/build.py
+    python3 tools/build.py            # beide Fassungen
+    python3 tools/build.py buch       # nur eine: blatt | buch
 
 Schritte:
   1. Version und Stand aus git (letztes Tag v*, Commit-Datum) -> build/version.tex
   2. src/finsterwacht.md -> build/body.tex (pandoc + filters/finsterwacht.lua)
   3. src/cards.toml -> build/cards.tex
-  4. LuaLaTeX (latexmk) -> build/Die-Finsterwacht-TOR2e-DE.pdf
+  4. LuaLaTeX (latexmk) -> build/Die-Finsterwacht-TOR2e-DE.pdf (Blattfassung, gelocht)
+     und build/Die-Finsterwacht-TOR2e-DE-Buch.pdf (Buchfassung zum Binden)
   5. Kopie mit Version im Namen -> build/Die-Finsterwacht-TOR2e-DE-v2.0.pdf
 
 Benötigt: pandoc, LuaLaTeX mit latexmk (TeX Live), Python 3.11+.
@@ -24,6 +26,11 @@ import tomllib
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD = os.path.join(ROOT, "build")
 JOB = "Die-Finsterwacht-TOR2e-DE"
+# Fassung -> (LaTeX-Gerüst, Jobname)
+EDITIONS = {
+    "blatt": ("latex/finsterwacht.tex", JOB),
+    "buch": ("latex/finsterwacht-buch.tex", JOB + "-Buch"),
+}
 
 
 def run(cmd, **kw):
@@ -106,6 +113,10 @@ def cards_tex():
 
 # ------------------------------------------------------------------ Ablauf
 def main():
+    editions = sys.argv[1:] or list(EDITIONS)
+    for e in editions:
+        if e not in EDITIONS:
+            sys.exit(f"Unbekannte Fassung „{e}“ – möglich: " + ", ".join(EDITIONS))
     os.makedirs(BUILD, exist_ok=True)
     ver, stand, slug = version()
     with open(os.path.join(BUILD, "version.tex"), "w") as f:
@@ -127,19 +138,20 @@ def main():
         "lualatex" if subprocess.run(["kpsewhich", "luaotfload-main.lua"], capture_output=True, text=True).stdout.strip()
         else "xelatex")
     print("TeX-Engine:", engine)
-    if shutil.which("latexmk"):
-        run(["latexmk", "-" + engine, "-outdir=build", "-jobname=" + JOB, *tex,
-             "latex/finsterwacht.tex"], env=env)
-    else:  # ohne latexmk: drei Läufe reichen für Seitenverweise und Lesezeichen
-        for _ in range(3):
-            run([engine, *tex, "-output-directory=build", "-jobname=" + JOB, "latex/finsterwacht.tex"], env=env)
-    # Kopie mit Version im Dateinamen – diese Datei veröffentlicht die CI
-    pdf = os.path.join("build", f"{JOB}-{slug}.pdf")
-    shutil.copyfile(os.path.join(BUILD, JOB + ".pdf"), os.path.join(ROOT, pdf))
-    if os.environ.get("GITHUB_OUTPUT"):
-        with open(os.environ["GITHUB_OUTPUT"], "a") as f:
-            f.write("pdf=" + pdf.replace(os.sep, "/") + "\n")
-    print("fertig:", pdf)
+    for e in editions:
+        src, job = EDITIONS[e]
+        if shutil.which("latexmk"):
+            run(["latexmk", "-" + engine, "-outdir=build", "-jobname=" + job, *tex, src], env=env)
+        else:  # ohne latexmk: drei Läufe reichen für Seitenverweise und Lesezeichen
+            for _ in range(3):
+                run([engine, *tex, "-output-directory=build", "-jobname=" + job, src], env=env)
+        # Kopie mit Version im Dateinamen – diese Datei veröffentlicht die CI
+        pdf = os.path.join("build", f"{job}-{slug}.pdf")
+        shutil.copyfile(os.path.join(BUILD, job + ".pdf"), os.path.join(ROOT, pdf))
+        if os.environ.get("GITHUB_OUTPUT"):
+            with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                f.write("pdf=" + pdf.replace(os.sep, "/") + "\n")
+        print("fertig:", pdf)
 
 
 if __name__ == "__main__":

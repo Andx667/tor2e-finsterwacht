@@ -1,30 +1,11 @@
-% Die Finsterwacht – Druckfassung. Wird von tools/build.py aufgerufen (LuaLaTeX,
-% Arbeitsverzeichnis = Projektwurzel). Die Dateien in build/ erzeugt das Build-Skript.
+% Die Finsterwacht – Druckfassung (Blattfassung, gelocht). Wird von tools/build.py aufgerufen
+% (LuaLaTeX, Arbeitsverzeichnis = Projektwurzel).
 \documentclass[10pt]{article}
 \usepackage{finsterwacht}
 \input{build/version.tex}
 
 \begin{document}
 
-\fwtitle{Die Finsterwacht}{Ein Abenteuer für The One Ring, 2nd Edition · Eriador, Frühjahr TA 2965}
-
-\input{build/body.tex}
-
-% ---- Anhang: Gegenstandskarten (aus src/cards.toml)
-\input{build/cards.tex}
-
-% ---- Karten für den Loremaster (nummeriert, quer)
-\fwlmmap[Karten für den Loremaster]{lm-fornost}{Karte: Fornost Erain}%
-  {Loremaster-Version · Nummern wie in Teil 2}{assets/maps/map-fornost-de.jpg}{Fornost Erain}
-\fwlmmap{lm-finster}{Karte: Die Finsterwacht}%
-  {Loremaster-Version · Nummern wie in Teil 3}{assets/maps/map-finsterwacht-de.jpg}{Die Finsterwacht}
-\label{fw-lastnum}
-
-% ---- Handouts für die Spieler (ohne Seitenzahl)
-\input{build/letter.tex}
-\fwhandoutmap[Handouts für die Spieler]{h-fornost}{assets/maps/map-fornost-players-de.jpg}{Karte von Fornost Erain}
-\fwhandoutletter{h-brief}{Thorondirs Brief}
-\fwhandoutmap{h-signal}{assets/maps/map-beacons-players-de.jpg}{Karte der Signalfeuer-Linie}
-\fwhandoutmap{h-finster}{assets/maps/map-finsterwacht-players-de.jpg}{Karte der Finsterwacht}
+\input{latex/inhalt.tex}
 
 \end{document}

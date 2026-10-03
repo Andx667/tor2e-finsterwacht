@@ -1,10 +1,18 @@
 % finsterwacht.sty – Layout für „Die Finsterwacht“ (TOR 2e, Druckfassung)
 % LuaLaTeX (CI) oder XeLaTeX (lokaler Ersatz). Seitenränder links 26 mm (Lochung), Notizspalte rechts, Fußzeile mit
 % Version und Stand auf jeder Seite.
+% Option „buch“ (latex/finsterwacht-buch.tex): Buchblock zum Binden – doppelseitig, die 26 mm
+% liegen als Bundsteg innen, Notizspalte, Kolumnentitel und Seitenzahl außen; Querseiten
+% stehen gedreht im Hochformat, damit alle Seiten gleich groß sind.
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{finsterwacht}[2026/10/03 Finsterwacht layout]
 
+\newif\iffw@book
+\DeclareOption{buch}{\fw@booktrue}
+\ProcessOptions\relax
+
 % ---------------------------------------------------------------- Pakete
+\iffw@book\PassOptionsToPackage{twoside}{geometry}\fi
 \RequirePackage[a4paper,top=16mm,bottom=18mm,left=26mm,right=14mm,nohead,nofoot]{geometry}
 \RequirePackage{fontspec}
 \RequirePackage{iftex}
@@ -93,7 +101,10 @@
 \newif\iffw@first
 \newif\iffw@started
 \gdef\fwcurrent{}
-\gdef\fwpagekind{normal}   % normal | lm (Loremaster-Karte, quer) | handout (quer)
+\gdef\fwpagekind{normal}   % normal | lm (Loremaster-Karte, quer) | handout (quer) | blank (Buch: ohne Fußzeile)
+% Buchfassung: left/right heißen innen/außen; auf linken (geraden) Seiten ist alles gespiegelt
+\newif\iffw@left
+\newcommand\fw@setside{\fw@leftfalse\iffw@book\ifodd\c@page\else\fw@lefttrue\fi\fi}
 \def\fw@geometry#1{%
   \ifstrequal{#1}{notes}
     {\global\fwnotestrue\newgeometry{top=16mm,bottom=18mm,left=26mm,right=76mm,nohead,nofoot}}
@@ -126,32 +137,63 @@
 \newcommand\fw@at[3]{\put(#1,#2){\makebox(0,0)[#3]}}
 \newcommand\fw@footerfont{\fontsize{8}{10}\selectfont\color{fwgrey}}
 
-\newcommand\fw@notescolumn{%
-  \put(142,18){\color{fwnotesep}\linethickness{0.6pt}\line(0,1){263}}%
-  \put(146,276){\makebox(0,0)[lb]{\fontsize{9}{10}\selectfont\scshape\addfontfeature{LetterSpace=8}\color{fwgrey}Notizen}}%
-  {\color{fwnoterule}\linethickness{0.25pt}\multiput(146,266)(0,-7){36}{\line(1,0){50}}}}
+\newcommand\fw@notescolumn[2]{% Trennlinie-x, Zeilen-x
+  \put(#1,18){\color{fwnotesep}\linethickness{0.6pt}\line(0,1){263}}%
+  \put(#2,276){\makebox(0,0)[lb]{\fontsize{9}{10}\selectfont\scshape\addfontfeature{LetterSpace=8}\color{fwgrey}Notizen}}%
+  {\color{fwnoterule}\linethickness{0.25pt}\multiput(#2,266)(0,-7){36}{\line(1,0){50}}}}
 
-\newcommand\fw@runninghead{%
-  \put(26,287){\makebox(0,0)[lb]{\fontsize{8}{10}\selectfont\scshape\addfontfeature{LetterSpace=12}\color{fwgrey}Die Finsterwacht}}%
-  \put(196,287){\makebox(0,0)[rb]{\fontsize{8}{10}\selectfont\scshape\addfontfeature{LetterSpace=12}\color{fwred}\fwcurrent}}%
-  \put(26,285.6){\color{fwhline}\linethickness{0.5pt}\line(1,0){170}}}
+\newcommand\fw@headtext[2]{\fontsize{8}{10}\selectfont\scshape\addfontfeature{LetterSpace=12}\color{#1}#2}
+\newcommand\fw@runninghead{% Kapitel steht außen
+  \iffw@left
+    \put(14,287){\makebox(0,0)[lb]{\fw@headtext{fwred}{\fwcurrent}}}%
+    \put(184,287){\makebox(0,0)[rb]{\fw@headtext{fwgrey}{Die Finsterwacht}}}%
+    \put(14,285.6){\color{fwhline}\linethickness{0.5pt}\line(1,0){170}}%
+  \else
+    \put(26,287){\makebox(0,0)[lb]{\fw@headtext{fwgrey}{Die Finsterwacht}}}%
+    \put(196,287){\makebox(0,0)[rb]{\fw@headtext{fwred}{\fwcurrent}}}%
+    \put(26,285.6){\color{fwhline}\linethickness{0.5pt}\line(1,0){170}}%
+  \fi}
 
-\newcommand\fw@footer[3]{% links-x, mitte-x, rechts-x
-  \put(#1,7){\makebox(0,0)[lb]{\fw@footerfont Die Finsterwacht · TOR 2e}}%
+\newcommand\fw@pageno{\thepage\ / \pageref*{fw-lastnum}}
+\newcommand\fw@footer[3]{% links-x, mitte-x, rechts-x; Seitenzahl steht außen
+  \put(#1,7){\makebox(0,0)[lb]{\fw@footerfont\iffw@left\fw@pageno\else Die Finsterwacht · TOR 2e\fi}}%
   \put(#2,7){\makebox(0,0)[b]{\fontsize{7.5}{9}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand}}%
-  \put(#3,7){\makebox(0,0)[rb]{\fw@footerfont\thepage\ / \pageref*{fw-lastnum}}}}
+  \put(#3,7){\makebox(0,0)[rb]{\fw@footerfont\iffw@left Die Finsterwacht · TOR 2e\else\fw@pageno\fi}}}
+
+\newcommand\fw@bgportrait{%
+  \fw@setside
+  \iffw@left
+    \iffwnotes\fw@notescolumn{68}{14}\fi
+    \iffw@first\else\ifx\fwcurrent\@empty\else\fw@runninghead\fi\fi
+    \fw@footer{14}{105}{184}%
+  \else
+    \iffwnotes\fw@notescolumn{142}{146}\fi
+    \iffw@first\else\ifx\fwcurrent\@empty\else\fw@runninghead\fi\fi
+    \fw@footer{26}{105}{196}%
+  \fi}
+\newcommand\fw@bglandscape{%
+  \fw@leftfalse
+  \ifdefstring{\fwpagekind}{handout}{%
+    \put(285,5){\makebox(0,0)[rb]{\fontsize{6.5}{8}\selectfont\color{fwline}Version \fwversion\ · Stand \fwstand}}%
+  }{\fw@footer{14}{148.5}{283}}}
+
+% Buchfassung: Querseite (297 × 210 mm) um 90° gedreht auf die Hochformatseite, Kopf nach
+% links. Auf 93 % verkleinert; die gewonnenen 14,7 mm liegen innen am Bund.
+\newcommand\fw@rotated[1]{%
+  \fw@setside
+  \edef\fw@rotx{\iffw@left 0\else 14.7\fi}%
+  \put(\fw@rotx,10.4){\scalebox{0.93}{\rotatebox{90}{%
+    \begin{picture}(297,210)#1\end{picture}}}}}
+\newcommand\fw@landpic[1]{\iffw@book\fw@rotated{#1}\else#1\fi}
 
 \AddToShipoutPictureBG{%
   \setlength\unitlength{1mm}%
-  \ifdim\paperwidth>\paperheight
-    \ifdefstring{\fwpagekind}{handout}{%
-      \put(285,5){\makebox(0,0)[rb]{\fontsize{6.5}{8}\selectfont\color{fwline}Version \fwversion\ · Stand \fwstand}}%
-    }{\fw@footer{14}{148.5}{283}}%
-  \else
-    \iffwnotes\fw@notescolumn\fi
-    \iffw@first\else\ifx\fwcurrent\@empty\else\fw@runninghead\fi\fi
-    \fw@footer{26}{105}{196}%
-  \fi
+  \ifdefstring{\fwpagekind}{blank}{}{%
+    \iffw@book
+      \ifdefstring{\fwpagekind}{normal}{\fw@bgportrait}{\fw@rotated{\fw@bglandscape}}%
+    \else
+      \ifdim\paperwidth>\paperheight\fw@bglandscape\else\fw@bgportrait\fi
+    \fi}%
   \global\fw@firstfalse}
 
 % ---------------------------------------------------------------- Kästen
@@ -253,21 +295,27 @@
     \draw[fwline, line width=0.6pt, dash pattern=on 1.4pt off 1.4pt] (0,0) rectangle (63mm,88mm);
     \node[inner sep=0pt] at (31.5mm,44mm) {\usebox\fw@cardbox};
   \end{tikzpicture}}
-\newcommand\fwcardrow[3]{\noindent\hbox to\linewidth{\hss#1#2#3\hss}\par\nointerlineskip}
+% Buchfassung: Karten auf 88 % verkleinert, damit der Bundsteg frei bleibt
+\newcommand\fwcardrow[3]{\noindent\hbox to\linewidth{\hss
+  \iffw@book\scalebox{0.88}{#1#2#3}\else#1#2#3\fi\hss}\par\nointerlineskip}
 \newcommand\fwcardspage[2]{% Hinweis, Kartenreihen
   \clearpage
-  \newgeometry{top=16mm,bottom=18mm,left=11mm,right=10mm,nohead,nofoot}%
+  \iffw@book\fw@geometry{nonotes}%
+  \else\newgeometry{top=16mm,bottom=18mm,left=11mm,right=10mm,nohead,nofoot}\fi
   \global\fwnotesfalse\gdef\fwcurrent{}%
   \fw@heading{Anhang: Gegenstandskarten}%
-  \vspace{-1.2mm}{\fontsize{8.5}{11}\selectfont\itshape\color{fwgrey}#1\par}\vspace{3mm}%
+  \vspace{-1.2mm}{\fontsize{8.5}{11}\selectfont\itshape\color{fwgrey}#1%
+    \iffw@book\ · Hier verkleinert; in Originalgröße in der Blattfassung\fi\par}\vspace{3mm}%
   \begingroup\setlength\parskip{0pt}#2\endgroup}
 
 % ---------------------------------------------------------------- Querformat: Karten und Handouts
 \newcommand\fw@landscape{%
   \clearpage
-  \global\paperwidth=297mm \global\paperheight=210mm
-  \ifLuaTeX\global\pagewidth=297mm \global\pageheight=210mm
-  \else\global\pdfpagewidth=297mm \global\pdfpageheight=210mm\fi}
+  \iffw@book\else
+    \global\paperwidth=297mm \global\paperheight=210mm
+    \ifLuaTeX\global\pagewidth=297mm \global\pageheight=210mm
+    \else\global\pdfpagewidth=297mm \global\pdfpageheight=210mm\fi
+  \fi}
 % \fwlmmap[Gruppen-Lesezeichen]{label}{Titel}{Untertitel}{Bild}{Lesezeichen}
 \NewDocumentCommand\fw@bookmarks{mmm}{% gruppe, label, titel
   \phantomsection
@@ -275,17 +323,17 @@
   \pdfbookmark[1]{#3}{bm-#2}\label{#2}}
 \NewDocumentCommand\fwlmmap{O{}mmmmm}{%
   \fw@landscape\gdef\fwpagekind{lm}%
-  \AddToShipoutPictureFG*{\setlength\unitlength{1mm}%
+  \AddToShipoutPictureFG*{\setlength\unitlength{1mm}\fw@landpic{%
     \put(14,183.5){\makebox(0,0)[lb]{\fontsize{13}{15}\selectfont\bfseries\color{fwred}#3%
       \hspace{3mm}{\mdseries\itshape\fontsize{9.5}{11}\selectfont\color{fwgrey}#4}}}%
     \put(14,182){\color{fwhline}\linethickness{0.6pt}\line(1,0){269}}%
-    \put(148.5,19){\makebox(0,0)[b]{\includegraphics[height=160mm]{#5}}}}%
+    \put(148.5,19){\makebox(0,0)[b]{\includegraphics[height=160mm]{#5}}}}}%
   \null\fw@bookmarks{#1}{#2}{#6}}
 % \fwhandoutmap[Gruppen-Lesezeichen]{label}{Bild}{Lesezeichen}
 \NewDocumentCommand\fwhandoutmap{O{}mmm}{%
   \fw@landscape\gdef\fwpagekind{handout}%
-  \AddToShipoutPictureFG*{\setlength\unitlength{1mm}%
-    \put(148.5,97){\makebox(0,0){\includegraphics[height=178mm]{#3}}}}%
+  \AddToShipoutPictureFG*{\setlength\unitlength{1mm}\fw@landpic{%
+    \put(148.5,97){\makebox(0,0){\includegraphics[height=178mm]{#3}}}}}%
   \null\fw@bookmarks{#1}{#2}{#4}}
 % \fwhandoutletter{label}{Lesezeichen}
 \newsavebox\fw@letterbox
@@ -297,8 +345,29 @@
       fontupper=\fwchorus\fontsize{21}{30.5}\selectfont\color{fwletterink}\raggedright]
     \fwletterhandout\par\vspace{6mm}\hspace*{\fill}Thorondir
   \end{tcolorbox}}%
-  \AddToShipoutPictureFG*{\setlength\unitlength{1mm}%
-    \put(148.5,97){\makebox(0,0){\usebox\fw@letterbox}}}%
+  \AddToShipoutPictureFG*{\setlength\unitlength{1mm}\fw@landpic{%
+    \put(148.5,97){\makebox(0,0){\usebox\fw@letterbox}}}}%
   \null\fw@bookmarks{}{#1}{#2}}
+
+% ---------------------------------------------------------------- Buchfassung: Titelblatt, Bogenfüllung
+% \fwbooktitle{Titel}{Untertitel} – Titelblatt mit leerer Rückseite
+\newcommand\fwbooktitle[2]{%
+  \gdef\fwpagekind{blank}%
+  \begingroup\centering
+  \null\vspace{70mm}%
+  {\fontsize{38}{44}\selectfont\bfseries\color{fwred}#1\par}%
+  \vspace{6mm}{\color{fwred}\hrule height 1.2pt}\vspace{6mm}%
+  {\fontsize{13}{18}\selectfont\itshape\color{fwgrey}#2\par}%
+  \vfill
+  {\fontsize{9}{12}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand\par}%
+  \endgroup
+  \clearpage\null\clearpage
+  \gdef\fwpagekind{normal}}
+% Leere Seiten anhängen, bis die Seitenzahl durch 4 teilbar ist (ganze Bogen)
+\newcommand\fw@fill{%
+  \@tempcnta=\c@page \advance\@tempcnta\m@ne
+  \@tempcntb=\@tempcnta \divide\@tempcntb 4 \multiply\@tempcntb 4
+  \ifnum\@tempcnta>\@tempcntb \null\clearpage\expandafter\fw@fill\fi}
+\newcommand\fwfillsheets{\clearpage\gdef\fwpagekind{blank}\fw@fill}
 
 \endinput
