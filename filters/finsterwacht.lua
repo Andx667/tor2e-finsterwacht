@@ -125,7 +125,13 @@ end
 
 local block_pass = {
   Header = function(h)
-    if h.level == 1 then
+    -- Ebenen hier selbst verschieben (## -> Kapitel, ### -> \subsection): pandocs
+    -- --shift-heading-level-by greift erst nach den Filtern
+    if h.level > 2 then
+      h.level = h.level - 1
+      return h
+    end
+    if h.level == 2 then
       local mode = h.classes:includes("nonotes") and "nonotes" or "notes"
       local out = {}
       if h.identifier == "hintergrund" then out[#out + 1] = raw("\\fwindex") end

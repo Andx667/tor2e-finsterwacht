@@ -125,7 +125,7 @@ def main():
 
     env = dict(os.environ, FW_BUILD=BUILD)
     run(["pandoc", "src/finsterwacht.md", "-f", "markdown", "-t", "latex",
-         "--shift-heading-level-by=-1", "--lua-filter", "filters/finsterwacht.lua",
+         "--lua-filter", "filters/finsterwacht.lua",
          "-o", os.path.join(BUILD, "body.tex")], env=env)
 
     with open(os.path.join(BUILD, "cards.tex"), "w") as f:
