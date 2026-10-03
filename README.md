@@ -72,8 +72,9 @@ Der Build erzeugt zwei PDFs aus demselben Text:
 - **Buchfassung** (`Die-Finsterwacht-TOR2e-DE-Buch-v….pdf`): Buchblock zum Binden,
   doppelseitig zu drucken. Titelblatt mit leerer Rückseite; der Bundsteg (26 mm) liegt
   innen, Notizspalte, Kapitelname und Seitenzahl außen. Alle Seiten sind A4 hoch: Karten
-  und Handouts stehen um 90° gedreht (Kopf links) und auf 93 % verkleinert, die
-  Gegenstandskarten auf 88 %. Am Ende füllen leere Seiten auf eine durch 4 teilbare
+  und Handouts stehen um 90° gedreht (Kopf links) und auf 93 % verkleinert. Die
+  Gegenstandskarten bleiben in Originalgröße, stehen aber 2 × 3 statt 3 × 2 je Seite,
+  damit der Bundsteg frei bleibt. Am Ende füllen leere Seiten auf eine durch 4 teilbare
   Seitenzahl auf.
 
 Die Buchfassung enthält Einzelseiten in Lesereihenfolge. Für Klebe- oder Spiralbindung

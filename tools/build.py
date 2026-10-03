@@ -96,18 +96,12 @@ def cards_tex():
         up.append(r"\end{fwcardeffects}")
         return r"\fwcard{" + "\n".join(up) + "}{" + tex_escape(data["footer"]) + "}"
 
+    # Sechs Karten je Seite; die Reihen (3 × 2 bzw. 2 × 3) bricht \fwcard in finsterwacht.sty um
     order = data["order"]
     pages = [order[i:i + 6] for i in range(0, len(order), 6)]
     out = []
-    for n, page in enumerate(pages):
-        page = page + [None] * (6 - len(page))
-        rows = []
-        for r in range(2):
-            cells = [card(k) if k else r"\hspace{63mm}" for k in page[3 * r:3 * r + 3]]
-            rows.append(r"\fwcardrow{" + "}{".join(cells) + "}")
-        anchor = (r"\phantomsection\pdfbookmark[0]{Anhang: Gegenstandskarten}{bm-cards}\label{cards}"
-                  if n == 0 else "")
-        out.append(r"\fwcardspage{" + tex_escape(data["hint"]) + "}{" + anchor + "\n" + "\n".join(rows) + "}")
+    for page in pages:
+        out.append(r"\fwcardspage{" + tex_escape(data["hint"]) + "}{%\n" + "\n".join(card(k) for k in page) + "}")
     return "\n\n".join(out) + "\n"
 
 

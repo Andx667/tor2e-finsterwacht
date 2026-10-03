@@ -287,26 +287,48 @@
 \newcommand\fwcardstats[2]{\begin{tcolorbox}[fw stats]#1\ifblank{#2}{}{ {\mdseries\itshape\fontsize{7.2}{9}\selectfont\color{fwgrey}(#2)}}\end{tcolorbox}}
 \newcommand\fwcardtext[1]{#1\par\vspace{1.8mm}}
 \newenvironment{fwcardeffects}{\begin{itemize}[leftmargin=3.6mm,itemsep=0.9mm,label={\textbullet}]}{\end{itemize}}
-% \fwcard{Inhalt oben}{Fußzeile}
+% Karten je Reihe: Blattfassung 3 × 2 je Seite; Buchfassung 2 × 3, damit die Karten in
+% Originalgröße neben den Bundsteg passen
+\iffw@book\def\fw@cardcols{2}\else\def\fw@cardcols{3}\fi
+\newcount\fw@cardn
+\newsavebox\fw@cardsbox
+\newif\iffw@cardsanchor
+% \fwcard{Inhalt oben}{Fußzeile} – nur innerhalb von \fwcardspage; bricht die Reihe selbst um
 \newcommand\fwcard[2]{%
   \sbox\fw@cardbox{\begin{tcolorbox}[fw card]#1\tcblower #2\end{tcolorbox}}%
+  \ifnum\fw@cardn=0 \noindent\fi%
   \begin{tikzpicture}
     \useasboundingbox (0,0) rectangle (63mm,88mm);
     \draw[fwline, line width=0.6pt, dash pattern=on 1.4pt off 1.4pt] (0,0) rectangle (63mm,88mm);
     \node[inner sep=0pt] at (31.5mm,44mm) {\usebox\fw@cardbox};
-  \end{tikzpicture}}
-% Buchfassung: Karten auf 88 % verkleinert, damit der Bundsteg frei bleibt
-\newcommand\fwcardrow[3]{\noindent\hbox to\linewidth{\hss
-  \iffw@book\scalebox{0.88}{#1#2#3}\else#1#2#3\fi\hss}\par\nointerlineskip}
-\newcommand\fwcardspage[2]{% Hinweis, Kartenreihen
+  \end{tikzpicture}%
+  \global\advance\fw@cardn 1
+  \ifnum\fw@cardn<\fw@cardcols\relax\else\global\fw@cardn=0 \par\nointerlineskip\fi%
+  \ignorespaces}
+\newcommand\fw@cardhint[1]{{\fontsize{8.5}{11}\selectfont\itshape\color{fwgrey}#1\par}}
+\newcommand\fwcardspage[2]{% Hinweis, Karten
   \clearpage
-  \iffw@book\fw@geometry{nonotes}%
+  \iffw@book\newgeometry{top=8mm,bottom=12mm,left=26mm,right=14mm,nohead,nofoot}%
   \else\newgeometry{top=16mm,bottom=18mm,left=11mm,right=10mm,nohead,nofoot}\fi
   \global\fwnotesfalse\gdef\fwcurrent{}%
+  \iffw@cardsanchor\else\global\fw@cardsanchortrue
+    \phantomsection\pdfbookmark[0]{Anhang: Gegenstandskarten}{bm-cards}\label{cards}\fi
   \fw@heading{Anhang: Gegenstandskarten}%
-  \vspace{-1.2mm}{\fontsize{8.5}{11}\selectfont\itshape\color{fwgrey}#1%
-    \iffw@book\ · Hier verkleinert; in Originalgröße in der Blattfassung\fi\par}\vspace{3mm}%
-  \begingroup\setlength\parskip{0pt}#2\endgroup}
+  \global\fw@cardn=0
+  \sbox\fw@cardsbox{\begin{minipage}[b]{\dimexpr63mm*\fw@cardcols+0.1mm\relax}%
+    \setlength\parskip{0pt}#2\par\end{minipage}}%
+  \global\fw@cardn=0
+  \iffw@book
+    % Karten innen am Bundsteg, der Hinweis in der freien Spalte außen
+    \vspace{2mm}\nointerlineskip\fw@setside
+    \hbox to\linewidth{%
+      \iffw@left\else\usebox\fw@cardsbox\hfil\fi%
+      \begin{minipage}[b][\ht\fw@cardsbox][t]{38mm}\fw@ragged\fw@cardhint{#1}\end{minipage}%
+      \iffw@left\hfil\usebox\fw@cardsbox\fi}%
+  \else
+    \vspace{-1.2mm}\fw@cardhint{#1}\vspace{3mm}\nointerlineskip
+    \hbox to\linewidth{\hss\usebox\fw@cardsbox\hss}%
+  \fi}
 
 % ---------------------------------------------------------------- Querformat: Karten und Handouts
 \newcommand\fw@landscape{%
