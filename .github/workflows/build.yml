@@ -1,0 +1,57 @@
+name: PDF bauen
+
+# Läuft bei jedem Commit (jeder Branch), bei Pull Requests und von Hand.
+# Getaggte Commits (v*) werden zusätzlich als Release mit PDF veröffentlicht.
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    # Volles TeX Live (inkl. LuaLaTeX, deutscher Silbentrennung, TeX-Gyre-Schriften)
+    container: texlive/texlive:latest
+    steps:
+      - name: Werkzeuge installieren (git, pandoc, python3)
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends git pandoc python3 ca-certificates
+
+      - name: Auschecken (mit Tags für die Versionsnummer)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Git-Verzeichnis freigeben
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: PDF bauen
+        env:
+          FW_ENGINE: lualatex
+        run: python3 tools/build.py
+
+      - name: PDF als Artefakt ablegen
+        uses: actions/upload-artifact@v4
+        with:
+          name: Die-Finsterwacht-PDF
+          path: build/Die-Finsterwacht-TOR2e-DE.pdf
+          if-no-files-found: error
+
+      - name: Build-Log bei Fehlern ablegen
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build/*.log
+
+      - name: Release für Tags
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/Die-Finsterwacht-TOR2e-DE.pdf

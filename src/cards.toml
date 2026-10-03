@@ -1,0 +1,98 @@
+# Gegenstandskarten (Anhang). Eine Karte pro physischem Exemplar, Reihenfolge = `order`.
+# Regelbegriffe aus `terms` werden auf den Karten automatisch kursiv gesetzt.
+
+hint = "Zum Ausschneiden, im Pokerkartenformat (63 × 88 mm) · Klinge, Dolch, Bogen und Panzerhemd je zweimal, Tirnaur, Torhüter, Breschenwacht und Horn je einmal"
+footer = "Gabe der Wacht: wirkt erst, wenn sie erwacht."
+order = ["tirnaur", "schild", "horn", "axt", "klinge", "klinge", "dolch", "dolch", "bogen", "bogen", "hemd", "hemd"]
+
+terms = [
+  "Shadow weakness", "Eye Awareness", "Peril rating", "Success die", "Feat die", "Piercing Blow",
+  "Famous Weapon", "Famous Armour", "Marvellous Artefact", "Core Rules", "Close-fitting",
+  "Cunning Make", "Long-hafted axe", "Long sword", "Short sword", "Coat of mail", "Undertaking",
+  "Blessings", "Blessing", "Banes", "Bane", "Keen", "Fell", "Grievous", "Reinforced", "Damage",
+  "Injury", "Load", "Protection", "Parry", "Hope", "Shadow", "Awe", "Battle", "Sword", "Bow", "Shield",
+]
+
+[cards.tirnaur]
+name = "Tirnaur, das Schwert des Hauptmanns"
+kind = "Famous Weapon · Long sword · númenórische Arbeit"
+stats = "Damage 5 · Injury 16 (zweihändig 18) · Load 3"
+stats_note = "ein- oder zweihändig"
+text = "Thorondirs eigene Klinge, älter als die Festung, aus Númenor mitgebracht. Die Runen auf dem Stahl nennen ihren Namen: Tirnaur, „Wachfeuer“."
+effects = [
+  ["Sofort", "Keen (Piercing Blow schon bei 9 auf dem Feat die)"],
+  ["Gabe der Wacht", "Fell (Injury +2); Bane: Orks"],
+  ["Besonderheit", "Leuchtet schwach, wenn Orks im Umkreis einer Meile sind."],
+]
+
+[cards.schild]
+name = "Der Torhüter"
+kind = "Famous Armour · Shield · númenórische Arbeit"
+stats = "Parry +2 · Load 4"
+stats_note = "vor Reinforced und Cunning Make"
+text = "Der Schild des Torwächters, in númenórischer Kunst geschmiedet und mit Turm und Stern bemalt. Sein Rand ist von hundert Orkklingen zerkerbt, doch er ist nie gesplittert."
+effects = [
+  ["Sofort", "Reinforced (Parry +1; kann nicht zerschmettert werden)"],
+  ["Gabe der Wacht", "Cunning Make (Load −2)"],
+]
+
+[cards.horn]
+name = "Das Horn der Finsterwacht"
+kind = "Marvellous Artefact · númenórische Arbeit"
+text = "Ein silberbeschlagenes Horn aus Númenor, das einst die Besatzung auf die Mauern rief."
+effects = [
+  ["Sofort", "Ruf der Wacht – einmal pro Nacht lässt ein Stoß geringere Gegner wanken."],
+  ["Gabe der Wacht", "Blessings: Awe, Battle"],
+]
+
+[cards.axt]
+name = "Die Breschenwacht"
+kind = "Famous Weapon · Long-hafted axe · númenórische Arbeit"
+stats = "Damage 6 · Injury 18 (zweihändig 20) · Load 3"
+stats_note = "ein- oder zweihändig"
+text = "Eine langstielige Axt nach der Kunst der Dúnedain. Ihr Träger hielt drei Nächte lang die Bresche neben dem Tor, bis er fiel; seine Gefährten trugen sie hinab in die Kammer."
+effects = [
+  ["Sofort", "Grievous (Damage +1)"],
+  ["Gabe der Wacht", "Bane: Trolle"],
+]
+
+[cards.klinge]
+name = "Klinge der Wacht"
+kind = "Famous Weapon · Sword · númenórische Arbeit"
+stats = "Damage 4 · Injury 16 · Load 2"
+text = "Ein Schwert nach der Kunst der Dúnedain, „zum Verderben Angmars“ geschmiedet, mit Turm und Stern auf dem Knauf – die Schwester der zerbrochenen Klinge aus Fornost."
+effects = [
+  ["Sofort", "Grievous (Damage +1)"],
+  ["Gabe der Wacht", "Bane: Orks"],
+]
+
+[cards.dolch]
+name = "Dolch der Wacht"
+kind = "Famous Weapon · Short sword · númenórische Arbeit"
+stats = "Damage 3 · Injury 16 · Load 1"
+text = "Ein langer Dolch nach der Kunst der Dúnedain, wie ihn die Wächter auf den Mauern im Gürtel trugen. In die Klinge sind Runen gegen die Geister Angmars geätzt."
+effects = [
+  ["Sofort", "Keen (Piercing Blow schon bei 9 auf dem Feat die)"],
+  ["Gabe der Wacht", "Bane: Untote"],
+]
+
+[cards.bogen]
+name = "Bogen der Wacht"
+kind = "Famous Weapon · Bow · númenórische Arbeit"
+stats = "Damage 3 · Injury 14 · Load 2"
+text = "Ein Eibenbogen von númenórischen Bogenmachern, mit einer Sehne, die nie ausfranst. Mit diesen Bögen wurde einst die Rampe gehalten."
+effects = [
+  ["Sofort", "Keen (Piercing Blow schon bei 9 auf dem Feat die)"],
+  ["Gabe der Wacht", "Fell (Injury +2)"],
+]
+
+[cards.hemd]
+name = "Panzerhemd der Wacht"
+kind = "Famous Armour · Coat of mail · númenórische Arbeit"
+stats = "Protection 4d · Load 12"
+stats_note = "vor Cunning Make"
+text = "Ein langes Hemd aus feinen númenórischen Ringen, leicht wie Leder und noch immer blank."
+effects = [
+  ["Sofort", "Cunning Make (Load −2)"],
+  ["Gabe der Wacht", "Close-fitting (+2 auf Protection-Würfe)"],
+]
