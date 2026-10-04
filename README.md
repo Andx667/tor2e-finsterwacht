@@ -74,8 +74,8 @@ Der Build erzeugt zwei PDFs aus demselben Text:
   innen, Notizspalte, Kapitelname und Seitenzahl außen. Alle Seiten sind A4 hoch: Karten
   und Handouts stehen um 90° gedreht (Kopf links) und auf 93 % verkleinert. Die
   Gegenstandskarten bleiben in Originalgröße, stehen aber 2 × 3 statt 3 × 2 je Seite,
-  damit der Bundsteg frei bleibt. Am Ende füllen leere Seiten auf eine durch 4 teilbare
-  Seitenzahl auf.
+  damit der Bundsteg frei bleibt. Am Ende füllen Notizseiten (liniert wie die
+  Notizspalte) auf eine durch 4 teilbare Seitenzahl auf.
 
 Die Buchfassung enthält Einzelseiten in Lesereihenfolge. Für Klebe- oder Spiralbindung
 einfach doppelseitig drucken; für gefalzte Bogen (Heft, Fadenbindung) im Druckdialog

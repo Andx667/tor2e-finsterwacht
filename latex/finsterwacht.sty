@@ -101,7 +101,7 @@
 \newif\iffw@first
 \newif\iffw@started
 \gdef\fwcurrent{}
-\gdef\fwpagekind{normal}   % normal | lm (Loremaster-Karte, quer) | handout (quer) | blank (Buch: ohne Fußzeile)
+\gdef\fwpagekind{normal}   % normal | lm (Loremaster-Karte, quer) | handout (quer) | blank (Buch: ohne Fußzeile) | fill (Buch: Notizseite)
 % Buchfassung: left/right heißen innen/außen; auf linken (geraden) Seiten ist alles gespiegelt
 \newif\iffw@left
 \newcommand\fw@setside{\fw@leftfalse\iffw@book\ifodd\c@page\else\fw@lefttrue\fi\fi}
@@ -137,10 +137,17 @@
 \newcommand\fw@at[3]{\put(#1,#2){\makebox(0,0)[#3]}}
 \newcommand\fw@footerfont{\fontsize{8}{10}\selectfont\color{fwgrey}}
 
+\newcommand\fw@noteslines[2]{% Zeilen-x, Zeilenbreite
+  \put(#1,276){\makebox(0,0)[lb]{\fontsize{9}{10}\selectfont\scshape\addfontfeature{LetterSpace=8}\color{fwgrey}Notizen}}%
+  {\color{fwnoterule}\linethickness{0.25pt}\multiput(#1,266)(0,-7){36}{\line(1,0){#2}}}}
 \newcommand\fw@notescolumn[2]{% Trennlinie-x, Zeilen-x
   \put(#1,18){\color{fwnotesep}\linethickness{0.6pt}\line(0,1){263}}%
-  \put(#2,276){\makebox(0,0)[lb]{\fontsize{9}{10}\selectfont\scshape\addfontfeature{LetterSpace=8}\color{fwgrey}Notizen}}%
-  {\color{fwnoterule}\linethickness{0.25pt}\multiput(#2,266)(0,-7){36}{\line(1,0){50}}}}
+  \fw@noteslines{#2}{50}}
+% Buchfassung: ganze Notizseite (Füllseiten am Ende), Bundsteg innen
+\newcommand\fw@notespage{%
+  \fw@setside
+  \edef\fw@notesx{\iffw@left 14\else 26\fi}%
+  \fw@noteslines{\fw@notesx}{170}}
 
 \newcommand\fw@headtext[2]{\fontsize{8}{10}\selectfont\scshape\addfontfeature{LetterSpace=12}\color{#1}#2}
 \newcommand\fw@runninghead{% Kapitel steht außen
@@ -189,11 +196,12 @@
 \AddToShipoutPictureBG{%
   \setlength\unitlength{1mm}%
   \ifdefstring{\fwpagekind}{blank}{}{%
-    \iffw@book
-      \ifdefstring{\fwpagekind}{normal}{\fw@bgportrait}{\fw@rotated{\fw@bglandscape}}%
-    \else
-      \ifdim\paperwidth>\paperheight\fw@bglandscape\else\fw@bgportrait\fi
-    \fi}%
+    \ifdefstring{\fwpagekind}{fill}{\fw@notespage}{%
+      \iffw@book
+        \ifdefstring{\fwpagekind}{normal}{\fw@bgportrait}{\fw@rotated{\fw@bglandscape}}%
+      \else
+        \ifdim\paperwidth>\paperheight\fw@bglandscape\else\fw@bgportrait\fi
+      \fi}}%
   \global\fw@firstfalse}
 
 % ---------------------------------------------------------------- Kästen
@@ -386,11 +394,11 @@
   \endgroup
   \clearpage\null\clearpage
   \gdef\fwpagekind{normal}}
-% Leere Seiten anhängen, bis die Seitenzahl durch 4 teilbar ist (ganze Bogen)
+% Notizseiten anhängen, bis die Seitenzahl durch 4 teilbar ist (ganze Bogen)
 \newcommand\fw@fill{%
   \@tempcnta=\c@page \advance\@tempcnta\m@ne
   \@tempcntb=\@tempcnta \divide\@tempcntb 4 \multiply\@tempcntb 4
   \ifnum\@tempcnta>\@tempcntb \null\clearpage\expandafter\fw@fill\fi}
-\newcommand\fwfillsheets{\clearpage\gdef\fwpagekind{blank}\fw@fill}
+\newcommand\fwfillsheets{\clearpage\gdef\fwpagekind{fill}\fw@fill}
 
 \endinput
