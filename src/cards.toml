@@ -22,7 +22,7 @@ text = "Thorondirs eigene Klinge, älter als die Festung, aus Númenor mitgebrac
 effects = [
   ["Sofort", "Keen (Piercing Blow schon bei 9 auf dem Feat die)"],
   ["Gabe der Wacht", "Fell (Injury +2); Bane: Orks"],
-  ["Besonderheit", "Leuchtet schwach, wenn Orks im Umkreis einer Meile sind."],
+  ["Besonderheit", "Leuchtet schwach bläulich, wenn Orks nahe sind."],
 ]
 
 [cards.schild]
