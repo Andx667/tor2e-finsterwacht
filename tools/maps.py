@@ -294,11 +294,6 @@ def finsterwacht():
     s += f'<circle cx="452" cy="122" r="24" fill="#d9c69e" stroke="{INK}" stroke-width="2.2"/><circle cx="452" cy="122" r="11" fill="none" stroke="{INK}" stroke-width="1.2"/>'
     s += path("M444 114 l16 16 M460 114 l-16 16", 1.2)
     s += num(498, 112, 3) + label(520, 100, "Signalturm", 20, anchor="start")
-    # hall of names in the east wall
-    s += path(rough([(566, 228), (600, 228), (600, 262), (566, 262)], closed=True, jit=0.6, seed=250), 1.8, fill="#d9c69e")
-    for k in range(3):
-        s += path(f"M572 {236 + k * 9} L594 {236 + k * 9}", 0.7)
-    s += num(548, 245, 4) + label(556, 292, "Halle der Namen" if GM else "eine Kammer in der Mauer", 19, anchor="end")
     # fallen keep: broken square + rubble scribble + stair down
     s += path(rough([(380, 175), (470, 175), (470, 225)], jit=1.2, seed=260), 3)
     s += path(rough([(380, 175), (380, 238), (405, 238)], jit=1.2, seed=261), 3)
@@ -307,20 +302,20 @@ def finsterwacht():
     s += path(rough(scr, jit=1, seg=40, seed=263), 0.8, op=0.8)
     for k in range(5):
         s += path(f"M{432 + k * 5} {244 + k * 4} l14 0", 1.2)
-    s += num(356, 205, 5) + label(428, 164, "eingestürzter Bergfried", 18, anchor="middle")
+    s += num(356, 205, 4) + label(428, 164, "eingestürzter Bergfried", 18, anchor="middle")
     if GM:
       s += path(rough([(462, 262), (540, 214), (634, 202)], jit=1, seed=270), 1, dash="4 4", col=RED)
-      s += num(650, 200, 6) + label(668, 205, "Treppe hinab", 16, anchor="start") + label(668, 224, "zur tiefen Tür &amp;", 16, anchor="start") + label(668, 243, "zur Waffenkammer", 16, anchor="start")
+      s += num(650, 200, 5) + label(668, 205, "Treppe hinab", 16, anchor="start") + label(668, 224, "zur tiefen Tür &amp;", 16, anchor="start") + label(668, 243, "zur Waffenkammer", 16, anchor="start")
       s += label(668, 261, "(unter der Erde)", 14, anchor="start", col="#6b4a24")
     # hidden postern on the west cliff
     if GM:
         s += path(rough([(262, 262), (238, 270), (222, 292), (204, 300), (190, 326), (170, 340)], jit=0.8, seed=280), 1.1, dash="3 4", col=RED)
         s += label(112, 364, "verborgene Ausfallpforte", 18, col=RED) + label(112, 382, "(Ziegenpfad)", 15, col="#6b4a24")
-    # orcs come up the valley
-    for k, (x, y) in enumerate([(700, 560), (620, 545), (540, 552)] if GM else []):
-        s += path(rough([(x + 40, y + 6), (x, y)], jit=0.6, seed=290 + k), 1.4, col=RED)
-        s += path(f"M{x} {y} l9 -5 M{x} {y} l9 6", 1.4, col=RED)
-    s += label(610, 578, "das Tal · hier kommen die Orks", 18, col=RED) if GM else label(620, 578, "das Tal", 20)
+    # orcs come up the valley from the south
+    for k, (x, y) in enumerate([(690, 548), (610, 542), (530, 548)] if GM else []):
+        s += path(rough([(x + 4, y + 40), (x, y)], jit=0.6, seed=290 + k), 1.4, col=RED)
+        s += path(f"M{x} {y} l-5 9 M{x} {y} l6 9", 1.4, col=RED)
+    s += label(610, 528, "das Tal · die Orks kommen von Süden", 18, col=RED) if GM else label(620, 578, "das Tal", 20)
     # direction to the next beacon hill
     s += path(rough([(110, 470), (40, 540)], jit=0.8, seed=300), 1.3, dash="6 5")
     s += path("M40 540 l4 -12 M40 540 l12 -4", 1.3)
@@ -338,7 +333,7 @@ def finsterwacht():
 def beacons():
     s = ""
     MI = 8.5                       # map units per mile
-    B = [(232, 432), (318, 392), (398, 344), (472, 302), (548, 258), (622, 214), (694, 158)]
+    B = [(334, 372), (454, 302), (574, 232), (694, 158)]
     # Lake Evendim (west edge)
     lake = blob(70, 210, 95, 60, irr=0.12, n=30, seed=401)
     s += path(rough(lake, closed=True, jit=1.5, seed=402), 1.6, fill="#c9c3a4", op=0.9)
@@ -358,7 +353,9 @@ def beacons():
         t = rr.random()
         bx = 200 + t * 520 + rr.uniform(-25, 25)
         by = 470 - t * 330 + rr.uniform(-75, 75)
-        if min(math.hypot(bx - x, by - y) for x, y in B) < 26:
+        if min(min(math.hypot(bx - x, by - y), math.hypot(bx - x - 20, by - y - 20), math.hypot(bx - x + 24, by - y - 8)) for x, y in B) < 28:
+            continue
+        if 530 < bx < 680 and 95 < by < 160:      # keep the Finsterwacht label clear
             continue
         w_ = rr.uniform(10, 18)
         s += path(rough([(bx - w_, by + 5), (bx, by - 8), (bx + w_, by + 5)], jit=0.7, seg=6, seed=430 + k), 1.1, op=0.85)
@@ -375,25 +372,25 @@ def beacons():
     for k, (x, y) in enumerate([(178, 446), (194, 440), (204, 452)]):
         s += path(rough([(x - 5, y + 4), (x - 5, y - 4), (x + 5, y - 4), (x + 5, y + 4)], jit=0.5, seg=4, seed=470 + k), 1.1)
     s += label(150, 462, "Fornost Erain", 22, anchor="end") + label(150, 480, "(Deadmen's Dike)", 15, anchor="end", col="#6b4a24")
-    # the beacon line: dashed path from Fornost through the seven marks
+    # the beacon line: dashed path from Fornost through the four marks
     pts = [(214, 440)] + B
     s += path(rough(pts, jit=1.2, seed=480), 1.5, dash="8 6")
-    roman = ["I", "II", "III", "IV", "V", "VI", "VII"]
+    roman = ["I", "II", "III", "IV"]
     for k, (x, y) in enumerate(B[:-1]):
         s += path(rough([(x - 10, y + 8), (x, y - 10), (x + 10, y + 8)], closed=True, jit=0.6, seg=6, seed=490 + k), 1.5, fill="#cdb78c")
         s += f'<circle cx="{x}" cy="{y - 15}" r="4" fill="url(#lamp)"/>'
         s += f'<text x="{x + 14}" y="{y + 24}" font-family="TeX Gyre Pagella" font-size="15" font-weight="700" fill="{RED}" text-anchor="start">{roman[k]}</text>'
-    # VII: the Finsterwacht, tower and star
+    # IV: the Finsterwacht, tower and star
     x, y = B[-1]
     s += path(rough(blob(x, y + 6, 24, 15, irr=0.12, seed=500), closed=True, jit=0.8, seed=501), 1.5, fill="#d9c69e")
     s += path(rough([(x - 6, y + 2), (x - 6, y - 22), (x + 6, y - 22), (x + 6, y + 2)], jit=0.5, seg=6, seed=502), 1.6, fill="#efe2c4")
     star = "M{0} {1} l2.6 6.2 6.6 .5 -5 4.3 1.6 6.4 -5.8 -3.5 -5.8 3.5 1.6 -6.4 -5 -4.3 6.6 -.5z".format(x, y - 46)
     s += path(star, 0.8, col=RED, fill=RED, op=0.9)
-    s += f'<text x="{x + 28}" y="{y + 30}" font-family="TeX Gyre Pagella" font-size="15" font-weight="700" fill="{RED}" text-anchor="start">VII</text>'
-    s += label(x - 36, y - 34, "das siebte Zeichen:", 16, anchor="end", col="#6b4a24") + label(x - 36, y - 14, "die Finsterwacht?", 20, anchor="end", col=RED)
+    s += f'<text x="{x + 28}" y="{y + 30}" font-family="TeX Gyre Pagella" font-size="15" font-weight="700" fill="{RED}" text-anchor="start">IV</text>'
+    s += label(x - 36, y - 34, "das vierte Zeichen:", 16, anchor="end", col="#6b4a24") + label(x - 36, y - 14, "die Finsterwacht?", 20, anchor="end", col=RED)
     s += label(286, 340, "jedes Feuer in Sichtweite des nächsten", 16, rot=-28, col="#6b4a24")
     # rough camp marks: a 3-4 day march at a hard pace
-    for k, (x, y) in enumerate([(356, 372), (510, 284), (640, 196)]):
+    for k, (x, y) in enumerate([(310, 374), (430, 304), (550, 234)]):
         s += f'<path d="M{x - 5} {y + 12} L{x} {y + 4} L{x + 5} {y + 12} Z" fill="{INK}" opacity="0.75"/>'
     s += label(406, 400, "Lager: je etwa ein Tagesmarsch", 15, anchor="start", col="#6b4a24")
     # scale bar
@@ -404,7 +401,7 @@ def beacons():
         s += label(x0 + m * MI, y0 + 22, f"{m}", 15)
     s += path(f"M{x0} {y0} L{x0 + 10 * MI} {y0}", 4, op=0.8)
     s += label(x0 + 20 * MI + 14, y0 + 5, "Meilen", 16, anchor="start")
-    s += label(x0 + 10 * MI, y0 - 24, "etwa 60 Meilen von Fornost bis zum siebten Zeichen", 15, col="#6b4a24")
+    s += label(x0 + 10 * MI, y0 - 24, "etwa 60 Meilen von Fornost bis zum vierten Zeichen", 15, col="#6b4a24")
     s += compass(735, 470)
     s += cartouche(28, 24, "Signalfeuer-Linie", "aus der Halle der Schriftrollen", 270)
     return frame(s, 37)

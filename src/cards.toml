@@ -38,8 +38,8 @@ effects = [
 
 [cards.horn]
 name = "Das Horn der Finsterwacht"
-kind = "Marvellous Artefact · númenórische Arbeit"
-text = "Ein silberbeschlagenes Horn aus Númenor, das einst die Besatzung auf die Mauern rief."
+kind = "Marvellous Artefact · Arbeit der Dúnedain"
+text = "Ein silberbeschlagenes Horn, von den Dúnedain des Nordens gefertigt, das einst die Besatzung auf die Mauern rief."
 effects = [
   ["Sofort", "Ruf der Wacht – einmal pro Nacht lässt ein Stoß geringere Gegner wanken."],
   ["Gabe der Wacht", "Blessings: Awe, Battle"],

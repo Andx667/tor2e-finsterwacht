@@ -11,15 +11,15 @@ Die Gefährten folgen einer zerbrochenen Klinge von Bree zu den Ruinen von Forno
 **Aufbau:**
 
 1. [**Bree**](#teil1) – der Aufhänger: Lady Gilraen zeigt den Gefährten eine zerbrochene Klinge des Nordkönigreichs und bittet sie herauszufinden, woher sie stammt; auch jemand anderes hat es auf sie abgesehen.
-2. [**Fornost Erain**](#teil2) – nach einer einwöchigen Reise über den Greenway (*Journey*-Regeln von TOR 2e): die Erkundung von Deadmen's Dike nach Aufzeichnungen über die Finsterwacht und dem Wort, das ihre Waffenkammer öffnet.
-3. [**Die Finsterwacht**](#teil3) – nach einer harten Reise entlang der Signalfeuer-Linie hinauf in die North Downs: die verbrannte Festung, Thorondirs Geist und die Waffenkammer.
+2. [**Fornost Erain**](#teil2) – nach einer einwöchigen Reise über den Greenway (*Journey*-Regeln von TOR 2e): die Erkundung von Deadmen's Dike nach Aufzeichnungen über die Finsterwacht und den Worten, die ihre Waffenkammer öffnen.
+3. [**Die Finsterwacht**](#teil3) – nach einer harten Reise entlang der Signalfeuer-Linie hinauf in die North Downs: die verbrannte Festung, Thorondirs Gebeine an der tiefen Tür und die Waffenkammer.
 4. [**Die Schlacht**](#teil4) – der Höhepunkt: Skarbaks Orks greifen in drei Wellen an, und die Gefährten müssen die Wacht eine Nacht lang halten.
 
 Jede Etappe endet an einer Station mit einer zentralen Entdeckung; die Spur der Orks schließt erst zu den Gefährten auf, wenn die Waffenkammer offen ist.
 
 ## Hintergrund: die Finsterwacht {#hintergrund .nonotes}
 
-Die Finsterwacht wurde um TA 1300 von den Königen von Arthedain errichtet, als der Witch-king Angmar gründete, und fiel im letzten Winter des Nordkönigreichs, TA 1974. Ihre Waffenkammer blieb erhalten, weil ihr Hauptmann sie mit einem Wort der Macht versiegelte und niemand überlebte, der das Wort kannte.
+Die Finsterwacht wurde um TA 1300 von den Königen von Arthedain errichtet, als der Witch-king Angmar gründete, und fiel im letzten Winter des Nordkönigreichs, TA 1974. Ihre Waffenkammer blieb erhalten, weil ihr Hauptmann sie mit dem Eid der Wacht versiegelte, der Bergfried über der Treppe einstürzte und niemand überlebte, der davon wusste.
 
 ### Gründung
 
@@ -30,16 +30,17 @@ Die Finsterwacht wurde um TA 1300 von den Königen von Arthedain errichtet, als 
 
 ### Der Fall (TA 1974)
 
-Beim großen Winterangriff, der Arthedain beendete, wurde die Finsterwacht zuerst angegriffen, um Fornost blind zu machen. Doch die Besatzung entzündete in der ersten Nacht das Signalfeuer, und Hügel um Hügel trug die Kette die Warnung nach Fornost: Die Wacht hatte ihre Pflicht getan. Hauptmann **Thorondir** hielt sie drei Nächte lang, ohne zu wissen, dass Angmars Hauptheer in dieser Zeit Fornost überrannte. Fiel einer der Krieger, die eine der berühmten Waffen der Wacht trugen, brachten seine Gefährten die Waffe hinab in die Kammer unter dem Bergfried, damit sie nicht in die Hände Angmars fiel. Als klar wurde, dass die Mauern nicht mehr lange halten würden, schickte Thorondir seinen letzten Reiter mit einem Brief an den König nach Süden. In der Nacht, in der das Tor brach, nahm er die Schlüssel der Waffenkammer mit hinab, versiegelte die Tür mit dem Wort *Estel* („Hoffnung“) und starb auf der Treppe. Die Orks brannten den Bergfried nieder, und er stürzte über der Treppe ein.
+Beim großen Winterangriff, der Arthedain beendete, wurde die Finsterwacht zuerst angegriffen, um Fornost blind zu machen. Doch die Besatzung entzündete in der ersten Nacht das Signalfeuer, und Hügel um Hügel trug die Kette die Warnung nach Fornost: Die Wacht hatte ihre Pflicht getan. Hauptmann **Thorondir** hielt sie drei Nächte lang, ohne zu wissen, dass Angmars Hauptheer in dieser Zeit Fornost überrannte. Fiel einer der Krieger, die eine der berühmten Waffen der Wacht trugen, brachten seine Gefährten die Waffe hinab in die Kammer unter dem Bergfried, damit sie nicht in die Hände Angmars fiel. Als klar wurde, dass die Mauern nicht mehr lange halten würden, schickte Thorondir seinen letzten Reiter mit einem Brief an den König nach Süden. In der Nacht, in der das Tor brach, nahm er die Schlüssel der Waffenkammer mit hinab, versiegelte die Tür mit dem Eid der Wacht, *„Für die Wacht, gegen den Norden“*, und starb neben ihr, das Schwert in den Händen. Die Orks brannten den Bergfried nieder, und er stürzte über der Treppe ein.
 
 ### Warum die Waffenkammer nie geplündert wurde
 
-- **Das Siegel:** Die Tür gehorcht nur dem Wort, gesprochen von jemandem, der es ernst meint.
+- **Das Siegel:** Die Tür gehorcht nur dem Eid der Wacht, gesprochen von jemandem, der ihn ernst meint.
+- **Der Schutt:** Der eingestürzte Bergfried begräbt die Treppe. Wer die Ruine durchsucht, findet verbrannte Mauern und Gebeine, aber keinen Weg hinab.
 - **Übler Ruf:** Die Rangers kennen in den North Downs eine verbrannte Ruine von bösem Ruf und meiden sie. Dass es die Finsterwacht ist und ihre Waffenkammer überdauert hat, weiß niemand, denn Thorondirs Brief erreichte den König nie (siehe Teil 2, Ort 2).
 
 ### Was die Gefährten noch nicht wissen
 
-Die Orks vom **Mount Gram** erzählen sich von „dem Hügel, wo die Schwerter brennen“, und ihr Häuptling **Skarbak** hat beschlossen, dass die Klingen gefunden und zerstört werden müssen, bevor Menschen sie finden. Doch die Festung selbst findet er nicht: Seit Thorondir die tiefe Tür versiegelte, verbirgt das Siegel den Hügel vor den Dienern des Feindes. Deshalb hat er einen bezahlten Spitzel in Bree, der jeden meldet, der sich für alte Waffen interessiert.
+Die Orks vom **Mount Gram** erzählen sich von „dem Hügel, wo die Schwerter brennen“, und ihr Häuptling **Skarbak** hat beschlossen, dass die Klingen gefunden und zerstört werden müssen, bevor Menschen sie finden. Seine Orks haben die Ruine der Finsterwacht durchwühlt und nichts gefunden: Der Schutt des Bergfrieds verbirgt die Treppe, und von der tiefen Tür wissen sie nichts. Deshalb hat er einen bezahlten Spitzel in Bree, der jeden meldet, der sich für alte Waffen interessiert. Wer nach den Klingen sucht, soll ihn zu ihnen führen.
 
 ## Zeitleiste {#zeitleiste .nonotes}
 
@@ -65,7 +66,7 @@ Das Abenteuer dauert etwa 25 Tage, von Mitte Astron (April) bis Anfang Thrimidge
 | 4–10 | 15.–21. Astron | Der Greenway | Reise nach Norden, etwa 100 Meilen |
 | 11–14 | 22.–25. Astron | Fornost Erain | Durchsuchung der Ruinen, der Brief des Hauptmanns |
 | 15–19 | 26.–30. Astron | North Downs | Harte Reise entlang der alten Signalfeuer-Linie |
-| 20 | 1. Thrimidge | Die Finsterwacht | Ankunft, Erkundung, die Halle der Namen, Brennholz für das Signalfeuer |
+| 20 | 1. Thrimidge | Die Finsterwacht | Ankunft, Erkundung, Brennholz für das Signalfeuer |
 | 21 | 2. Thrimidge | Die Finsterwacht | Räumen des Bergfrieds; die Tür öffnet sich am späten Nachmittag; die Orks kommen in der Dämmerung |
 | 21–22 | 2.–3. Thrimidge | Die Finsterwacht | Nachtschlacht; die Rangers kommen im Morgengrauen, wenn das Signalfeuer brannte |
 | 23–30 | Anfang Thrimidge | Rückkehr | Zurück nach Bree oder in ein Lager der Rangers |
@@ -95,7 +96,7 @@ Gilraen erzählt den Gefährten, was sie weiß:
 
 Gilraen bittet die Gefährten herauszufinden, woher die Klinge stammt, zu erkunden, ob weitere Waffen der Wacht erhalten sind, und ihr Nachricht zu bringen. Sie leiht ihnen die zerbrochene Klinge als Erkennungszeichen für Halbarads Rangers und bietet Proviant, ein Pony und ihren Dank. Ihr eigentlicher Lohn ist ihre Freundschaft.
 
-**Hinweis für den Loremaster:** Gilraens Sohn wuchs in Rivendell unter dem Namen *Estel* auf, „Hoffnung“. Sie gibt keinen Hinweis auf das Wort, das die Waffenkammer öffnet. Doch wenn die Spieler Thorondirs Brief in Fornost lesen, erinnert sich vielleicht jemand an sie. Lass sie diese Verbindung selbst ziehen.
+**Hinweis für den Loremaster:** Die Inschrift auf der Parierstange ist der Eid der Wacht, und er öffnet später die Waffenkammer (Teil 3). Gilraen weiß das nicht. Lies die Worte hier deutlich vor, aber betone sie nicht weiter. Wenn die Spieler Thorondirs Brief in Fornost lesen, erinnert sich vielleicht jemand an die Klinge. Lass sie diese Verbindung selbst ziehen.
 
 ### Ned Appledore
 
@@ -153,9 +154,9 @@ Die Bree-Leute nennen den Hügel Deadmen's Dike und sagen, hier gingen die Toten
 ### Orte und Hinweise
 
 1. **Die Außenmauern – die Lichter.** Nachts wandern Laternen durch die Ruinen. Sie gehören vier Plünderern aus dem Bree-land unter **Wat Ferny**, die nach königlichem Gold graben. Man kann mit ihnen verhandeln, sie verscheuchen oder bekämpfen (wie Banditen behandeln). Wat hat am Nordhang „Orkspuren“ gesehen und will nicht hier sein, wenn sie kommen. Ein Licht, niedrig und bleich, gehört niemandem. Lass es unerklärt. Überspringbar: Lass die Plünderer weg und behalte nur das bleiche Licht; die Orkspuren kann dann der *Scout* der Gefährten selbst finden.
-2. **Der Thronsaal Arveduis – der Reiter.** Eine lange Halle, deren Pfeiler bis unter die Decke mit Schnitzwerk bedeckt sind, in einer Kunst, die längst verloren ist. Am Kopfende steht der Thron, als hätten ihn die Jahrhunderte nicht berührt: schwarzer Marmor mit dem Bild eines einzelnen, vielstrahligen Sterns. Nur das hintere Ende ist eingestürzt; dort, am Rand des Schutts, fand Ned das Schwert. Tiefer unter dem Schutt liegt das Skelett von Thorondirs letztem Reiter, noch im Kettenhemd. Er erreichte Fornost lebend, verwundet, doch knapp zu spät: Die Stadt war gefallen, der König fort. Er starb hier, als das brennende Dach herabstürzte; die zerbrochene Klinge aus Bree war sein Schwert. An seinem Finger: ein Ring mit dem Zeichen von Turm und Stern, der später in der Finsterwacht wichtig wird (siehe Teil 3, Der Geist Thorondirs). In einer Bleiröhre an seinem Gürtel: der letzte Brief des Hauptmanns (siehe unten). Den Reiter unter dem Schutt zu finden erfordert einen *Scan*-Wurf.
-3. **Die Halle der Schriftrollen – die Karte.** Steinregale, die Schriftrollen längst verbrannt. An einer Wand ist noch eine eingemeißelte Karte der nördlichen Signalfeuer-Kette erhalten: sieben Zeichen, die von Fornost nach Nordosten führen, das letzte mit Turm und Stern markiert. Sie zu lesen erfordert *Lore* oder *Travel*, ein Dúnadan-Held liest sie ohne Wurf; wer sie abzeichnet, erhält auf der Reise zur Finsterwacht 1 zusätzlichen *Success die* auf den *Travel*-Wurf (siehe Teil 3).
-4. **Die Gräber der Könige.** Kalt, still, versiegelt. Gefährten, die nichts anrühren, spüren einen seltsamen Segen (1 *Hope* zurück). Wer ein Grab plündert, erhält *Shadow*, und die *Eye Awareness* steigt. Außerdem verwirken die Gefährten damit die Gabe der Wacht: Die besonderen Kräfte der Waffen in der Finsterwacht erwachen nur für jene, die Arnor nicht entehrt haben (Hausregel, Einzelheiten in Teil 3, Die Waffenkammer). Überspringbar.
+2. **Der Thronsaal Arveduis – der Reiter.** Eine lange Halle, deren Pfeiler bis unter die Decke mit Schnitzwerk bedeckt sind, in einer Kunst, die längst verloren ist. Am Kopfende steht der Thron, als hätten ihn die Jahrhunderte nicht berührt: schwarzer Marmor mit dem Bild eines einzelnen, vielstrahligen Sterns. Nur das hintere Ende ist eingestürzt; dort, am Rand des Schutts, fand Ned das Schwert. Tiefer unter dem Schutt liegt das Skelett von Thorondirs letztem Reiter, noch im Kettenhemd. Er erreichte Fornost lebend, verwundet, doch knapp zu spät: Die Stadt war gefallen, der König fort. Er starb hier, als das brennende Dach herabstürzte; die zerbrochene Klinge aus Bree war sein Schwert. An seinem Finger: ein Ring mit dem Zeichen von Turm und Stern, der später in der Finsterwacht wichtig wird (siehe Teil 3, Der Hauptmann an der Tür). In einer Bleiröhre an seinem Gürtel: der letzte Brief des Hauptmanns (siehe unten). Den Reiter unter dem Schutt zu finden erfordert einen *Scan*-Wurf.
+3. **Die Halle der Schriftrollen – die Karte.** Steinregale, die Schriftrollen längst verbrannt. An einer Wand ist noch eine eingemeißelte Karte der nördlichen Signalfeuer-Kette erhalten: drei Signalfeuer, die von Fornost nach Nordosten führen, und dahinter ein viertes Zeichen, mit Turm und Stern markiert. Sie zu lesen erfordert *Lore* oder *Travel*, ein Dúnadan-Held liest sie ohne Wurf; wer sie abzeichnet, erhält auf der Reise zur Finsterwacht 1 zusätzlichen *Success die* auf den *Travel*-Wurf (siehe Teil 3).
+4. **Die Gräber der Könige.** Kalt, still, versiegelt. Gefährten, die nichts anrühren, spüren einen seltsamen Segen (1 *Hope* zurück). Wer ein Grab plündert, erhält *Shadow*, und die *Eye Awareness* steigt. Außerdem verwirken die Gefährten damit die Gabe der Wacht: Die besonderen Kräfte der Waffen in der Finsterwacht bleiben jenen verschlossen, die Arnor entehrt haben (Hausregel, Einzelheiten in Teil 3, Die Waffenkammer). Überspringbar.
 
 ### Thorondirs letzter Brief (Handout)
 
@@ -163,12 +164,12 @@ Die Bree-Leute nennen den Hügel Deadmen's Dike und sagen, hier gingen die Toten
 An den König zu Fornost, von Thorondir, Hauptmann der Finsterwacht.\
 Der Feind ist mit großer Macht gekommen. Wir halten die Mauern, doch nicht mehr lange.\
 Fällt die Wacht, so verschließe ich die tiefe Tür, und keiner des Feindes soll sie durchschreiten.\
-Nur wer in Hoffnung kommt, soll sie wieder öffnen.\
+Nur wer den Eid der Wacht spricht, soll sie wieder öffnen.\
 Haltet Ausschau nach unserem Feuer. Brennt es nicht, so sind wir nicht mehr.\
 [Thorondir]{.sig}
 :::
 
-Das Schlüsselwort ist **Estel** („Hoffnung“ auf Sindarin). Lass die Spieler es herausfinden: mit einem *Riddle*- oder *Lore*-Wurf (ein Dúnadan- oder Elbenheld kennt das Wort ohne Wurf), indem sie Halbarad fragen, oder indem sie an der Tür „Hoffnung“ in irgendeiner Sprache sprechen: Dem Siegel kommt es auf die Bedeutung an, nicht auf die Zunge.
+Die Worte, die die Tür öffnen, sind der **Eid der Wacht**: *„Für die Wacht, gegen den Norden.“* Sie stehen auf der Parierstange der zerbrochenen Klinge aus Bree. Lass die Spieler es herausfinden: indem sie die Inschrift wiedererkennen, mit einem *Riddle*- oder *Lore*-Wurf (ein Dúnadan-Held kennt den Eid aus den Liedern ohne Wurf) oder indem sie Halbarad fragen. Dem Siegel kommt es auf die Bedeutung an, nicht auf die Zunge.
 
 ### Mögliche Begegnung
 
@@ -184,13 +185,13 @@ Die letzte Etappe ist kurz, aber hart, und die Festung selbst soll sich anfühle
 
 Von Fornost aus folgen die Gefährten der alten Signalfeuer-Linie nach Nordosten hinauf in die hohen, kahlen North Downs. Erhöhe das *Peril rating*: kalter Wind, Spätschnee, kein Unterschlupf. Haben die Gefährten die Karte aus der Halle der Schriftrollen abgezeichnet, erhalten sie auf dieser Reise 1 zusätzlichen *Success die* auf den *Travel*-Wurf.
 
-![Handout für die Spieler: die Abschrift der Gefährten von der eingemeißelten Karte in der Halle der Schriftrollen (Teil 2, Ort 3). Austeilen, wenn sie sie abzeichnen. Etwa 60 Meilen von Fornost bis zum siebten Zeichen.](assets/maps/map-beacons-players-de.jpg){.map}
+![Handout für die Spieler: die Abschrift der Gefährten von der eingemeißelten Karte in der Halle der Schriftrollen (Teil 2, Ort 3). Austeilen, wenn sie sie abzeichnen. Etwa 60 Meilen von Fornost bis zum vierten Zeichen.](assets/maps/map-beacons-players-de.jpg){.map}
 
 - **Nebel auf den Höhen** (*Ill Choices*): Dichter Nebel zieht über die Downs, und die nächste Signalfeuer-Kuppe verschwindet. Irgendwo im Grau klingt etwas wie ein ferner Ruf – ein Schafhirte, ein Ork oder nur der Wind. Die Gefährten müssen entscheiden: warten, bis sich der Nebel hebt (ein halber Tag verloren, die Orks holen auf), oder nach Gefühl weitergehen (ein misslungener *Explore*-Wurf führt sie auf einen falschen Grat, zusätzliche *Fatigue*). Überspringbar.
 - **Spätschnee** (*Mishap*): ein plötzlicher Frühjahrssturm auf den Höhen. Zusätzliche *Fatigue*, außer der *Scout* findet mit *Explore* den Windschatten eines Signalfeuer-Steinhaufens. Überspringbar.
 - **Trollspuren** (*Ill Choices*): riesige Abdrücke und ein zerrissenes, angenagtes Schaf. In der Nähe lebt ein Hügeltroll, und Skarbak bringt ihn vielleicht zur Schlacht mit. Überspringbar; der Troll ist dann in Welle 3 eine Überraschung.
 - **Das Grab der Patrouille** (*Joyful Sight* oder *Despair*): Steine, aufgeschichtet über Gebeinen der Dúnedain, ein verrosteter Helm obenauf. Rangers of the North haben sie vor langer Zeit begraben, und in einen Stein ist ein Wegzeichen der Rangers geschnitten. Die Gefährten sehen, dass die Dúnedain sich noch an diesen Weg erinnern. Überspringbar.
-- **Das Orklager** (*Chance-meeting*): Von einem Grat aus sehen die Gefährten Skarbaks Bande: etwa 15 Orks und ihren Häuptling, einen Tag hinter oder vor ihnen. Wer mit *Stealth* spioniert, erfährt, dass sie „den brennenden Hügel“ suchen und den Weg nicht kennen. Sind die Gefährten unvorsichtig, folgen ihnen die Orks nun. Überspringbar; die Orks tauchen dann einfach zur Schlacht auf.
+- **Das Orklager** (*Chance-meeting*): Von einem Grat aus sehen die Gefährten Skarbaks Bande: etwa 15 Orks und ihren Häuptling, einen Tag hinter oder vor ihnen. Wer mit *Stealth* spioniert, erfährt, dass sie „den brennenden Hügel“ längst durchwühlt und nichts gefunden haben; nun warten sie darauf, dass die Gefährten ihnen zeigen, wo die Klingen liegen. Sind die Gefährten unvorsichtig, folgen ihnen die Orks nun. Überspringbar; die Orks tauchen dann einfach zur Schlacht auf.
 
 ### Die Festung
 
@@ -201,30 +202,27 @@ Die Finsterwacht steht auf einem Felssporn, der auf drei Seiten steil abfällt. 
 1. **Das zerbrochene Tor.** Die Torflügel sind fort; eine Bresche in der Mauer daneben ist der einzige andere Weg hinein. Beide Stellen sind in der Schlacht wichtig.
 2. **Der Burghof.** Gebeine von Menschen und Orks unter dem Gras, verrostete Speerspitzen, ein trockener Brunnen. Ein *Battle*-Wurf liest den letzten Kampf: Die Verteidiger zogen sich zum Bergfried zurück. Ein guter *Scan*-Wurf findet hinter Efeu an der Westmauer eine schmale, verschüttete Ausfallpforte; ein Pfad führt von dort die Klippe hinab (rot gestrichelt auf der Loremaster-Karte).
 3. **Der Signalturm.** Er steht noch, seine Treppe halb zerbrochen. Die Feuerschale oben enthält noch die Asche des Feuers, mit dem die Besatzung Fornost warnte. Die Gefährten können Brennholz sammeln (ein halber Tag), um es zu entzünden. Brennt es, sieht man das Feuer vom nächsten Signalhügel aus, wo Halbarads Rangers wachen.
-4. **Die Halle der Namen.** Eine Kammer in der Mauer, in die die Verteidiger während der dreitägigen Belagerung den Namen jedes gefallenen Kameraden meißelten, etwa zweihundert Namen. Der letzte, Thorondirs, bricht in der Mitte ab: Jemand, vielleicht der Hauptmann selbst, begann ihn in der letzten Nacht, und das Tor brach, bevor er fertig war. Der Meißel liegt noch auf dem Boden, wo er hinfiel. Ein *Lore*- oder *Riddle*-Wurf verrät, was die unvollendete Inschrift bedeutet, sodass auch Spieler, die es übersehen, die Wahl bekommen. Vollendet ein Held den Namen aus eigenem Antrieb, zeigt das, dass die Gefährten die Festung als Grab ehren und nicht als Schatzkammer. Dieser Held erhält 1 *Hope* zurück, und beim *Council* mit dem Geist an der tiefen Tür bringt die Tat 1 zusätzlichen *Success die* (siehe Der Geist Thorondirs). Überspringbar.
-5. **Der eingestürzte Bergfried.** Ein Haufen verbrannter Balken und Steine. Die Treppe freizuräumen dauert fast einen ganzen Tag (*Athletics*- und *Craft*-Würfe, *Fatigue* bei Misserfolgen). Schlechte Würfe bedeuten hier, dass die Orks früher kommen.
-6. **Die tiefe Tür.** Am Fuß der Treppe sitzen Thorondirs Gebeine im Kettenhemd, das Schwert des Hauptmanns, Tirnaur, über den Knien, vor einer schlichten Steintür mit Turm und Stern. Die Luft ist kalt. Eine Stimme, oder ein Gefühl, fragt: *„Warum kommt ihr?“*
+4. **Der eingestürzte Bergfried.** Ein Haufen verbrannter Balken und Steine. Die Treppe freizuräumen dauert fast einen ganzen Tag (*Athletics*- und *Craft*-Würfe, *Fatigue* bei Misserfolgen). Schlechte Würfe bedeuten hier, dass die Orks früher kommen.
+5. **Die tiefe Tür.** Am Fuß der Treppe steht eine schlichte Steintür mit Turm und Stern. Neben ihr sitzen Thorondirs Gebeine im Kettenhemd, an die Wand gelehnt, beide Hände fest um das Heft seines Schwertes Tirnaur geschlossen. Die Luft ist kalt und still.
 
-### Der Geist Thorondirs
+### Der Hauptmann an der Tür
 
-Spiele dies als *Council* (TOR 2e): Die Gefährten müssen den Hauptmann überzeugen, dass sie in Hoffnung kommen, nicht aus Gier. Empfohlene *Resistance* 3. Passende Fertigkeiten: *Courtesy*, um die Toten zu ehren, *Persuade*, um die eigene Absicht darzulegen, und *Awe*, um sich als würdige Erben zu zeigen. Jedes dieser Zeichen gibt dem Helden, der es vorbringt, bei jedem Wurf dieses *Council* 1 zusätzlichen *Success die*:
+Thorondir starb hier, den Rücken an der Wand, das Schwert in den Händen, und so sitzt er noch nach tausend Jahren. Kein Geist spricht, und nichts greift die Gefährten an. Die Szene prüft allein, wie sie mit einem Toten umgehen.
 
-- **Der Ring des Reiters:** Der Hauptmann erkennt einen der Seinen.
-- **Thorondirs Brief:** sein eigenes Wort, das nie gelesen wurde.
-- **Der vollendete Name** in der Halle der Namen (Ort 4).
-- **Der Eid der Wacht**, wenn ein Held die Worte von der Klinge aus Bree von sich aus spricht: *„Für die Wacht, gegen den Norden!“*
+**Die Tür:** Sie öffnet sich nur dem Eid der Wacht: *„Für die Wacht, gegen den Norden!“* Die Worte stehen auf der Klinge aus Bree, und Thorondirs Brief nennt den Eid als Schlüssel. In welcher Sprache sie gesprochen werden, ist gleich, doch wer sie spricht, muss sie ernst meinen. Kommen die Spieler nicht darauf, zeigt ein *Scan*-Wurf denselben Satz, in den Türsturz gemeißelt und halb unter Ruß verborgen.
 
-**Das Wort:** Die Tür öffnet sich nur dem Wort *Estel*, „Hoffnung“ in irgendeiner Sprache. Kennen die Gefährten es nicht, wiederholt der Geist zuletzt den Satz aus dem Brief: *„Nur wer in Hoffnung kommt …“* Gelingt der *Council*, öffnet sich die Tür in Frieden. Scheitert er, öffnet das Wort sie trotzdem, aber jeder Held erhält 1 *Shadow*.
+**Tirnaur:** Die Knochenfinger halten das Heft so fest, als lebte der Hauptmann noch. Behandeln die Gefährten ihn mit Achtung oder bitten sie freundlich um das Schwert, löst sich der Griff, und die Klinge gleitet ihnen in die Hand. Dafür ist kein Wurf nötig. Es genügt etwa, dass sie:
 
-**Der Eid:** Wer eine Waffe der Wacht aufnimmt, muss den Eid der Besatzung sprechen. Von Skarbak weiß der Geist nichts; es ist der Dienst, den er einst jedem seiner Männer abverlangte. An diesen Eid ist auch die Gabe der Wacht gebunden (siehe Die Waffenkammer).
+- ihn höflich bitten und sagen, wozu sie das Schwert brauchen,
+- den Eid der Wacht vor ihm sprechen,
+- ihm den Ring des Reiters zeigen oder in den Schoß legen und erzählen, dass sein Bote Fornost erreichte, oder
+- ihm seinen eigenen Brief vorlesen, der nie gelesen wurde.
 
-**Tirnaur**, das Schwert des Hauptmanns, liegt über seinen Knien. Die Gefährten sollten darum bitten, statt es einfach zu nehmen: Sagen sie, wozu sie es brauchen, gibt der Geist es frei. Wer einfach danach greift, erhält 1 *Shadow*, und die Gabe der Wacht ist verwirkt.
-
-**Möglicher Abschluss:** Gelingt der *Council*, verblasst der Geist mit einem letzten Satz, bevor sich die Tür öffnet: *„Es gibt immer Hoffnung.“*
+Wer die Finger aufbricht oder das Schwert mit Gewalt herausreißt, bekommt es ebenfalls, doch die Gebeine zerfallen dabei. Dieser Held erhält 1 *Shadow*, und die Gabe der Wacht ist verwirkt (siehe Die Waffenkammer).
 
 ### Die Waffenkammer
 
-Die Finsterwacht birgt zwölf besondere Stücke, alle von númenórischer Schmiedekunst: elf in der Waffenkammer und Tirnaur auf den Knien des Hauptmanns. Dazu kommt ein Vorrat guter gewöhnlicher Waffen. Ihre Spielwerte stehen auf den Gegenstandskarten im Anhang: Drucke sie aus und gib jedem Helden die Karte des Stücks, das er an sich nimmt. Wer was trägt, entscheiden die Gefährten selbst.
+Die Finsterwacht birgt zwölf besondere Stücke, alle Werk der Dúnedain in númenórischer Schmiedekunst: elf in der Waffenkammer und Tirnaur in den Händen des Hauptmanns. Dazu kommt ein Vorrat guter gewöhnlicher Waffen. Ihre Spielwerte stehen auf den Gegenstandskarten im Anhang: Drucke sie aus und gib jedem Helden die Karte des Stücks, das er an sich nimmt. Wer was trägt, entscheiden die Gefährten selbst.
 
 Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versiegelten Krügen, Schilde mit Turm und Stern: der Rest des Vorrats nach drei Nächten Belagerung, alles so frisch wie am Tag der Einlagerung. Am hinteren Ende, hinter einer Eisentür, liegen die Schätze: die Waffen der gefallenen Krieger, von ihren Gefährten hierhergetragen. Man sieht ihnen den Kampf an – Kerben in den Schneiden, ein geflickter Riemen, dunkle Flecken am Griff –, doch der númenórische Stahl hat gehalten, und jedes Stück ist noch voll einsatzfähig.
 
@@ -238,17 +236,17 @@ Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versieg
 - Das Horn der Finsterwacht (*Marvellous Artefact*)
 - Gewöhnliche Waffen: 40 Speere, 20 Schilde, 500 Pfeile – genug, um später Brees Wache oder eine Schar Rangers auszurüsten
 
-**Gabe der Wacht (Hausregel, abweichend von den _Core Rules_):** Jedes Stück wirkt mit dem Eintrag *Sofort* gleich. Die übrigen *Rewards*, *Banes* und *Blessings* – die **Gabe der Wacht** – erwachen für jeden Helden, der den Eid der Wacht geschworen hat, sobald der Eid zum ersten Mal gilt: wenn Skarbaks Orks das Tal heraufkommen. Verwirkt ist die Gabe, wenn die Gefährten:
+**Gabe der Wacht (Hausregel, abweichend von den _Core Rules_):** Jedes Stück wirkt vom ersten Augenblick an vollständig: mit dem Eintrag *Sofort* und mit den übrigen *Rewards*, *Banes* und *Blessings*, der **Gabe der Wacht**. Verwirkt ist die Gabe nur, wenn die Gefährten die Toten entehren, etwa wenn sie:
 
 - die Gräber der Könige in Fornost geplündert haben (Teil 2, Ort 4),
-- Tirnaur genommen haben, ohne den Geist zu fragen (Teil 3, Der Geist Thorondirs), oder
-- den Eid brechen und vor der Schlacht fliehen (Teil 4, Warum die Helden bleiben).
+- Thorondirs Gebeine stören oder ihm Tirnaur mit Gewalt entreißen (Teil 3, Der Hauptmann an der Tür), oder
+- die Gebeine der Besatzung im Burghof oder das Grab der Patrouille plündern oder schänden.
 
-Wenn die Gabe erwacht, werden die Klingen warm in der Hand, das Panzerhemd wird leicht und das Horn summt leise. Sag den Spielern an, dass ihre Karten ab jetzt vollständig gelten. Ist die Gabe verwirkt, bleibt es beim Eintrag *Sofort*; in einer Kampagne kann die Gabe später noch durch ein *Undertaking* in Rivendell geweckt werden. Die Klammern auf den Karten sind Kurzfassungen; maßgeblich sind die *Core Rules*.
+Wer ein Stück aufnimmt, spürt die Gabe: Die Klingen liegen warm in der Hand, das Panzerhemd ist leicht und das Horn summt leise. Sag den Spielern an, dass ihre Karten vollständig gelten. Ist die Gabe verwirkt, bleibt es beim Eintrag *Sofort*; in einer Kampagne kann die Gabe später noch durch ein *Undertaking* in Rivendell geweckt werden. Die Klammern auf den Karten sind Kurzfassungen; maßgeblich sind die *Core Rules*.
 
 ### Der Preis
 
-Das Öffnen der Tür bricht das Siegel, das den Hügel tausend Jahre lang vor den Dienern des Feindes verbarg. Lass die Spieler die Veränderung spüren: Der Wind legt sich, die Krähen verstummen. Noch am selben Abend findet Skarbak den Weg.
+Skarbaks Späher haben den ganzen Tag zugesehen, wie die Gefährten den Bergfried räumten. Nun wissen die Orks, wo sie hätten graben müssen. Lass die Spieler spüren, dass sie nicht mehr allein sind: Der Wind legt sich, die Krähen verstummen. Noch am selben Abend kommt Skarbak von Süden das Tal herauf.
 
 ## Teil 4: Die Schlacht um die Finsterwacht {#teil4}
 
@@ -260,19 +258,19 @@ Kombiniere zwei oder drei davon, damit das Bleiben sich wie die eigene Entscheid
 
 - **Kein besserer Ort.** Das Räumen des Bergfrieds dauert fast den ganzen Tag, also öffnet sich die Tür erst am späten Nachmittag. Als die Gefährten wieder heraufkommen, sieht der *Look-out* Skarbaks Bande im Tal unterhalb der Rampe, dem einzigen Weg hinunter. Ein *Battle*-Wurf macht die Wahl deutlich: offener Hang bei Nacht gegen rund 15 Orks, oder Mauern, ein Tor, eine Bresche, die man blockieren kann, und die Höhe. Fliehen hilft nicht: Skarbak will die Klingen zerstören und würde die Gefährten mit Wölfen nachts über die offenen Downs jagen. Besser, man kämpft einmal, auf eigenem Grund.
 - **Ein verwundeter Ranger.** Kurz vor der Dämmerung stolpert **Rhovan**, ein junger Ranger aus Halbarads Schar, mit einem Orkpfeil im Bein die Rampe herauf. Er hat die Orks beschattet und kann nicht weiter. Er erzählt den Gefährten, dass Halbarad am nächsten Signalhügel lagert: Brennt das Signalfeuer, kommen die Rangers bis zum Morgengrauen. Nun haben die Helden jemanden zu beschützen, einen Plan und ein Ziel.
-- **Der Eid der Wacht.** Wer an der tiefen Tür den Eid der Besatzung geschworen hat, begreift beim Anblick der Orks, was *„Für die Wacht, gegen den Norden!“* jetzt bedeutet. Den Eid zu brechen, ist 1 *Shadow* wert und kostet die Gabe der Wacht.
+- **Der Eid der Wacht.** Wer an der tiefen Tür den Eid der Besatzung gesprochen hat, um sie zu öffnen, begreift beim Anblick der Orks, was *„Für die Wacht, gegen den Norden!“* jetzt bedeutet. Den Eid zu brechen, ist 1 *Shadow* wert.
 
 **Wenn sie trotzdem gehen:** Halte sie nicht auf. Spiele die Flucht als kurze Reise mit hohem *Peril rating* und lass die Orks die Gefährten am schlechtesten möglichen Ort einholen, etwa an einem Signalfeuer-Steinhaufen im Schneesturm. Die Schlacht findet trotzdem statt, unter schlechteren Bedingungen. Die verborgene Ausfallpforte (Teil 3, Ort 2) ist für den Fall gedacht, dass die Mauern fallen, nicht als bequemer Ausweg vor dem Kampf.
 
 ### Vor der Schlacht
 
-Die Gefährten sehen die Orks etwa zwei Stunden vor Einbruch der Dunkelheit das Tal heraufkommen. Lass jeden Helden eine Vorbereitung wählen und dafür würfeln:
+Die Gefährten sehen die Orks etwa zwei Stunden vor Einbruch der Dunkelheit von Süden das Tal heraufkommen. Lass jeden Helden eine Vorbereitung wählen und dafür würfeln:
 
 - **Die Bresche blockieren** mit Balken aus dem Bergfried (*Athletics* oder *Craft*): Die zweite Welle greift nur das Tor an.
 - **Das Signalfeuer entzünden** (*Craft*, verbraucht das gesammelte Brennholz): Halbarads Rangers reiten sofort los und kommen im Morgengrauen an.
 - **Speere und Schilde** aus der Waffenkammer entlang der Rampe aufstellen (*Battle*): Die erste Welle verliert an Wucht.
 - **Den Feind auskundschaften** (*Stealth* oder *Scan*): vom Troll erfahren, sodass er keine Überraschung ist.
-- **Den Schatz unten verbergen** und die tiefe Tür mit *Estel* wieder verschließen: Die Orks können ihn nicht nehmen, selbst wenn die Mauern fallen.
+- **Den Schatz unten verbergen** und die tiefe Tür mit dem Eid der Wacht wieder verschließen: Die Orks können ihn nicht nehmen, selbst wenn die Mauern fallen.
 
 ### Die Wellen (für 4 Helden; Orks nach Bedarf hinzufügen oder entfernen)
 
@@ -282,13 +280,13 @@ Die Gefährten sehen die Orks etwa zwei Stunden vor Einbruch der Dunkelheit das 
 | 2. Der Sturmangriff | Tiefe Nacht | 8 Ork-Krieger gleichzeitig an Tor und Bresche | Die Gefährten müssen sich aufteilen oder Boden aufgeben |
 | 3. Skarbak | Mitternacht | Skarbak (*orc chieftain*), der Hügeltroll, 2 oder 3 Leibwächter | Der Troll zerschmettert das Tor; Kampf im Burghof |
 
-Nutze die Einträge für *orc*, *orc chieftain* und *hill-troll* aus den *Core Rules*. Um die Schlacht zu verkürzen, lege die Wellen 1 und 2 zu einem einzigen Angriff zusammen. Zwischen den Wellen gönne eine kurze Rast und einen Moment der Gemeinschaft, etwa Wasser teilen auf der Mauer oder einen Namen aus der Halle vorlesen.
+Nutze die Einträge für *orc*, *orc chieftain* und *hill-troll* aus den *Core Rules*. Um die Schlacht zu verkürzen, lege die Wellen 1 und 2 zu einem einzigen Angriff zusammen. Zwischen den Wellen gönne eine kurze Rast und einen Moment der Gemeinschaft, etwa Wasser teilen auf der Mauer oder ein leise gesungenes Lied der Dúnedain.
 
 **Optionale Erweiterung – Brór auf der Rampe:** Haben die Gefährten Brór unterwegs fair behandelt, ihm zugehört und ihn weder betrogen noch bedroht, ist er ihnen mit Abstand gefolgt. In Welle 1 oder 2 taucht er unerwartet auf der Rampe auf, die Axt in der Hand, und fällt den Orks in den Rücken: Für diese Welle bindet er zwei Orks, die die Gefährten nicht bekämpfen müssen. Nach der Schlacht bittet er um eine einzige Klinge der Wacht; mit „Brórs Motiv“ (Teil 2) ist es die mit dem Zeichen seines Ahnherrn. Haben die Gefährten ihn schlecht behandelt, bleibt er fern.
 
 ### Das Horn
 
-Einmal in dieser Nacht, in einer beliebigen Welle, kann ein Held das Horn der Finsterwacht blasen. Sein Ruf hallt aus der Halle der Namen zurück, und für einen Moment hören die Orks viele Hörner. Geringere Gegner wanken; wird es in der dritten Welle geblasen, fliehen vielleicht sogar Skarbaks Leibwächter. Ob die Toten antworteten, entscheiden die Spieler.
+Einmal in dieser Nacht, in einer beliebigen Welle, kann ein Held das Horn der Finsterwacht blasen. Sein Ruf hallt von den Mauern und aus dem Tal zurück, und für einen Moment hören die Orks viele Hörner. Geringere Gegner wanken; wird es in der dritten Welle geblasen, fliehen vielleicht sogar Skarbaks Leibwächter. Ob die Toten antworteten, entscheiden die Spieler.
 
 ### Wie es endet
 
@@ -306,7 +304,7 @@ Das Abenteuer endet damit, dass die Gefährten die Schätze der Finsterwacht in 
 - **Bericht erstatten:** Die Gefährten bringen Lady Gilraen Nachricht von der Finsterwacht. Sie und Halbarad bitten darum, dass die gewöhnlichen Waffen an die Rangers oder an Brees Wache gehen. Wer zustimmt, gewinnt die dauerhafte Freundschaft der Dúnedain, und Gilraen bleibt die Patronin der Gefährten für spätere Abenteuer.
 - **Ausblick:** Ein Held kann später zur Finsterwacht zurückkehren, um die Besatzung würdig zu bestatten, oder Tirnaur bei einem Gelehrten in Rivendell studieren lassen.
 
-**Erinnerung für den Loremaster – Neds Klinge:** Lass das zerbrochene Schwert, mit dem alles begann, nicht einfach verschwinden. Es gehört Gilraen, als Erkennungszeichen geliehen. Die Gefährten können es ihr zurückgeben, sie um Erlaubnis bitten, es als Gabe an die Wacht auf Thorondirs Gebeine oder in die Halle der Namen zu legen, oder es auf ihren Wunsch nach Rivendell bringen und neu schmieden lassen. So oder so sollte jemand Ned erzählen, wozu sein Fund geführt hat.
+**Erinnerung für den Loremaster – Neds Klinge:** Lass das zerbrochene Schwert, mit dem alles begann, nicht einfach verschwinden. Es gehört Gilraen, als Erkennungszeichen geliehen. Die Gefährten können es ihr zurückgeben, sie um Erlaubnis bitten, es als Gabe an die Wacht zu Thorondirs Gebeinen zu legen, oder es auf ihren Wunsch nach Rivendell bringen und neu schmieden lassen. So oder so sollte jemand Ned erzählen, wozu sein Fund geführt hat.
 
 ### Lose Fäden für spätere Abenteuer
 
@@ -328,7 +326,7 @@ Elf Figuren tragen das Abenteuer; Skarbak, Malk und Brór können in späteren A
 | Halbarad | Ranger of the North | Teil 1 (bringt die Gefährten zu Gilraen), Teil 4 (Schlacht) | Den Norden vor den Orks schützen, die sich regen | Grimmig, wortkarg; prüft die Gefährten, bevor er ihnen traut; kommt im Morgengrauen, wenn das Signalfeuer brennt |
 | Brór | Zwergenhändler aus den Blue Mountains | Teil 1 (Gerücht), Teil 2 (unterwegs) | Rostfreien númenórischen Stahl, zu einem fairen Preis; optional: die Klinge seines Ahnherrn (Teil 2) | Höflich, gewieft, hartnäckig; Käufer und Rivale um denselben Fund |
 | Wat Ferny | Anführer von vier Plünderern aus dem Bree-land | Teil 2, Fornost bei Nacht | Königliches Gold, dann fort, bevor die Orks kommen | Gierig, aber feige; lässt mit sich handeln; weiß von den Orkspuren am Nordhang |
-| Thorondir | Letzter Hauptmann der Finsterwacht, tot seit TA 1974 | Teil 3, an der tiefen Tür (als Geist) | Dass die Waffenkammer nur an jene geht, die in Hoffnung kommen | Eine kalte Gegenwart und eine Stimme; feierlich, prüfend, nie feindselig |
+| Thorondir | Letzter Hauptmann der Finsterwacht, tot seit TA 1974 | Teil 3, an der tiefen Tür (seine Gebeine) | Dass die Waffenkammer nur an jene geht, die den Eid der Wacht sprechen | Stumm; ein Toter im Kettenhemd, der sein Schwert festhält, bis man ihm mit Achtung begegnet |
 | Skarbak | Ork-Häuptling vom Mount Gram | Teil 3 (Lager), Teil 4 (Welle 3) | Die Klingen finden und zerstören, bevor Menschen sie nutzen | Listig, grausam, vorsichtig; lässt andere zuerst sterben; flieht, wenn der Kampf kippt |
 | Der Hügeltroll | Troll aus den nördlichen Downs, von Skarbak getrieben | Teil 3 (Spuren), Teil 4 (Welle 3) | Fressen und zertrümmern | Langsam, riesig, dumm; bricht das Tor |
 | Rhovan | Junger Ranger aus Halbarads Schar, verwundet | Teil 4, kurz vor der Dämmerung | Die Gefährten warnen und das Signalfeuer brennen sehen | Blass, tapfer, unter Schmerzen; besteht darauf, mit dem Bogen auf der Mauer zu stehen; ein Grund zu bleiben |
