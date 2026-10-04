@@ -389,10 +389,6 @@ def beacons():
     s += f'<text x="{x + 28}" y="{y + 30}" font-family="TeX Gyre Pagella" font-size="15" font-weight="700" fill="{RED}" text-anchor="start">IV</text>'
     s += label(x - 36, y - 34, "das vierte Zeichen:", 16, anchor="end", col="#6b4a24") + label(x - 36, y - 14, "die Finsterwacht?", 20, anchor="end", col=RED)
     s += label(286, 340, "jedes Feuer in Sichtweite des nächsten", 16, rot=-28, col="#6b4a24")
-    # rough camp marks: a 3-4 day march at a hard pace
-    for k, (x, y) in enumerate([(310, 374), (430, 304), (550, 234)]):
-        s += f'<path d="M{x - 5} {y + 12} L{x} {y + 4} L{x + 5} {y + 12} Z" fill="{INK}" opacity="0.75"/>'
-    s += label(406, 400, "Lager: je etwa ein Tagesmarsch", 15, anchor="start", col="#6b4a24")
     # scale bar
     x0, y0 = 470, 548
     s += path(f"M{x0} {y0} L{x0 + 20 * MI} {y0}", 1.6)

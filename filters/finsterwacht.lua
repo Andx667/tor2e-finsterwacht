@@ -24,6 +24,9 @@ local TABLES = {
   ["Jahr (TA)"] = { widths = { 0.15, 0.62, 0.23 }, size = "normal" },
   ["Tag"]       = { widths = { 0.08, 0.17, 0.18, 0.57 }, size = "normal" },
   ["Welle"]     = { widths = { 0.22, 0.20, 0.29, 0.29 }, size = "normal" },
+  ["Vorbereitung"] = { widths = { 0.24, 0.22, 0.54 }, size = "small" },
+  ["Angriff"]   = { widths = { 0.16, 0.17, 0.33, 0.34 }, size = "small" },
+  ["Im Kampf"]  = { widths = { 0.24, 0.76 }, size = "small" },
   ["Name"]      = { widths = { 0.13, 0.17, 0.17, 0.24, 0.29 }, size = "small" },
   ["Volk"]      = { widths = { 0.16, 0.84 }, size = "small" },
 }

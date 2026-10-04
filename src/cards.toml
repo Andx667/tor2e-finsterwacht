@@ -2,7 +2,7 @@
 # Regelbegriffe aus `terms` werden auf den Karten automatisch kursiv gesetzt.
 
 hint = "Zum Ausschneiden, im Pokerkartenformat (63 × 88 mm) · Klinge, Dolch, Bogen und Panzerhemd je zweimal, Narcrist, Torhüter, Breschenwacht und Horn je einmal"
-footer = "Gabe der Wacht: wirkt erst, wenn sie erwacht."
+footer = "Gabe der Wacht: wirkt sofort – verwirkt, wenn die Toten entehrt wurden."
 order = ["narcrist", "schild", "horn", "axt", "klinge", "klinge", "dolch", "dolch", "bogen", "bogen", "hemd", "hemd"]
 
 terms = [
@@ -10,7 +10,7 @@ terms = [
   "Famous Weapon", "Famous Armour", "Marvellous Artefact", "Core Rules", "Close-fitting",
   "Cunning Make", "Long-hafted axe", "Long sword", "Short sword", "Coat of mail", "Undertaking",
   "Blessings", "Blessing", "Banes", "Bane", "Keen", "Fell", "Grievous", "Reinforced", "Damage",
-  "Injury", "Load", "Protection", "Parry", "Hope", "Shadow", "Awe", "Battle", "Sword", "Bow", "Shield",
+  "Injury", "Load", "Protection", "Parry", "Hope", "Hate", "Shadow", "Awe", "Battle", "Sword", "Bow", "Shield",
 ]
 
 [cards.narcrist]
@@ -41,7 +41,7 @@ name = "Das Horn der Finsterwacht"
 kind = "Marvellous Artefact · Arbeit der Dúnedain"
 text = "Ein silberbeschlagenes Horn, von den Dúnedain des Nordens gefertigt, das einst die Besatzung auf die Mauern rief."
 effects = [
-  ["Sofort", "Ruf der Wacht – einmal pro Nacht lässt ein Stoß geringere Gegner wanken."],
+  ["Sofort", "Ruf der Wacht – einmal pro Nacht: Gegner mit Hate 3 oder weniger fliehen aus dem Kampf."],
   ["Gabe der Wacht", "Blessings: Awe, Battle"],
 ]
 
