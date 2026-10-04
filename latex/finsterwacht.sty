@@ -157,7 +157,7 @@
 \newcommand\fw@pageno{\thepage\ / \pageref*{fw-lastnum}}
 \newcommand\fw@footer[3]{% links-x, mitte-x, rechts-x; Seitenzahl steht außen
   \put(#1,7){\makebox(0,0)[lb]{\fw@footerfont\iffw@left\fw@pageno\else Die Finsterwacht · TOR 2e\fi}}%
-  \put(#2,7){\makebox(0,0)[b]{\fontsize{7.5}{9}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand}}%
+  \put(#2,7){\makebox(0,0)[b]{\fontsize{7.5}{9}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand\ · by Andy Börner – MIT License}}%
   \put(#3,7){\makebox(0,0)[rb]{\fw@footerfont\iffw@left Die Finsterwacht · TOR 2e\else\fw@pageno\fi}}}
 
 \newcommand\fw@bgportrait{%
@@ -174,7 +174,7 @@
 \newcommand\fw@bglandscape{%
   \fw@leftfalse
   \ifdefstring{\fwpagekind}{handout}{%
-    \put(285,5){\makebox(0,0)[rb]{\fontsize{6.5}{8}\selectfont\color{fwline}Version \fwversion\ · Stand \fwstand}}%
+    \put(285,5){\makebox(0,0)[rb]{\fontsize{6.5}{8}\selectfont\color{fwline}Version \fwversion\ · Stand \fwstand\ · by Andy Börner – MIT License}}%
   }{\fw@footer{14}{148.5}{283}}}
 
 % Buchfassung: Querseite (297 × 210 mm) um 90° gedreht auf die Hochformatseite, Kopf nach
@@ -381,7 +381,8 @@
   \vspace{6mm}{\color{fwred}\hrule height 1.2pt}\vspace{6mm}%
   {\fontsize{13}{18}\selectfont\itshape\color{fwgrey}#2\par}%
   \vfill
-  {\fontsize{9}{12}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand\par}%
+  {\fontsize{9}{12}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand\par
+   by Andy Börner – MIT License\par}%
   \endgroup
   \clearpage\null\clearpage
   \gdef\fwpagekind{normal}}

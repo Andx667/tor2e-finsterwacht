@@ -48,21 +48,21 @@ def git(*args):
 
 # ------------------------------------------------------------------ 1. Version
 def version():
-    """v2.0 auf dem getaggten Commit -> „2.0“; drei Commits danach -> „2.0+3 (abc1234)“.
+    """Die Version im PDF ist die Nummer des letzten Tags: v2.1.1 -> „2.1.1“.
 
-    Dritter Rückgabewert ist dieselbe Version für den Dateinamen: „v2.0“ bzw. „v2.0+3-abc1234“.
+    Dritter Rückgabewert ist die genaue Version für den Dateinamen: „v2.1.1“ auf dem
+    getaggten Commit, drei Commits danach „v2.1.1+3-abc1234“.
     """
     desc = git("describe", "--tags", "--long", "--match", "v*")
     m = re.match(r"v(.+)-(\d+)-g([0-9a-f]+)$", desc)
     if m:
-        ver = m[1] if m[2] == "0" else f"{m[1]}+{m[2]} ({m[3]})"
+        ver = m[1]
         slug = "v" + (m[1] if m[2] == "0" else f"{m[1]}+{m[2]}-{m[3]}")
     else:
         commit = git("rev-parse", "--short", "HEAD")
-        ver = "0.0 (" + (commit or "ohne git") + ")"
+        ver = "0.0"
         slug = "v0.0" + ("-" + commit if commit else "")
     if git("status", "--porcelain", "--untracked-files=no"):
-        ver += ", lokal geändert"
         slug += "-lokal"
     stand = git("log", "-1", "--format=%cd", "--date=format:%d.%m.%Y") or datetime.date.today().strftime("%d.%m.%Y")
     return ver, stand, slug

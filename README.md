@@ -44,14 +44,14 @@ Druckfassung baut. Bei jedem Commit baut GitHub Actions die PDFs
 
 ## Version und Stand
 
-Version und Datum in der Fußzeile kommen aus git:
+Version und Datum in der Fußzeile kommen aus git; daneben steht der Autorenhinweis
+(„by Andy Börner – MIT License“).
 
-- Auf einem getaggten Commit (`v2.1`) steht dort **Version 2.1**.
-- Commits danach erscheinen als **Version 2.1+3 (abc1234)**.
-- Uncommittete Änderungen werden als „lokal geändert“ markiert.
+- In der Fußzeile steht die Nummer des letzten Tags: nach `v2.1.1` also **Version 2.1.1**,
+  auch für Commits danach und für uncommittete Änderungen.
 - „Stand“ ist das Datum des letzten Commits.
-- Dieselbe Version steht im Dateinamen: `Die-Finsterwacht-TOR2e-DE-v2.1.pdf` bzw.
-  `…-v2.1+3-abc1234.pdf` (lokal geändert: Zusatz `-lokal`).
+- Der Dateiname nennt die genaue Version: `Die-Finsterwacht-TOR2e-DE-v2.1.1.pdf` auf dem
+  getaggten Commit, danach `…-v2.1.1+3-abc1234.pdf` (lokal geändert: Zusatz `-lokal`).
 
 Neue Version veröffentlichen:
 
