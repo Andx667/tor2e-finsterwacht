@@ -6,7 +6,7 @@ Die Gefährten folgen einer zerbrochenen Klinge von Bree zu den Ruinen von Forno
 
 **Stimmung:** Wehmut und Staunen. Jede Station zeigt den Gefährten, was das Nordkönigreich verloren hat, damit sich die Waffenkammer wie ein Erbe anfühlt und nicht wie Beute.
 
-**Umfang:** 2 bis 4 Sitzungen à etwa 4 Stunden (rund 7–8 Stunden ohne, 13–15 Stunden mit allen optionalen Teilen), eine einzelne *Adventuring Phase* ohne anschließende *Fellowship Phase*; das Abenteuer ist für sich allein spielbar. Als „Überspringbar“ markierte Ereignisse und optionale Teile können gestrichen werden, ohne die Handlung zu brechen; streicht man alle, spart das etwa anderthalb bis zwei Sitzungen.
+**Umfang:** 2 bis 4 Sitzungen à etwa 4 Stunden (rund 6½–7½ Stunden ohne, 12–13 Stunden mit allen optionalen Teilen), eine einzelne *Adventuring Phase* ohne anschließende *Fellowship Phase*; das Abenteuer ist für sich allein spielbar. Als „Überspringbar“ markierte Ereignisse und optionale Teile können gestrichen werden, ohne die Handlung zu brechen; streicht man alle, spart das etwa eine bis anderthalb Sitzungen.
 
 **Aufbau:**
 
@@ -123,7 +123,7 @@ Wirf einen d6 oder wähle:
 
 ## Teil 2: Fornost Erain {#teil2}
 
-In den Ruinen müssen die Gefährten zwei Dinge finden: wo die Finsterwacht steht und wie man ihre Waffenkammer öffnet. Die Hinweise verteilen sich auf vier Orte; die Suche füllt bis zu einer Sitzung.
+In den Ruinen müssen die Gefährten zwei Dinge finden: wo die Finsterwacht steht und wie man ihre Waffenkammer öffnet. Die Hinweise verteilen sich auf vier Orte; die Suche füllt etwa eine halbe Sitzung.
 
 ### Die Reise über den Greenway
 
