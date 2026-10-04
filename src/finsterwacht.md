@@ -30,7 +30,7 @@ Die Finsterwacht wurde um TA 1300 von den Königen von Arthedain errichtet, als 
 
 ### Der Fall (TA 1974)
 
-Beim großen Winterangriff, der Arthedain beendete, wurde die Finsterwacht zuerst angegriffen, um Fornost blind zu machen. Doch die Besatzung entzündete in der ersten Nacht das Signalfeuer, und Hügel um Hügel trug die Kette die Warnung nach Fornost: Die Wacht hatte ihre Pflicht getan. Hauptmann **Thorondir** hielt sie drei Nächte lang, ohne zu wissen, dass Angmars Hauptheer in dieser Zeit Fornost überrannte. Fiel einer der Krieger, die eine der berühmten Waffen der Wacht trugen, brachten seine Gefährten die Waffe hinab in die Kammer unter dem Bergfried, damit sie nicht in die Hände Angmars fiel. Als klar wurde, dass die Mauern nicht mehr lange halten würden, schickte Thorondir seinen letzten Reiter mit einem Brief an den König nach Süden. In der Nacht, in der das Tor brach, nahm er die Schlüssel der Waffenkammer mit hinab, versiegelte die Tür mit dem Eid der Wacht, *„Für die Wacht, gegen den Norden“*, und starb neben ihr, das Schwert in den Händen. Die Orks brannten den Bergfried nieder, und er stürzte über der Treppe ein.
+Beim großen Winterangriff, der Arthedain beendete, wurde die Finsterwacht zuerst angegriffen, um Fornost blind zu machen. Doch die Besatzung entzündete in der ersten Nacht das Signalfeuer, und Hügel um Hügel trug die Kette die Warnung nach Fornost: Die Wacht hatte ihre Pflicht getan. Hauptmann **Thorondir** hielt sie drei Nächte lang, ohne zu wissen, dass Angmars Hauptheer in dieser Zeit Fornost überrannte. Fiel einer der Krieger, die eine der berühmten Waffen der Wacht trugen, brachten seine Gefährten die Waffe hinab in die Kammer unter dem Bergfried, damit sie nicht in die Hände Angmars fiel. Als klar wurde, dass die Mauern nicht mehr lange halten würden, schickte Thorondir seinen letzten Reiter mit einem Brief an den König nach Süden. In der Nacht, in der das Tor brach, steig er zur Waffenkammer hinab, versiegelte die Tür mit dem Eid der Wacht, *„Für die Wacht, gegen den Norden“*, und starb neben ihr, das Schwert in den Händen. Die Orks brannten den Bergfried nieder, und er stürzte über der Treppe ein.
 
 ### Warum die Waffenkammer nie geplündert wurde
 
@@ -195,7 +195,7 @@ Von Fornost aus folgen die Gefährten der alten Signalfeuer-Linie nach Nordosten
 
 ### Die Festung
 
-Die Finsterwacht steht auf einem Felssporn, der auf drei Seiten steil abfällt. Eine schmale Rampe führt zum Tor. Alles ist schwarz von altem Feuer und grün von Moos.
+Die Finsterwacht steht auf einem Felssporn, der auf drei Seiten steil abfällt. Eine schmale Rampe führt zum Tor. Alles ist schwarz von altem Feuer und grün von Moos. Doch an manchen Stellen ist das Moos abgerissen und der Boden frisch aufgewühlt, als hätte hier vor nicht langer Zeit jemand etwas gesucht (siehe Hintergrund, Was die Gefährten noch nicht wissen).
 
 ![Die Nummern entsprechen der Liste unten. Der rot gestrichelte Pfad an der Westklippe ist die verborgene Ausfallpforte (Ort 2).](assets/maps/map-finsterwacht-de.jpg){.map}
 
