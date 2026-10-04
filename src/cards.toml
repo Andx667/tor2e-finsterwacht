@@ -1,9 +1,9 @@
 # Gegenstandskarten (Anhang). Eine Karte pro physischem Exemplar, Reihenfolge = `order`.
 # Regelbegriffe aus `terms` werden auf den Karten automatisch kursiv gesetzt.
 
-hint = "Zum Ausschneiden, im Pokerkartenformat (63 × 88 mm) · Klinge, Dolch, Bogen und Panzerhemd je zweimal, Tirnaur, Torhüter, Breschenwacht und Horn je einmal"
+hint = "Zum Ausschneiden, im Pokerkartenformat (63 × 88 mm) · Klinge, Dolch, Bogen und Panzerhemd je zweimal, Narcrist, Torhüter, Breschenwacht und Horn je einmal"
 footer = "Gabe der Wacht: wirkt erst, wenn sie erwacht."
-order = ["tirnaur", "schild", "horn", "axt", "klinge", "klinge", "dolch", "dolch", "bogen", "bogen", "hemd", "hemd"]
+order = ["narcrist", "schild", "horn", "axt", "klinge", "klinge", "dolch", "dolch", "bogen", "bogen", "hemd", "hemd"]
 
 terms = [
   "Shadow weakness", "Eye Awareness", "Peril rating", "Success die", "Feat die", "Piercing Blow",
@@ -13,12 +13,12 @@ terms = [
   "Injury", "Load", "Protection", "Parry", "Hope", "Shadow", "Awe", "Battle", "Sword", "Bow", "Shield",
 ]
 
-[cards.tirnaur]
-name = "Tirnaur, das Schwert des Hauptmanns"
-kind = "Famous Weapon · Long sword · númenórische Arbeit"
+[cards.narcrist]
+name = "Narcrist, das Schwert des Hauptmanns"
+kind = "Famous Weapon · Long sword · elbische Arbeit"
 stats = "Damage 5 · Injury 16 (zweihändig 18) · Load 3"
 stats_note = "ein- oder zweihändig"
-text = "Thorondirs eigene Klinge, älter als die Festung, aus Númenor mitgebracht. Die Runen auf dem Stahl nennen ihren Namen: Tirnaur, „Wachfeuer“."
+text = "Thorondirs eigene Klinge, weit älter als die Festung: in Gondolin geschmiedet und von den Getreuen aus Númenor mitgebracht. Die Runen auf dem Stahl nennen ihren Namen: Narcrist, „Feuerspalter“."
 effects = [
   ["Sofort", "Keen (Piercing Blow schon bei 9 auf dem Feat die)"],
   ["Gabe der Wacht", "Fell (Injury +2); Bane: Orks"],

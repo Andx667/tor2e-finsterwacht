@@ -203,7 +203,7 @@ Die Finsterwacht steht auf einem Felssporn, der auf drei Seiten steil abfällt. 
 2. **Der Burghof.** Gebeine von Menschen und Orks unter dem Gras, verrostete Speerspitzen, ein trockener Brunnen. Ein *Battle*-Wurf liest den letzten Kampf: Die Verteidiger zogen sich zum Bergfried zurück. Ein guter *Scan*-Wurf findet hinter Efeu an der Westmauer eine schmale, verschüttete Ausfallpforte; ein Pfad führt von dort die Klippe hinab (rot gestrichelt auf der Loremaster-Karte).
 3. **Der Signalturm.** Er steht noch, seine Treppe halb zerbrochen. Die Feuerschale oben enthält noch die Asche des Feuers, mit dem die Besatzung Fornost warnte. Die Gefährten können Brennholz sammeln (ein halber Tag), um es zu entzünden. Brennt es, sieht man das Feuer vom nächsten Signalhügel aus, wo Halbarads Rangers wachen.
 4. **Der eingestürzte Bergfried.** Ein Haufen verbrannter Balken und Steine. Die Treppe freizuräumen dauert fast einen ganzen Tag (*Athletics*- und *Craft*-Würfe, *Fatigue* bei Misserfolgen). Schlechte Würfe bedeuten hier, dass die Orks früher kommen.
-5. **Die tiefe Tür.** Am Fuß der Treppe steht eine schlichte Steintür mit Turm und Stern. Neben ihr sitzen Thorondirs Gebeine im Kettenhemd, an die Wand gelehnt, beide Hände fest um das Heft seines Schwertes Tirnaur geschlossen. Die Luft ist kalt und still.
+5. **Die tiefe Tür.** Am Fuß der Treppe steht eine schlichte Steintür mit Turm und Stern. Neben ihr sitzen Thorondirs Gebeine im Kettenhemd, an die Wand gelehnt, beide Hände fest um das Heft seines Schwertes Narcrist geschlossen. Die Luft ist kalt und still.
 
 ### Der Hauptmann an der Tür
 
@@ -211,7 +211,7 @@ Thorondir starb hier, den Rücken an der Wand, das Schwert in den Händen, und s
 
 **Die Tür:** Sie öffnet sich nur dem Eid der Wacht: *„Für die Wacht, gegen den Norden!“* Die Worte stehen auf der Klinge aus Bree. Thorondirs Brief sagt nur, dass allein einer der Finsterwacht die Tür öffnen soll, und zu einem der Wacht macht der Eid. In welcher Sprache sie gesprochen werden, ist gleich, doch wer sie spricht, muss sie ernst meinen.
 
-**Tirnaur:** Die Knochenfinger halten das Heft so fest, als lebte der Hauptmann noch. Behandeln die Gefährten ihn mit Achtung oder bitten sie freundlich um das Schwert, löst sich der Griff, und die Klinge gleitet ihnen in die Hand. Dafür ist kein Wurf nötig. Es genügt etwa, dass sie:
+**Narcrist:** Die Knochenfinger halten das Heft so fest, als lebte der Hauptmann noch. Behandeln die Gefährten ihn mit Achtung oder bitten sie freundlich um das Schwert, löst sich der Griff, und die Klinge gleitet ihnen in die Hand. Dafür ist kein Wurf nötig. Es genügt etwa, dass sie:
 
 - ihn höflich bitten und sagen, wozu sie das Schwert brauchen,
 - den Eid der Wacht vor ihm sprechen,
@@ -222,11 +222,11 @@ Wer die Finger aufbricht oder das Schwert mit Gewalt herausreißt, bekommt es eb
 
 ### Die Waffenkammer
 
-Die Finsterwacht birgt zwölf besondere Stücke, allesamt Werke der Dúnedain in númenórischer Schmiedekunst: elf in der Waffenkammer und Tirnaur in den Händen des Hauptmanns. Dazu kommt ein Vorrat guter gewöhnlicher Waffen. Ihre Spielwerte stehen auf den Gegenstandskarten im Anhang: Drucke sie aus und gib jedem Helden die Karte des Stücks, das er an sich nimmt. Wer was trägt, entscheiden die Gefährten selbst.
+Die Finsterwacht birgt zwölf besondere Stücke: elf Werke der Dúnedain in númenórischer Schmiedekunst in der Waffenkammer und Narcrist, eine Elbenklinge aus Gondolin, in den Händen des Hauptmanns. Dazu kommt ein Vorrat guter gewöhnlicher Waffen. Ihre Spielwerte stehen auf den Gegenstandskarten im Anhang: Drucke sie aus und gib jedem Helden die Karte des Stücks, das er an sich nimmt. Wer was trägt, entscheiden die Gefährten selbst.
 
 Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versiegelten Krügen, Schilde mit Turm und Stern: der Rest des Vorrats nach drei Nächten Belagerung, alles so frisch wie am Tag der Einlagerung – nur die Lücken erzählen, dass hier Waffen entnommen wurden, um zu kämpfen. Am hinteren Ende, hinter einer Eisentür, liegen die Schätze: die berühmten Waffen der gefallenen Krieger, von ihren Gefährten hierhergetragen. Man sieht ihnen den Kampf an – Kerben in den Schneiden, ein fast zerrissener Riemen, dunkle Flecken am Griff –, doch der númenórische Stahl hat gehalten, und jedes Stück ist noch voll einsatzfähig.
 
-- Tirnaur, das Schwert des Hauptmanns (*Long sword*)
+- Narcrist, das Schwert des Hauptmanns (*Long sword*)
 - 2 × Klinge der Wacht (*Sword*)
 - 2 × Dolch der Wacht (*Short sword*)
 - 2 × Bogen der Wacht (*Bow*)
@@ -239,14 +239,14 @@ Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versieg
 **Gabe der Wacht (Hausregel, abweichend von den _Core Rules_):** Jedes Stück wirkt vom ersten Augenblick an vollständig: mit dem Eintrag *Sofort* und mit den übrigen *Rewards*, *Banes* und *Blessings*, der **Gabe der Wacht**. Verwirkt ist die Gabe nur, wenn die Gefährten die Toten entehren, etwa wenn sie:
 
 - die Gräber der Könige in Fornost geplündert haben (Teil 2, Ort 4),
-- Thorondirs Gebeine stören oder ihm Tirnaur mit Gewalt entreißen (Teil 3, Der Hauptmann an der Tür), oder
+- Thorondirs Gebeine stören oder ihm Narcrist mit Gewalt entreißen (Teil 3, Der Hauptmann an der Tür), oder
 - die Gebeine der Besatzung im Burghof oder das Grab der Patrouille plündern oder schänden.
 
 Wer ein Stück aufnimmt, spürt die Gabe: Die Klingen liegen warm in der Hand, das Panzerhemd ist leicht und das Horn summt leise. Sag den Spielern an, dass ihre Karten vollständig gelten. Ist die Gabe verwirkt, bleibt es beim Eintrag *Sofort*; in einer Kampagne kann die Gabe später noch durch ein *Undertaking* in Rivendell geweckt werden. Die Klammern auf den Karten sind Kurzfassungen; maßgeblich sind die *Core Rules*.
 
 ### Der Preis
 
-Skarbaks Späher haben den ganzen Tag zugesehen, wie die Gefährten den Bergfried räumten. Nun wissen die Orks, wo sie hätten graben müssen. Lass die Spieler spüren, dass sie nicht mehr allein sind: Der Wind legt sich, die Krähen verstummen. Noch am selben Abend kommt Skarbak von Süden das Tal herauf. Sobald Orks auf der Rampe stehen, leuchtet Tirnaur leicht bläulich.
+Skarbaks Späher haben den ganzen Tag zugesehen, wie die Gefährten den Bergfried räumten. Nun wissen die Orks, wo sie hätten graben müssen. Lass die Spieler spüren, dass sie nicht mehr allein sind: Der Wind legt sich, die Krähen verstummen. Noch am selben Abend kommt Skarbak von Süden das Tal herauf. Sobald Orks auf der Rampe stehen, leuchtet Narcrist leicht bläulich.
 
 ## Teil 4: Die Schlacht um die Finsterwacht {#teil4}
 
@@ -302,7 +302,7 @@ Das Abenteuer endet damit, dass die Gefährten die Schätze der Finsterwacht in 
 
 - **Belohnungen:** Das Abenteuer endet ohne *Fellowship Phase*; die Belohnungen sind die Schätze der Waffenkammer und die *Skill Points* aus Fornost (siehe Teil 3). Bettest du es in eine Kampagne ein, schließe eine *Fellowship Phase* wie üblich an.
 - **Bericht erstatten:** Die Gefährten bringen Lady Gilraen Nachricht von der Finsterwacht. Sie und Halbarad bitten darum, dass die gewöhnlichen Waffen an die Rangers oder an Brees Wache gehen. Wer zustimmt, gewinnt die dauerhafte Freundschaft der Dúnedain, und Gilraen bleibt die Patronin der Gefährten für spätere Abenteuer.
-- **Ausblick:** Ein Held kann später zur Finsterwacht zurückkehren, um die Besatzung würdig zu bestatten, oder Tirnaur bei einem Gelehrten in Rivendell studieren lassen.
+- **Ausblick:** Ein Held kann später zur Finsterwacht zurückkehren, um die Besatzung würdig zu bestatten, oder Narcrist bei einem Gelehrten in Rivendell studieren lassen.
 
 **Erinnerung für den Loremaster – Neds Klinge:** Lass das zerbrochene Schwert, mit dem alles begann, nicht einfach verschwinden. Es gehört Gilraen, als Erkennungszeichen geliehen. Die Gefährten können es ihr zurückgeben, sie um Erlaubnis bitten, es als Gabe an die Wacht zu Thorondirs Gebeinen zu legen, oder es auf ihren Wunsch nach Rivendell bringen und neu schmieden lassen. So oder so sollte jemand Ned erzählen, wozu sein Fund geführt hat.
 
