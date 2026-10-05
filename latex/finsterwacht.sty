@@ -112,8 +112,11 @@
 
 % ---------------------------------------------------------------- Titel und Kapitel
 \newcommand\fwtitle[2]{%
-  {\fontsize{24}{27}\selectfont\bfseries\color{fwred}#1\par}%
-  \vspace{1mm}{\itshape\color{fwgrey}#2\par}%
+  \noindent\begin{minipage}[b]{\dimexpr\linewidth-24mm\relax}%
+    {\fontsize{24}{27}\selectfont\bfseries\color{fwred}#1\par}%
+    \vspace{1mm}{\itshape\color{fwgrey}#2\par}%
+  \end{minipage}\hfill
+  \includegraphics[height=20mm]{assets/logo-print.png}\par
   \vspace{2.5mm}{\color{fwred}\hrule height 1.2pt}\vspace{2mm}}
 
 \newcommand\fw@heading[1]{%
@@ -385,7 +388,9 @@
 \newcommand\fwbooktitle[2]{%
   \gdef\fwpagekind{blank}%
   \begingroup\centering
-  \null\vspace{70mm}%
+  \null\vspace{28mm}%
+  \includegraphics[height=32mm]{assets/logo-print.png}\par
+  \vspace{10mm}%
   {\fontsize{38}{44}\selectfont\bfseries\color{fwred}#1\par}%
   \vspace{6mm}{\color{fwred}\hrule height 1.2pt}\vspace{6mm}%
   {\fontsize{13}{18}\selectfont\itshape\color{fwgrey}#2\par}%

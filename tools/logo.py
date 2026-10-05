@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Zeichnet das Logo (Wachturm unter einem Stern) -> assets/logo.svg, logo.png (512), logo.webp (144).
+"""Zeichnet das Logo (Wachturm unter einem Stern) -> assets/logo.svg, logo.png (512), logo.webp (144), logo-print.png (512, rot).
 
-Weiß auf transparent, im Stil der Mod-Icons auf andx.eu. SVG und Raster stammen aus
+Weiß auf transparent (plus logo-print.png in Titelrot für die PDFs), im Stil der Mod-Icons auf andx.eu. SVG und Raster stammen aus
 denselben Koordinaten (64×64-Raster).
     python3 tools/logo.py
 """
@@ -51,4 +51,7 @@ img = Image.new("RGBA", (S, S), (245, 243, 242, 0))
 img.putalpha(m)
 img.resize((512, 512), Image.LANCZOS).save(os.path.join(A, "logo.png"), optimize=True)
 img.resize((144, 144), Image.LANCZOS).save(os.path.join(A, "logo.webp"), quality=90, method=6)
-print("assets/logo.svg, logo.png, logo.webp")
+ink = Image.new("RGBA", (S, S), (0x7A, 0x2A, 0x1F, 0))   # fwred aus finsterwacht.sty
+ink.putalpha(m)
+ink.resize((512, 512), Image.LANCZOS).save(os.path.join(A, "logo-print.png"), optimize=True)
+print("assets/logo.svg, logo.png, logo.webp, logo-print.png")
