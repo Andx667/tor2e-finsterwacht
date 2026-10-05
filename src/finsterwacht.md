@@ -108,10 +108,6 @@ Zurück in Bree findet man Ned in der Gaststube des Prancing Pony. Er ist nervö
 
 **Malk**, ein allzu neugieriger Südländer, der in der billigen Ecke des Pony trinkt, hat gesehen, wie Ned das Schwert verkaufte. Ihn bezahlt „ein Fremder von der Nordstraße“ dafür, nach alten Waffen Ausschau zu halten und sie zu melden, und nun beobachtet er jeden, der die Klinge trägt. In der letzten Nacht der Gefährten in Bree bricht er in ihr Zimmer ein, um sie zu stehlen. Wird er gefasst, weiß er wenig; entkommt er, ob mit oder ohne Klinge, reitet er nach Norden, und Skarbaks Orks erfahren von den Gefährten. Überspringbar: Ohne den Diebstahl sieht Malk die Gefährten einfach aufbrechen und reitet noch in derselben Nacht nach Norden.
 
-### NSCs
-
-Gilraen, Ned, Malk, Halbarad und Barliman Butterbur, der Wirt des Pony, sind im Anhang *Wichtige NSCs* beschrieben.
-
 ### Gerüchte in der Gaststube
 
 Wirf einen d6 oder wähle:
