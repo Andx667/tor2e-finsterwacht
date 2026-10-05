@@ -93,6 +93,6 @@ stats = "Protection 4d · Load 12"
 stats_note = "vor Cunning Make"
 text = "Ein langes Hemd aus feinen númenórischen Ringen, leicht wie Leder und noch immer blank."
 effects = [
-  ["Sofort", "Cunning Make (Load −2)"],
-  ["Gabe der Wacht", "Close-fitting (+2 auf Protection-Würfe)"],
+  ["Sofort", "Close-fitting (+2 auf Protection-Würfe)"],
+  ["Gabe der Wacht", "Cunning Make (Load −2)"],
 ]
