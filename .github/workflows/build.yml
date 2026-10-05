@@ -12,6 +12,12 @@ on:
 permissions:
   contents: write
 
+# Läufe für denselben Ref nacheinander statt gleichzeitig, sonst legen sie beim Tag-Release
+# um die Wette Releases und Assets an.
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   pdf:
     runs-on: ubuntu-latest
