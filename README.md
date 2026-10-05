@@ -34,7 +34,7 @@ Druckfassung baut. Bei jedem Commit baut GitHub Actions die PDFs
   **Wenn sie trotzdem gehen:**, **Erfahrung:**
 - Der Absatz **Gabe der Wacht (Hausregel …):** mit folgender Liste und folgendem Absatz
   wird zum gerahmten Hausregel-Kasten.
-- Das Wort `Überspringbar` wird zur grauen Markierung.
+- Das Wort `Optional` wird zur grauen Markierung.
 - Karten im Text: `![Bildunterschrift](assets/maps/datei.jpg){.map}`
 - Der Brief: `::: letter … :::` mit `\` am Zeilenende; er erscheint im Text und
   zusätzlich als Handout-Seite.

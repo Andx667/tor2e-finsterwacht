@@ -4,7 +4,7 @@ Pandoc-Filter für „Die Finsterwacht“: Markdown -> LaTeX-Bausteine aus latex
   * Kapitel (## im Markdown):   \fwchapter{notes|nonotes}{id}{Titel}{Lesezeichen}
   * Kästen (Absätze, die mit einem fetten Label beginnen): fwbox-Umgebung
   * Hausregel-Kasten: Absatz „Gabe der Wacht (Hausregel …)“ + Liste + Absatz
-  * „Überspringbar“: graue Pille \fwskip
+  * „Optional“: graue Pille \fwskip
   * Tabellen: longtable mit festen Spaltenbreiten je Tabellentyp
   * Karten (Bilder mit Klasse .map): \fwmap
   * Brief (::: letter): fwletter-Umgebung; der Text geht zusätzlich als Handout
@@ -51,7 +51,7 @@ local function starts_with(s, prefix) return s:sub(1, #prefix) == prefix end
 ------------------------------------------------------------------------
 local inline_pass = {
   Str = function(s)
-    local punct = s.text:match("^Überspringbar(%p*)$")
+    local punct = s.text:match("^Optional(%p*)$")
     if punct then
       if punct == "" then return rawi("\\fwskip{}") end
       return { rawi("\\fwskip{}"), pandoc.Str(punct) }

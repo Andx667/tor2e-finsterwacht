@@ -6,7 +6,7 @@ Die Gefährten folgen einer zerbrochenen Klinge von Bree zu den Ruinen von Forno
 
 **Stimmung:** Wehmut und Staunen. Jede Station zeigt den Gefährten, was das Nordkönigreich verloren hat, damit sich die Waffenkammer wie ein Erbe anfühlt und nicht wie Beute.
 
-**Umfang:** 2 bis 4 Sitzungen à etwa 4 Stunden (rund 6½–7½ Stunden ohne, 12–13 Stunden mit allen optionalen Teilen), eine einzelne *Adventuring Phase* ohne anschließende *Fellowship Phase*; das Abenteuer ist für sich allein spielbar. Als „Überspringbar“ markierte Ereignisse und optionale Teile können gestrichen werden, ohne die Handlung zu brechen; streicht man alle, spart das etwa eine bis anderthalb Sitzungen.
+**Umfang:** 2 bis 4 Sitzungen à etwa 4 Stunden (rund 6½–7½ Stunden ohne, 12–13 Stunden mit allen optionalen Teilen), eine einzelne *Adventuring Phase* ohne anschließende *Fellowship Phase*; das Abenteuer ist für sich allein spielbar. Als „Optional“ markierte Ereignisse und optionale Teile können gestrichen werden, ohne die Handlung zu brechen; streicht man alle, spart das etwa eine bis anderthalb Sitzungen.
 
 **Regelwerk:** Regelbegriffe und Seitenzahlen beziehen sich auf die englische Ausgabe der *Core Rules* von *The One Ring, 2nd Edition*, dritte Auflage (third printing).
 
@@ -102,11 +102,11 @@ Gilraen bittet die Gefährten herauszufinden, woher die Klinge stammt, zu erkund
 
 ### Ned Appledore
 
-Zurück in Bree findet man Ned in der Gaststube des Prancing Pony. Er ist nervös, redet zu viel und führt niemanden nach Deadmen's Dike („da oben gibt's Lichter, nachts“). Aber er kann genau sagen, wo er das Schwert gefunden hat: am Rand des Schutts in einer großen Halle mit einem schwarzen Thron, auf der hohen Seite der Ruine. Überspringbar: Gilraen kann das auch selbst weitergeben.
+Zurück in Bree findet man Ned in der Gaststube des Prancing Pony. Er ist nervös, redet zu viel und führt niemanden nach Deadmen's Dike („da oben gibt's Lichter, nachts“). Aber er kann genau sagen, wo er das Schwert gefunden hat: am Rand des Schutts in einer großen Halle mit einem schwarzen Thron, auf der hohen Seite der Ruine. Optional: Gilraen kann das auch selbst weitergeben.
 
 ### Der Diebstahl
 
-**Malk**, ein allzu neugieriger Südländer, der in der billigen Ecke des Pony trinkt, hat gesehen, wie Ned das Schwert verkaufte. Ihn bezahlt „ein Fremder von der Nordstraße“ dafür, nach alten Waffen Ausschau zu halten und sie zu melden, und nun beobachtet er jeden, der die Klinge trägt. In der letzten Nacht der Gefährten in Bree bricht er in ihr Zimmer ein, um sie zu stehlen. Wird er gefasst, weiß er wenig; entkommt er, ob mit oder ohne Klinge, reitet er nach Norden, und Skarbaks Orks erfahren von den Gefährten. Überspringbar: Ohne den Diebstahl sieht Malk die Gefährten einfach aufbrechen und reitet noch in derselben Nacht nach Norden.
+**Malk**, ein allzu neugieriger Südländer, der in der billigen Ecke des Pony trinkt, hat gesehen, wie Ned das Schwert verkaufte. Ihn bezahlt „ein Fremder von der Nordstraße“ dafür, nach alten Waffen Ausschau zu halten und sie zu melden, und nun beobachtet er jeden, der die Klinge trägt. In der letzten Nacht der Gefährten in Bree bricht er in ihr Zimmer ein, um sie zu stehlen. Wird er gefasst, weiß er wenig; entkommt er, ob mit oder ohne Klinge, reitet er nach Norden, und Skarbaks Orks erfahren von den Gefährten. Optional: Ohne den Diebstahl sieht Malk die Gefährten einfach aufbrechen und reitet noch in derselben Nacht nach Norden.
 
 ### Gerüchte in der Gaststube
 
@@ -135,7 +135,7 @@ Nutze diese als *Journey*-Ereignisse (der passende Ereignistyp steht in Klammern
 
 - **Der Meilenstein** (*Joyful Sight*): ein moosbewachsener Meilenstein der Könige, der noch immer die Wegstunden nach Fornost zeigt. Ein guter Ort, um über das verlorene Königreich zu sprechen.
 - **Frühjahrshochwasser** (*Mishap*): Ein Bach ist über die Ufer getreten, die alte Brücke ist fort.
-- **Der Zwergenhändler** (*Chance-meeting*): **Brór**, ein Zwerg aus den Blue Mountains auf dem Weg nach Norden zu den Ruinen, derselbe, der in Bree nach rostfreiem Stahl fragte. Er will Fornost selbst durchsuchen und bietet einen guten Preis für jede Klinge, die die Gefährten finden. Freundlich, aber ein Rivale um denselben Fund. Überspringbar, dann kann Brór aber später nicht als Rivale oder Verbündeter zurückkehren.
+- **Der Zwergenhändler** (*Chance-meeting*): **Brór**, ein Zwerg aus den Blue Mountains auf dem Weg nach Norden zu den Ruinen, derselbe, der in Bree nach rostfreiem Stahl fragte. Er will Fornost selbst durchsuchen und bietet einen guten Preis für jede Klinge, die die Gefährten finden. Freundlich, aber ein Rivale um denselben Fund. Optional, dann kann Brór aber später nicht als Rivale oder Verbündeter zurückkehren.
 - **Orkspuren** (*Ill Choices*): eisenbeschlagene Füße, die nachts die Straße kreuzten, Richtung Nordosten. Mit einem erfolgreichen *Hunting*-Wurf zählt man 15 bis 20.
 - **Wölfe am Lager** (*Terrible Misfortune*): Ein hungriges Rudel umkreist das Feuer. Wer sie nicht mit Feuer und Lärm vertreibt, erleidet eine Wunde.
 - **Das leere Gehöft** (*Despair*): ein Haus der Dúnedain, das Dach eingestürzt, ein Kinderspielzeug im Herd.
@@ -151,7 +151,7 @@ Die Bree-Leute nennen den Hügel Deadmen's Dike und sagen, hier gingen die Toten
 
 ### Orte in Fornost
 
-1. **Die Außenmauern – die Lichter.** Nachts wandern Laternen durch die Ruinen. Sie gehören vier Plünderern aus dem Bree-land unter **Wat Ferny**, die nach königlichem Gold graben. Man kann mit ihnen verhandeln, sie verscheuchen oder bekämpfen (wie Banditen behandeln). Wat hat am Nordhang „Orkspuren“ gesehen und will nicht hier sein, wenn sie kommen. Ein Licht, niedrig und bleich, gehört niemandem. Lass es unerklärt. Überspringbar: Lass die Plünderer weg und behalte nur das bleiche Licht; die Orkspuren können mit einem *Explore*-Wurf gefunden werden.
+1. **Die Außenmauern – die Lichter.** Nachts wandern Laternen durch die Ruinen. Sie gehören vier Plünderern aus dem Bree-land unter **Wat Ferny**, die nach königlichem Gold graben. Man kann mit ihnen verhandeln, sie verscheuchen oder bekämpfen (wie Banditen behandeln). Wat hat am Nordhang „Orkspuren“ gesehen und will nicht hier sein, wenn sie kommen. Ein Licht, niedrig und bleich, gehört niemandem. Lass es unerklärt. Optional: Lass die Plünderer weg und behalte nur das bleiche Licht; die Orkspuren können mit einem *Explore*-Wurf gefunden werden.
 2. **Der Thronsaal Arveduis – der Reiter.** Eine lange Halle, deren Pfeiler bis unter die Decke mit Schnitzwerk bedeckt sind, in einer Kunst, die längst verloren ist. Am Kopfende steht der Thron, als hätten ihn die Jahrhunderte nicht berührt: schwarzer Marmor mit dem Bild eines einzelnen, vielstrahligen Sterns. Nur das hintere Ende ist eingestürzt; dort, am Rand des Schutts, fand Ned das Schwert. Tiefer unter dem Schutt liegt das Skelett von Thorondirs letztem Reiter, noch im Kettenhemd. Er erreichte Fornost lebend, verwundet, doch knapp zu spät: Die Stadt war gefallen, der König fort. Er starb hier, als das brennende Dach herabstürzte; die zerbrochene Klinge aus Bree war sein Schwert. An seinem Finger: ein Ring mit dem Zeichen von Turm und Stern, der später in der Finsterwacht wichtig wird (siehe Teil 3, Der Hauptmann an der Tür). In einer Bleiröhre an seinem Gürtel: der letzte Brief des Hauptmanns (siehe unten). Den Reiter unter dem Schutt zu finden erfordert einen *Scan*-Wurf.
 3. **Die Halle der Schriftrollen – die Karte.** Steinregale, die Schriftrollen längst verbrannt oder verrottet. An einer Wand ist noch eine eingemeißelte Karte der nördlichen Signalfeuer-Kette erhalten: drei Signalfeuer, die von Fornost nach Nordosten führen, und dahinter ein viertes Zeichen, mit Turm und Stern markiert. Wer sie abzeichnet, erhält auf der Reise zur Finsterwacht 1 zusätzlichen *Success die* auf den *Travel*-Wurf (siehe Teil 3).
 4. **Die Gräber der Könige.** Kalt, still, versiegelt. Gefährten, die nichts anrühren, spüren einen seltsamen Segen (1 *Hope* zurück). Wer ein Grab plündert, erhält 1 *Shadow*. Außerdem verwirken die Gefährten damit die Gabe der Wacht: Die besonderen Kräfte der Waffen in der Finsterwacht bleiben jenen verschlossen, die Arnor entehrt haben (Hausregel, Einzelheiten in Teil 3, Die Waffenkammer).
@@ -171,7 +171,7 @@ Die Worte, die die Tür öffnen, sind der **Eid der Wacht**: *„Für die Wacht,
 
 ### Mögliche Begegnung
 
-Wenn Malk in Bree entkommen ist oder nie gefasst wurde, beobachten zwei Ork-Späher die Ruine. Werden sie gesehen, fliehen sie nach Nordosten. Mit einem erfolgreichen *Hunting*-Wurf können die Gefährten ihrer Spur folgen, und sie führt in dieselbe Richtung wie die Signalfeuer-Karte. Überspringbar.
+Wenn Malk in Bree entkommen ist oder nie gefasst wurde, beobachten zwei Ork-Späher die Ruine. Werden sie gesehen, fliehen sie nach Nordosten. Mit einem erfolgreichen *Hunting*-Wurf können die Gefährten ihrer Spur folgen, und sie führt in dieselbe Richtung wie die Signalfeuer-Karte. Optional.
 
 ## Teil 3: Die Finsterwacht {#teil3}
 
