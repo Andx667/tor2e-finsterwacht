@@ -87,7 +87,7 @@ effects = [
 ]
 
 [cards.hemd]
-name = "Panzerhemd der Wacht"
+name = "Kettenhemd der Wacht"
 kind = "Famous Armour · Coat of mail · númenórische Arbeit"
 stats = "Protection 4d · Load 12"
 stats_note = "vor Cunning Make"

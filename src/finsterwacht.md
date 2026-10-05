@@ -236,7 +236,7 @@ Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versieg
 - 2 × Klinge der Wacht (*Sword*)
 - 2 × Dolch der Wacht (*Short sword*)
 - 2 × Bogen der Wacht (*Bow*)
-- 2 × Panzerhemd der Wacht (*Coat of mail*)
+- 2 × Kettenhemd der Wacht (*Coat of mail*)
 - Der Torhüter (*Shield*)
 - Die Breschenwacht (*Long-hafted axe*) für Helden ohne Schwert
 - Das Horn der Finsterwacht (*Marvellous Artefact*)
@@ -248,7 +248,7 @@ Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versieg
 - Thorondirs Gebeine stören oder ihm Narcrist mit Gewalt entreißen (Teil 3, Der Hauptmann an der Tür), oder
 - die Gebeine der Besatzung im Burghof, das Grab der Patrouille oder die Gebeine der vergessenen Patrouille plündern oder schänden (Teil 3, Die Reise entlang der Signalfeuer-Linie).
 
-Wer ein Stück aufnimmt, spürt die Gabe: Die Klingen liegen warm in der Hand, das Panzerhemd ist leicht und das Horn summt leise. Sag den Spielern an, dass ihre Karten vollständig gelten. Ist die Gabe verwirkt, bleibt es beim Eintrag *Sofort*; in einer Kampagne kann die Gabe später noch durch ein *Undertaking* in Rivendell geweckt werden. Die Klammern auf den Karten sind Kurzfassungen; maßgeblich sind die *Core Rules*.
+Wer ein Stück aufnimmt, spürt die Gabe: Die Klingen liegen warm in der Hand, das Kettenhemd ist leicht und das Horn summt leise. Sag den Spielern an, dass ihre Karten vollständig gelten. Ist die Gabe verwirkt, bleibt es beim Eintrag *Sofort*; in einer Kampagne kann die Gabe später noch durch ein *Undertaking* in Rivendell geweckt werden. Die Klammern auf den Karten sind Kurzfassungen; maßgeblich sind die *Core Rules*.
 
 ### Der Preis
 
