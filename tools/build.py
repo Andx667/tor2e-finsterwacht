@@ -113,7 +113,7 @@ def main():
             sys.exit(f"Unbekannte Fassung „{e}“ – möglich: " + ", ".join(EDITIONS))
     os.makedirs(BUILD, exist_ok=True)
     ver, stand, slug = version()
-    with open(os.path.join(BUILD, "version.tex"), "w") as f:
+    with open(os.path.join(BUILD, "version.tex"), "w", encoding="utf-8") as f:
         f.write("\\def\\fwversion{%s}\n\\def\\fwstand{%s}\n" % (tex_escape(ver), stand))
     print(f"Version {ver} · Stand {stand}")
 
@@ -122,7 +122,7 @@ def main():
          "--lua-filter", "filters/finsterwacht.lua",
          "-o", os.path.join(BUILD, "body.tex")], env=env)
 
-    with open(os.path.join(BUILD, "cards.tex"), "w") as f:
+    with open(os.path.join(BUILD, "cards.tex"), "w", encoding="utf-8") as f:
         f.write(cards_tex())
 
     env["TEXINPUTS"] = os.path.join(ROOT, "latex") + "//" + os.pathsep + env.get("TEXINPUTS", "")
