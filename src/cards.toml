@@ -1,7 +1,7 @@
 # Gegenstandskarten (Anhang). Eine Karte pro physischem Exemplar, Reihenfolge = `order`.
 # Regelbegriffe aus `terms` werden auf den Karten automatisch kursiv gesetzt.
 
-hint = "Zum Ausschneiden, im Pokerkartenformat (63 × 88 mm) · Klinge, Dolch, Bogen und Panzerhemd je zweimal, Narcrist, Torhüter, Breschenwacht und Horn je einmal"
+hint = "Zum Ausschneiden, im Pokerkartenformat (63,5 × 88,9 mm) · Klinge, Dolch, Bogen und Panzerhemd je zweimal, Narcrist, Torhüter, Breschenwacht und Horn je einmal"
 footer = "Gabe der Wacht: wirkt sofort – verwirkt, wenn die Toten entehrt wurden."
 order = ["narcrist", "schild", "horn", "axt", "klinge", "klinge", "dolch", "dolch", "bogen", "bogen", "hemd", "hemd"]
 
