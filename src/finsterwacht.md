@@ -239,7 +239,7 @@ Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versieg
 - 2 × Kettenhemd der Wacht (*Coat of mail*)
 - Der Torhüter (*Shield*)
 - Die Breschenwacht (*Long-hafted axe*) für Helden ohne Schwert
-- Das Horn der Finsterwacht (*Marvellous Artefact*)
+- Das Horn der Finsterwacht (*Wondrous Item*)
 - Gewöhnliche Waffen: 40 Speere, 20 Schilde, 500 Pfeile – genug, um später Brees Wache oder eine Schar Rangers auszurüsten
 
 **Gabe der Wacht (Hausregel, abweichend von den _Core Rules_):** Jedes Stück wirkt vom ersten Augenblick an vollständig: mit dem Eintrag *Sofort* und mit den übrigen *Rewards*, *Banes* und *Blessings*, der **Gabe der Wacht**. Verwirkt ist die Gabe nur, wenn die Gefährten die Toten entehren, etwa wenn sie:

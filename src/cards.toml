@@ -59,7 +59,7 @@ tags = ["finsterwacht"]
 
 [items.horn-der-finsterwacht]
 name = "Das Horn der Finsterwacht"
-type = "artefact"
+type = "wonder"
 craft = "Arbeit der Dúnedain"
 text = "Ein silberbeschlagenes Horn, von den Dúnedain des Nordens gefertigt, das einst die Besatzung auf die Mauern rief."
 blessings = ["Awe", "Battle"]

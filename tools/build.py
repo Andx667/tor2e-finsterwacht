@@ -137,7 +137,7 @@ def cards_tex():
         sys.exit("\n".join("Fehler: " + p for p in problems))
     data = check.load_toml("src", "cards.toml")  # Reihenfolge und Sofort-Liste stehen nur hier
     immediate = set(data["immediate"])
-    terms = set(db["terms"]) | set(rules["qualities"]) | {t["label"] for t in rules["types"].values()}
+    terms = set(db["terms"]) | set(rules["qualities"]) | set(rules["skills"]) | {t["label"] for t in rules["types"].values()}
     terms = sorted(terms, key=len, reverse=True)
     term_re = re.compile(r"(?<![\w])(" + "|".join(re.escape(t) for t in terms) + r")(?![\w])")
 
