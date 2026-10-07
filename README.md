@@ -12,7 +12,8 @@ Druckfassung baut. Bei jedem Commit baut GitHub Actions die PDFs
 | Pfad | Inhalt |
 | --- | --- |
 | `src/finsterwacht.md` | Der Abenteuertext (Pandoc-Markdown) – hier wird geschrieben |
-| `src/cards.toml` | Die Gegenstandskarten (Werte, Texte, Reihenfolge) |
+| `src/cards.toml` | Die Gegenstandskarten (Gegenstände, Texte, Reihenfolge) |
+| `src/rules.toml` | Gegenstandsarten, Handwerkskunst und die Eigenschaften mit ihren Regeltexten (aus tor2e-items) |
 | `assets/maps/` | Die gezeichneten Karten als JPG, Quellen als SVG in `svg/` |
 | `latex/finsterwacht.sty` | Das Layout: Ränder, Notizspalte, Kästen, Tabellen, Karten, Handouts |
 | `latex/finsterwacht.tex` | Gerüst der Blattfassung (einseitig gedacht, links gelocht) |
@@ -20,6 +21,7 @@ Druckfassung baut. Bei jedem Commit baut GitHub Actions die PDFs
 | `latex/inhalt.tex` | Inhalt beider Fassungen (Titel, Anhänge, Karten, Handouts) |
 | `filters/finsterwacht.lua` | Pandoc-Filter: Markdown-Elemente → Layout-Bausteine |
 | `tools/build.py` | Baut das PDF |
+| `tools/check.py` | Prüft die Gegenstände gegen `src/rules.toml` (aus tor2e-items); der Build ruft es auf |
 | `tools/maps.py` | Zeichnet die Karten neu (optional, braucht Playwright) |
 | `.github/workflows/build.yml` | CI: baut das PDF bei jedem Commit |
 
@@ -61,6 +63,21 @@ git push --tags
 ```
 
 Ein Tag `v*` erzeugt zusätzlich ein GitHub-Release mit beiden PDFs.
+
+## Gegenstandskarten
+
+Die Gegenstände in `src/cards.toml` haben dasselbe Format wie in tor2e-items (Schatzkammer): Name, Art,
+`base`, `craftsmanship`, Werte, `qualities` und `banes`. Werte und Regeltexte der Eigenschaften kommen aus
+`src/rules.toml`; die Karte zeigt die Werte mit den Eigenschaften schon eingerechnet. `src/rules.toml` und
+`tools/check.py` sind unverändert aus tor2e-items übernommen und werden dort gepflegt.
+
+Nur für die Finsterwacht gibt es zwei Zusätze in `src/cards.toml`: `order` (die Karten in Druckreihenfolge, ein
+Eintrag je Exemplar) und `immediate` (die einfachen Rewards). Auf der Karte stehen die einfachen Rewards und
+freie Effekte unter **Sofort**, alles andere – bessere Rewards, Banes und Blessings – unter **Gabe der Wacht**.
+Die Fußzeile, die die Gabe erklärt, erscheint nur auf Karten, die eine haben. Ein Gegenstand mit einem Superior
+Reward gilt als berühmt (*Famous Weapon*); ohne ihn ist er nur gut gemacht und trägt keine solche Zeile.
+
+`python3 tools/check.py` prüft die Gegenstände allein; der Build bricht bei einem Fehler ab.
 
 ## Blattfassung und Buchfassung
 

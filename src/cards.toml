@@ -1,98 +1,142 @@
 # Gegenstandskarten (Anhang). Eine Karte pro physischem Exemplar, Reihenfolge = `order`.
-# Regelbegriffe aus `terms` werden auf den Karten automatisch kursiv gesetzt.
+#
+# Die Gegenstände stehen im Format von tor2e-items (Schatzkammer): Werte, Eigenschaften (`qualities`)
+# und Regeltexte kommen aus src/rules.toml, tools/check.py prüft sie. Beide Dateien sind von dort
+# übernommen. Die Felder sind in tor2e-items/src/cards.toml beschrieben.
+#
+# Nur für die Finsterwacht:
+#   order      die Karten in Druckreihenfolge, ein Eintrag je Exemplar
+#   immediate  die einfachen Rewards: auf der Karte der Eintrag „Sofort“. Alles andere (bessere
+#              Rewards, Banes, Blessings) ist die „Gabe der Wacht“; freie `effects` stehen bei „Sofort“.
+# Regelbegriffe aus `terms` werden auf den Karten automatisch kursiv gesetzt, dazu die Namen der
+# Eigenschaften und die Gegenstandsarten aus src/rules.toml.
 
-hint = "Zum Ausschneiden, im Pokerkartenformat (63,5 × 88,9 mm) · Klinge, Dolch, Bogen und Panzerhemd je zweimal, Narcrist, Torhüter, Breschenwacht und Horn je einmal"
+hint = "Zum Ausschneiden, im Pokerkartenformat (63,5 × 88,9 mm) · Klinge, Kurzschwert, Bogen und Kettenhemd je zweimal, Narcrist, Torhüter, Breschenwacht und Horn je einmal"
 footer = "Gabe der Wacht: wirkt sofort – verwirkt, wenn die Toten entehrt wurden."
-order = ["narcrist", "schild", "horn", "axt", "klinge", "klinge", "dolch", "dolch", "bogen", "bogen", "hemd", "hemd"]
+order = [
+  "narcrist", "torhueter", "horn-der-finsterwacht", "breschenwacht",
+  "klinge-der-wacht", "klinge-der-wacht", "kurzschwert-der-wacht", "kurzschwert-der-wacht",
+  "bogen-der-wacht", "bogen-der-wacht", "kettenhemd-der-wacht", "kettenhemd-der-wacht",
+]
+immediate = ["Keen", "Fell", "Grievous", "Reinforced", "Close-fitting", "Cunning Make"]
 
 terms = [
   "Shadow weakness", "Eye Awareness", "Peril rating", "Success die", "Feat die", "Piercing Blow",
-  "Famous Weapon", "Famous Armour", "Marvellous Artefact", "Core Rules", "Close-fitting",
-  "Cunning Make", "Long-hafted axe", "Long sword", "Short sword", "Coat of mail", "Undertaking",
-  "Blessings", "Blessing", "Banes", "Bane", "Keen", "Fell", "Grievous", "Reinforced", "Damage",
-  "Injury", "Load", "Protection", "Parry", "Hope", "Hate", "Shadow", "Awe", "Battle", "Sword", "Bow", "Shield",
+  "Core Rules", "Long-hafted axe", "Long sword", "Short sword", "Coat of mail", "Undertaking",
+  "Blessings", "Blessing", "Banes", "Bane", "Damage", "Injury", "Load", "Protection", "Parry",
+  "Hope", "Hate", "Shadow", "Awe", "Battle", "Valour", "Sword", "Bow", "Shield",
 ]
 
-[cards.narcrist]
+[items.narcrist]
 name = "Narcrist, das Schwert des Hauptmanns"
-kind = "Famous Weapon · Long sword · elbische Arbeit"
-stats = "Damage 5 · Injury 16 (zweihändig 18) · Load 3"
-stats_note = "ein- oder zweihändig"
-text = "Thorondirs eigene Klinge, weit älter als die Festung: in Gondolin geschmiedet und von den Getreuen aus Númenor mitgebracht. Die Runen auf dem Stahl nennen ihren Namen: Narcrist, „Feuerspalter“."
-effects = [
-  ["Sofort", "Keen (Piercing Blow schon bei 9 auf dem Feat die)"],
-  ["Gabe der Wacht", "Fell (Injury +2); Bane: Orks"],
-  ["Besonderheit", "Leuchtet schwach bläulich, wenn Orks nahe sind."],
-]
+type = "weapon"
+proficiency = "swords"
+base = "Long sword"
+craft = "elbische Arbeit"
+craftsmanship = "Elven"
+damage = 4
+injury = 14
+injury_two_handed = 16
+load = 3
+stats_note = ""
+text = "In Gondolin geschmiedet und von den Getreuen aus Númenor mitgebracht, weit älter als die Festung. Die Runen auf dem Stahl nannten ihren Namen: Narcrist, „Feuerspalter“."
+qualities = ["Superior Fell", "Luminescence"]
+banes = ["Orks"]
+tags = ["finsterwacht"]
 
-[cards.schild]
+[items.torhueter]
 name = "Der Torhüter"
-kind = "Famous Armour · Shield · númenórische Arbeit"
-stats = "Parry +2 · Load 4"
-stats_note = "vor Reinforced und Cunning Make"
-text = "Der Schild des Torwächters, in númenórischer Kunst geschmiedet und mit Turm und Stern bemalt. Sein Rand ist von hundert Orkklingen zerkerbt, doch er ist nie gesplittert."
-effects = [
-  ["Sofort", "Reinforced (Parry +1; kann nicht zerschmettert werden)"],
-  ["Gabe der Wacht", "Cunning Make (Load −2)"],
-]
+type = "shield"
+base = "Shield"
+craft = "númenórische Arbeit"
+craftsmanship = "Númenórean"
+parry = 2
+load = 4
+text = "Der Schild des Torwächters, in númenórischer Kunst geschmiedet und mit Turm und Stern bemalt."
+qualities = ["Superior Reinforced"]
+banes = ["Orks"]
+tags = ["finsterwacht"]
 
-[cards.horn]
+[items.horn-der-finsterwacht]
 name = "Das Horn der Finsterwacht"
-kind = "Marvellous Artefact · Arbeit der Dúnedain"
+type = "artefact"
+craft = "Arbeit der Dúnedain"
 text = "Ein silberbeschlagenes Horn, von den Dúnedain des Nordens gefertigt, das einst die Besatzung auf die Mauern rief."
+blessings = ["Awe", "Battle"]
 effects = [
-  ["Sofort", "Ruf der Wacht – einmal pro Nacht: Gegner mit Hate 3 oder weniger fliehen aus dem Kampf."],
-  ["Gabe der Wacht", "Blessings: Awe, Battle"],
+  ["Ruf der Wacht", "einmal pro Nacht: Gegner mit Hate 3 oder weniger fliehen aus dem Kampf."],
 ]
+tags = ["finsterwacht"]
 
-[cards.axt]
+[items.breschenwacht]
 name = "Die Breschenwacht"
-kind = "Famous Weapon · Long-hafted axe · númenórische Arbeit"
-stats = "Damage 6 · Injury 18 (zweihändig 20) · Load 3"
-stats_note = "ein- oder zweihändig"
-text = "Eine langstielige Axt nach der Kunst der Dúnedain. Ihr Träger hielt drei Nächte lang die Bresche neben dem Tor, bis er fiel; seine Gefährten trugen sie hinab in die Kammer."
-effects = [
-  ["Sofort", "Grievous (Damage +1)"],
-  ["Gabe der Wacht", "Bane: Trolle"],
-]
+type = "weapon"
+proficiency = "axes"
+base = "Long-hafted axe"
+craft = "númenórische Arbeit"
+craftsmanship = "Númenórean"
+damage = 6
+injury = 18
+injury_two_handed = 20
+load = 3
+stats_note = ""
+text = "Eine langstielige Axt nach der Kunst der Dúnedain. Ihr Name stammte von der Bresche in der Mauer, die ihr Träger drei Nächte lang hielt."
+qualities = ["Superior Grievous"]
+banes = ["Trolle"]
+tags = ["finsterwacht"]
 
-[cards.klinge]
+[items.klinge-der-wacht]
 name = "Klinge der Wacht"
-kind = "Famous Weapon · Sword · númenórische Arbeit"
-stats = "Damage 4 · Injury 16 · Load 2"
+type = "weapon"
+proficiency = "swords"
+base = "Sword"
+craft = "númenórische Arbeit"
+craftsmanship = "Númenórean"
+damage = 4
+injury = 16
+load = 2
 text = "Ein Schwert nach der Kunst der Dúnedain, „zum Verderben Angmars“ geschmiedet, mit Turm und Stern auf dem Knauf – die Schwester der zerbrochenen Klinge aus Fornost."
-effects = [
-  ["Sofort", "Grievous (Damage +1)"],
-  ["Gabe der Wacht", "Bane: Orks"],
-]
+qualities = ["Superior Grievous"]
+banes = ["Orks"]
+tags = ["finsterwacht"]
 
-[cards.dolch]
-name = "Dolch der Wacht"
-kind = "Famous Weapon · Short sword · númenórische Arbeit"
-stats = "Damage 3 · Injury 16 · Load 1"
-text = "Ein langer Dolch nach der Kunst der Dúnedain, wie ihn die Wächter auf den Mauern im Gürtel trugen. In die Klinge sind Runen gegen die Geister Angmars geätzt."
-effects = [
-  ["Sofort", "Keen (Piercing Blow schon bei 9 auf dem Feat die)"],
-  ["Gabe der Wacht", "Bane: Untote"],
-]
+[items.kurzschwert-der-wacht]
+name = "Kurzschwert der Wacht"
+type = "weapon"
+proficiency = "swords"
+base = "Short sword"
+craft = "númenórische Arbeit"
+craftsmanship = "Númenórean"
+damage = 3
+injury = 16
+load = 1
+text = "Ein Kurzschwert nach der Kunst der Dúnedain, wie es die Wächter auf den Mauern im Gürtel trugen."
+qualities = ["Superior Fell"]
+banes = ["Orks", "Trolle"]
+tags = ["finsterwacht"]
 
-[cards.bogen]
+[items.bogen-der-wacht]
 name = "Bogen der Wacht"
-kind = "Famous Weapon · Bow · númenórische Arbeit"
-stats = "Damage 3 · Injury 14 · Load 2"
-text = "Ein Eibenbogen von númenórischen Bogenmachern, mit einer Sehne, die nie ausfranst. Mit diesen Bögen wurde einst die Rampe gehalten."
-effects = [
-  ["Sofort", "Keen (Piercing Blow schon bei 9 auf dem Feat die)"],
-  ["Gabe der Wacht", "Fell (Injury +2)"],
-]
+type = "weapon"
+proficiency = "bows"
+base = "Bow"
+craft = "númenórische Arbeit"
+craftsmanship = "Númenórean"
+damage = 3
+injury = 14
+load = 2
+text = "Ein Eibenbogen von númenórischen Bogenmachern, mit einer Sehne, die nie ausfranste."
+qualities = ["Superior Fell"]
+banes = ["Orks"]
+tags = ["finsterwacht"]
 
-[cards.hemd]
+[items.kettenhemd-der-wacht]
 name = "Kettenhemd der Wacht"
-kind = "Famous Armour · Coat of mail · númenórische Arbeit"
-stats = "Protection 4d · Load 12"
-stats_note = "vor Cunning Make"
-text = "Ein langes Hemd aus feinen númenórischen Ringen, leicht wie Leder und noch immer blank."
-effects = [
-  ["Sofort", "Close-fitting (+2 auf Protection-Würfe)"],
-  ["Gabe der Wacht", "Cunning Make (Load −2)"],
-]
+type = "armour"
+base = "Coat of mail"
+craft = "númenórische Arbeit"
+protection = 4
+load = 12
+text = "Ein langes Hemd aus feinen númenórischen Ringen, leicht wie Leder und blank geblieben."
+qualities = ["Close-fitting", "Cunning Make"]
+tags = ["finsterwacht"]

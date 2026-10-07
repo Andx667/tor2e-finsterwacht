@@ -302,7 +302,20 @@
 \newsavebox\fw@cardbox
 \newcommand\fwcardname[1]{{\fontsize{12}{13.8}\selectfont\bfseries\color{fwred}#1\par}}
 \newcommand\fwcardkind[1]{\vspace{0.6mm}{\itshape\color{fwgrey}#1\par}\vspace{1.4mm}{\color{fwcardline}\hrule height 0.5pt}\vspace{1.8mm}}
-\newcommand\fwcardstats[2]{\begin{tcolorbox}[fw stats]#1\ifblank{#2}{}{ {\mdseries\itshape\fontsize{7.2}{9}\selectfont\color{fwgrey}(#2)}}\end{tcolorbox}}
+\newcommand\fw@cardnote[1]{\ifblank{#1}{}{\par\vspace{1.2mm}{\mdseries\itshape\fontsize{7.2}{9}\selectfont\color{fwgrey}(#1)}}}
+\newcommand\fwstathead[1]{{\fontsize{6.2}{7.3}\selectfont\color{fwgrey}#1}}
+% \fwcardstats{Spalten}{Köpfe}{Werte}{Anmerkung} – Köpfe und Werte mit & getrennt
+\newcommand\fwcardstats[4]{%
+  % top ist negativ: die erste Tabellenzeile bringt selbst etwa 2,7 mm Luft über den Köpfen mit
+  \begin{tcolorbox}[fw stats, top=-1.9mm]
+    \setlength\tabcolsep{0pt}%
+    \begin{tabular}{@{}*{#1}{>{\centering\arraybackslash}p{\dimexpr\linewidth/#1\relax}}@{}}
+      #2 \\
+      #3
+    \end{tabular}%
+    \fw@cardnote{#4}%
+  \end{tcolorbox}%
+}
 \newcommand\fwcardtext[1]{#1\par\vspace{1.8mm}}
 \newenvironment{fwcardeffects}{\begin{itemize}[leftmargin=3.6mm,itemsep=0.9mm,label={\textbullet}]}{\end{itemize}}
 % Karten je Reihe: Blattfassung 3 × 2 je Seite; Buchfassung 2 × 3, damit die Karten in
@@ -313,7 +326,7 @@
 \newif\iffw@cardsanchor
 % \fwcard{Inhalt oben}{Fußzeile} – nur innerhalb von \fwcardspage; bricht die Reihe selbst um
 \newcommand\fwcard[2]{%
-  \sbox\fw@cardbox{\begin{tcolorbox}[fw card]#1\tcblower #2\end{tcolorbox}}%
+  \sbox\fw@cardbox{\begin{tcolorbox}[fw card]#1\ifblank{#2}{}{\tcblower #2}\end{tcolorbox}}%
   \ifnum\fw@cardn=0 \noindent\fi%
   \begin{tikzpicture}
     \useasboundingbox (0,0) rectangle (\fw@cw,\fw@ch);

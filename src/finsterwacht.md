@@ -234,7 +234,7 @@ Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versieg
 
 - Narcrist, das Schwert des Hauptmanns (*Long sword*)
 - 2 × Klinge der Wacht (*Sword*)
-- 2 × Dolch der Wacht (*Short sword*)
+- 2 × Kurzschwert der Wacht (*Short sword*)
 - 2 × Bogen der Wacht (*Bow*)
 - 2 × Kettenhemd der Wacht (*Coat of mail*)
 - Der Torhüter (*Shield*)
