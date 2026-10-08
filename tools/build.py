@@ -145,7 +145,7 @@ def cards_tex():
     problems = check.check(db, rules, duplicates)
     if problems:
         sys.exit("\n".join("Fehler: " + p for p in problems))
-    data = check.load_toml("src", "cards.toml")  # Reihenfolge und Sofort-Liste stehen nur hier
+    data = check.load_toml("src", "cards.toml")  # Reihenfolge und `immediate`-Liste stehen nur hier
     immediate = set(data["immediate"])
     terms = set(db["terms"]) | set(rules["qualities"]) | set(rules["skills"]) | {t["label"] for t in rules["types"].values()}
     terms = sorted(terms, key=len, reverse=True)
@@ -165,20 +165,20 @@ def cards_tex():
             up.append(r"\fwcardstats{%d}{%s}{%s}{%s}{%s}" % (len(stats), heads, values, bonuses, it(c.get("stats_note", ""))))
         if c.get("text"):
             up.append(r"\fwcardtext{" + it(c["text"]) + "}")
-        # Einfache Rewards und freie Effekte: „Sofort“; bessere Rewards, Banes, Blessings: „Gabe der Wacht“
-        sofort, gabe = [], []
+        # Einfache Rewards und freie Effekte: ohne Kennwort; bessere Rewards, Banes, Blessings: „Gabe der Wacht“
+        plain, gabe = [], []
         for q in c.get("qualities", []):
             text = quality_text(q, c, rules)
-            (sofort if q in immediate else gabe).append(it(q) + (" (" + it(text) + ")" if text else ""))
-        sofort += [tex_escape(a) + " (" + it(b) + ")" for a, b in c.get("effects", [])]
+            (plain if q in immediate else gabe).append(it(q) + (" (" + it(text) + ")" if text else ""))
+        plain += [tex_escape(a) + " (" + it(b) + ")" for a, b in c.get("effects", [])]
         if c.get("banes"):
             gabe.append(it("Bane: " + ", ".join(c["banes"])))
         if c.get("blessings"):
             gabe.append(it(("Blessings: " if len(c["blessings"]) > 1 else "Blessing: ") + ", ".join(c["blessings"])))
-        bullets = [(label, items) for label, items in (("Sofort", sofort), ("Gabe der Wacht", gabe)) if items]
+        bullets = [(label, items) for label, items in (("", plain), ("Gabe der Wacht", gabe)) if items]
         if bullets:
             up.append(r"\begin{fwcardeffects}")
-            up += [r"\item \textbf{" + label + ":} " + " · ".join(items) for label, items in bullets]
+            up += [r"\item " + (r"\textbf{" + label + ":} " if label else "") + " · ".join(items) for label, items in bullets]
             up.append(r"\end{fwcardeffects}")
         footer = tex_escape(db["footer"]) if gabe else ""  # die Fußzeile erklärt die Gabe
         icon = "[%s]" % rules["sources"][c["source"]]["icon"] if "source" in c else ""  # Herkunftszeichen

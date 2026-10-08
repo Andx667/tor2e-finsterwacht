@@ -6,8 +6,8 @@
 #
 # Nur für die Finsterwacht:
 #   order      die Karten in Druckreihenfolge, ein Eintrag je Exemplar
-#   immediate  die einfachen Rewards: auf der Karte der Eintrag „Sofort“. Alles andere (bessere
-#              Rewards, Banes, Blessings) ist die „Gabe der Wacht“; freie `effects` stehen bei „Sofort“.
+#   immediate  die einfachen Rewards: auf der Karte der Eintrag ohne Kennwort. Alles andere (bessere
+#              Rewards, Banes, Blessings) ist die „Gabe der Wacht“; freie `effects` stehen ohne Kennwort.
 # Regelbegriffe aus `terms` werden auf den Karten automatisch kursiv gesetzt, dazu die Namen der
 # Eigenschaften und die Gegenstandsarten aus src/rules.toml.
 

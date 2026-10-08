@@ -73,7 +73,7 @@ Die Gegenstände in `src/cards.toml` haben dasselbe Format wie in tor2e-items (S
 
 Nur für die Finsterwacht gibt es zwei Zusätze in `src/cards.toml`: `order` (die Karten in Druckreihenfolge, ein
 Eintrag je Exemplar) und `immediate` (die einfachen Rewards). Auf der Karte stehen die einfachen Rewards und
-freie Effekte unter **Sofort**, alles andere – bessere Rewards, Banes und Blessings – unter **Gabe der Wacht**.
+freie Effekte ohne Kennwort, alles andere – bessere Rewards, Banes und Blessings – unter **Gabe der Wacht**.
 Die Fußzeile, die die Gabe erklärt, erscheint nur auf Karten, die eine haben. Alles, was kein
 einfacher Reward ist, macht einen Gegenstand berühmt (*Famous Weapon*); mit nichts als einfachen Rewards ist er nur
 gut gemacht und trägt keine solche Zeile. `source` setzt das Zeichen der Finsterwacht in die Ecke der Karte
