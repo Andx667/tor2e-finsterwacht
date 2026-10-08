@@ -242,13 +242,13 @@ Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versieg
 - Das Horn der Finsterwacht (*Wondrous Item*)
 - Gewöhnliche Waffen: 40 Speere, 20 Schilde, 500 Pfeile – genug, um später Brees Wache oder eine Schar Rangers auszurüsten
 
-**Gabe der Wacht (Hausregel, abweichend von den _Core Rules_):** Jedes Stück wirkt vom ersten Augenblick an vollständig: mit dem, was auf der Karte ohne Kennwort steht, und mit den übrigen *Rewards*, *Banes* und *Blessings*, der **Gabe der Wacht**. Verwirkt ist die Gabe nur, wenn die Gefährten die Toten entehren, etwa wenn sie:
+**Gabe der Wacht (Hausregel, abweichend von den _Core Rules_):** Jedes Stück wirkt vom ersten Augenblick an vollständig, auch mit den *Rewards*, *Banes* und *Blessings*, die auf den Karten unter **Gabe der Wacht** stehen. Verwirkt ist die Gabe nur, wenn die Gefährten die Toten entehren, etwa wenn sie:
 
 - die Gräber der Könige in Fornost geplündert haben (Teil 2, Ort 4),
 - Thorondirs Gebeine stören oder ihm Narcrist mit Gewalt entreißen (Teil 3, Der Hauptmann an der Tür), oder
 - die Gebeine der Besatzung im Burghof, das Grab der Patrouille oder die Gebeine der vergessenen Patrouille plündern oder schänden (Teil 3, Die Reise entlang der Signalfeuer-Linie).
 
-Wer ein Stück aufnimmt, spürt die Gabe: Die Klingen liegen warm in der Hand, das Kettenhemd ist leicht und das Horn summt leise. Sag den Spielern an, dass ihre Karten vollständig gelten. Ist die Gabe verwirkt, bleibt es bei dem, was ohne Kennwort auf der Karte steht; in einer Kampagne kann die Gabe später noch durch ein *Undertaking* in Rivendell geweckt werden. Die Werte auf den Karten sind Grundwerte; was die Eigenschaften daran ändern, steht klein darunter und ist nicht eingerechnet. Die Klammern auf den Karten sind Kurzfassungen; maßgeblich sind die *Core Rules*.
+Wer ein Stück aufnimmt, spürt die Gabe: Die Klingen liegen warm in der Hand, das Kettenhemd ist leicht und das Horn summt leise. Sag den Spielern an, dass ihre Karten vollständig gelten. Ist die Gabe verwirkt, entfällt, was unter **Gabe der Wacht** steht; in einer Kampagne kann die Gabe später noch durch ein *Undertaking* in Rivendell geweckt werden. Die Werte auf den Karten sind Grundwerte; was die Eigenschaften daran ändern, steht klein darunter und ist nicht eingerechnet. Die Klammern auf den Karten sind Kurzfassungen; maßgeblich sind die *Core Rules*.
 
 ### Der Preis
 
