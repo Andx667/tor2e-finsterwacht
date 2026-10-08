@@ -248,7 +248,7 @@ Die Kammer ist trocken und dunkel. Gestelle mit Speeren, Pfeilbündel in versieg
 - Thorondirs Gebeine stören oder ihm Narcrist mit Gewalt entreißen (Teil 3, Der Hauptmann an der Tür), oder
 - die Gebeine der Besatzung im Burghof, das Grab der Patrouille oder die Gebeine der vergessenen Patrouille plündern oder schänden (Teil 3, Die Reise entlang der Signalfeuer-Linie).
 
-Wer ein Stück aufnimmt, spürt die Gabe: Die Klingen liegen warm in der Hand, das Kettenhemd ist leicht und das Horn summt leise. Sag den Spielern an, dass ihre Karten vollständig gelten. Ist die Gabe verwirkt, bleibt es beim Eintrag *Sofort*; in einer Kampagne kann die Gabe später noch durch ein *Undertaking* in Rivendell geweckt werden. Die Klammern auf den Karten sind Kurzfassungen; maßgeblich sind die *Core Rules*.
+Wer ein Stück aufnimmt, spürt die Gabe: Die Klingen liegen warm in der Hand, das Kettenhemd ist leicht und das Horn summt leise. Sag den Spielern an, dass ihre Karten vollständig gelten. Ist die Gabe verwirkt, bleibt es beim Eintrag *Sofort*; in einer Kampagne kann die Gabe später noch durch ein *Undertaking* in Rivendell geweckt werden. Die Werte auf den Karten sind Grundwerte; was die Eigenschaften daran ändern, steht klein darunter und ist nicht eingerechnet. Die Klammern auf den Karten sind Kurzfassungen; maßgeblich sind die *Core Rules*.
 
 ### Der Preis
 

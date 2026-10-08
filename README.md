@@ -68,14 +68,16 @@ Ein Tag `v*` erzeugt zusätzlich ein GitHub-Release mit beiden PDFs.
 
 Die Gegenstände in `src/cards.toml` haben dasselbe Format wie in tor2e-items (Schatzkammer): Name, Art,
 `base`, `craftsmanship`, Werte, `qualities` und `banes`. Werte und Regeltexte der Eigenschaften kommen aus
-`src/rules.toml`; die Karte zeigt die Werte mit den Eigenschaften schon eingerechnet. `src/rules.toml` und
+`src/rules.toml`; die Karte zeigt die Grundwerte, und was die Eigenschaften daran ändern, klein darunter. `src/rules.toml` und
 `tools/check.py` sind unverändert aus tor2e-items übernommen und werden dort gepflegt.
 
 Nur für die Finsterwacht gibt es zwei Zusätze in `src/cards.toml`: `order` (die Karten in Druckreihenfolge, ein
 Eintrag je Exemplar) und `immediate` (die einfachen Rewards). Auf der Karte stehen die einfachen Rewards und
 freie Effekte unter **Sofort**, alles andere – bessere Rewards, Banes und Blessings – unter **Gabe der Wacht**.
-Die Fußzeile, die die Gabe erklärt, erscheint nur auf Karten, die eine haben. Ein Gegenstand mit einem Superior
-Reward gilt als berühmt (*Famous Weapon*); ohne ihn ist er nur gut gemacht und trägt keine solche Zeile.
+Die Fußzeile, die die Gabe erklärt, erscheint nur auf Karten, die eine haben. Alles, was kein
+einfacher Reward ist, macht einen Gegenstand berühmt (*Famous Weapon*); mit nichts als einfachen Rewards ist er nur
+gut gemacht und trägt keine solche Zeile. `source` setzt das Zeichen der Finsterwacht in die Ecke der Karte
+(`assets/icons/`, ebenfalls aus tor2e-items).
 
 `python3 tools/check.py` prüft die Gegenstände allein; der Build bricht bei einem Fehler ab.
 

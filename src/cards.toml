@@ -28,7 +28,8 @@ terms = [
 ]
 
 [items.narcrist]
-name = "Narcrist, das Schwert des Hauptmanns"
+name = "Narcrist"
+source = "finsterwacht"
 type = "weapon"
 proficiency = "swords"
 base = "Long sword"
@@ -46,6 +47,7 @@ tags = ["finsterwacht"]
 
 [items.torhueter]
 name = "Der Torhüter"
+source = "finsterwacht"
 type = "shield"
 base = "Shield"
 craft = "númenórische Arbeit"
@@ -59,6 +61,7 @@ tags = ["finsterwacht"]
 
 [items.horn-der-finsterwacht]
 name = "Das Horn der Finsterwacht"
+source = "finsterwacht"
 type = "wonder"
 craft = "Arbeit der Dúnedain"
 text = "Ein silberbeschlagenes Horn, von den Dúnedain des Nordens gefertigt, das einst die Besatzung auf die Mauern rief."
@@ -70,6 +73,7 @@ tags = ["finsterwacht"]
 
 [items.breschenwacht]
 name = "Die Breschenwacht"
+source = "finsterwacht"
 type = "weapon"
 proficiency = "axes"
 base = "Long-hafted axe"
@@ -87,6 +91,7 @@ tags = ["finsterwacht"]
 
 [items.klinge-der-wacht]
 name = "Klinge der Wacht"
+source = "finsterwacht"
 type = "weapon"
 proficiency = "swords"
 base = "Sword"
@@ -102,6 +107,7 @@ tags = ["finsterwacht"]
 
 [items.kurzschwert-der-wacht]
 name = "Kurzschwert der Wacht"
+source = "finsterwacht"
 type = "weapon"
 proficiency = "swords"
 base = "Short sword"
@@ -117,6 +123,7 @@ tags = ["finsterwacht"]
 
 [items.bogen-der-wacht]
 name = "Bogen der Wacht"
+source = "finsterwacht"
 type = "weapon"
 proficiency = "bows"
 base = "Bow"
@@ -132,6 +139,7 @@ tags = ["finsterwacht"]
 
 [items.kettenhemd-der-wacht]
 name = "Kettenhemd der Wacht"
+source = "finsterwacht"
 type = "armour"
 base = "Coat of mail"
 craft = "númenórische Arbeit"

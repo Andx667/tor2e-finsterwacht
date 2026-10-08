@@ -25,9 +25,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATS = ("damage", "injury", "protection", "parry", "load")
 VALOUR_STATS = (*STATS, "piercing_blow")  # what a `valour_bonus` may name
-ITEM_KEYS = {"name", "type", "proficiency", "base", "craft", "craftsmanship", "text", "stats_note", "qualities",
+ITEM_KEYS = {"name", "source", "type", "proficiency", "base", "craft", "craftsmanship", "text", "stats_note", "qualities",
              "banes", "blessings", "effects", "tags", "injury_two_handed", *STATS}
-HOARD_KEYS = {"name", "text", "items", "wealth", "wealth_note", "tags"}
+HOARD_KEYS = {"name", "source", "text", "items", "wealth", "wealth_note", "tags"}
 EFFECT_LISTS = ("qualities", "banes", "blessings")
 
 
@@ -38,7 +38,7 @@ def load_toml(*parts):
 
 def load_rules():
     rules = load_toml("src", "rules.toml")
-    for key in ("types", "categories", "qualities", "limits"):
+    for key in ("types", "sources", "categories", "qualities", "limits"):
         rules.setdefault(key, {})
     rules.setdefault("craftsmanships", [])
     rules.setdefault("skills", [])
@@ -131,6 +131,11 @@ def check_rules_file(rules):
         for s in (*STATS, "injury_two_handed"):
             if s in b and not is_int(b[s]):
                 yield f"rules: bases.{name}: '{s}' must be a whole number"
+    for name, src in rules["sources"].items():
+        if not isinstance(src.get("label"), str) or not src["label"].strip():
+            yield f"rules: sources.{name}: 'label' is missing"
+        if not isinstance(src.get("icon"), str) or not os.path.isfile(os.path.join(ROOT, "assets", "icons", src["icon"] + ".png")):
+            yield f"rules: sources.{name}: 'icon' must name a file assets/icons/<icon>.png"
     for name, c in rules["categories"].items():
         if not isinstance(c.get("label"), str) or not c["label"].strip():
             yield f"rules: categories.{name}: 'label' is missing"
@@ -166,6 +171,8 @@ def check_rules_file(rules):
         if not isinstance(effects, list) or not all(isinstance(e, dict) for e in effects):
             yield f"rules: qualities.{name}: effects must be a list of [[qualities.<name>.effects]] tables"
             continue
+        if q.get("basic") and q.get("superior"):
+            yield f"rules: qualities.{name}: a quality is either basic or superior"
         explained = [(f"qualities.{name}.effects #{n}", e) for n, e in enumerate(effects, 1)] or [(f"qualities.{name}", q)]
         for where, part in explained:
             if not isinstance(part.get("text"), str) or not part["text"].strip():
@@ -180,6 +187,8 @@ def check_rules_file(rules):
                     yield f"rules: {where}: valour_bonus names the unknown stat '{s}'"
             if "piercing_blow" in part and not is_int(part["piercing_blow"]):
                 yield f"rules: {where}: piercing_blow must be a whole number"
+            if "protection_roll" in part and not is_int(part["protection_roll"]):
+                yield f"rules: {where}: protection_roll must be a whole number"
             if i and not is_strings(part.get("bases", [])):
                 yield f"rules: {where}: bases must be a list of texts"
             for field in ("modifies", "sets"):
@@ -197,9 +206,16 @@ def check_rules_file(rules):
             yield f"rules: limits.{name}: unknown type"
 
 
+def check_source(entry, rules):
+    """`source` of an item or a hoard: one of the [sources] in src/rules.toml."""
+    if "source" in entry and entry["source"] not in rules["sources"]:
+        yield f"unknown source '{entry['source']}' (known: {', '.join(rules['sources'])})"
+
+
 def check_item(item, rules):
     for key in sorted(set(item) - ITEM_KEYS):
         yield f"unknown field '{key}'"
+    yield from check_source(item, rules)
     for key in ("name", "type"):
         if not isinstance(item.get(key), str) or not item[key].strip():
             yield f"'{key}' is missing"
@@ -410,7 +426,7 @@ def check(db, rules, duplicates=()):
             found += list(fn(key, item, db, rules))
         problems += [f"items.{key}: {p}" for p in found]
     for key, hoard in db["hoards"].items():
-        problems += [f"hoards.{key}: {p}" for p in check_hoard(hoard, db)]
+        problems += [f"hoards.{key}: {p}" for p in (*check_hoard(hoard, db), *check_source(hoard, rules))]
     return problems
 
 

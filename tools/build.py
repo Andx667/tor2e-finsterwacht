@@ -80,11 +80,11 @@ def tex_escape(s):
 
 # ------------------------------------------------------------------ 3. Karten
 def kind_line(item, rules):
-    """Die Zeile unter dem Namen. Ein Superior Reward macht einen Gegenstand berühmt; ohne ihn
-    (und ohne Blessings oder freie Effekte) ist er nur gut gemacht und bekommt das `plain_label`
-    der Gegenstandsart statt ihres `label`."""
+    """Die Zeile unter dem Namen. Alles, was kein einfacher Reward ist, macht einen Gegenstand
+    berühmt: jede andere Eigenschaft, ein Blessing oder ein freier Effekt. Mit nichts als einfachen
+    Rewards ist er nur gut gemacht und bekommt das `plain_label` der Gegenstandsart statt ihres `label`."""
     kind = rules["types"][item["type"]]
-    famous = (any(rules["qualities"][q].get("superior") for q in item.get("qualities", []))
+    famous = (any(not rules["qualities"][q].get("basic") for q in item.get("qualities", []))
               or item.get("blessings") or item.get("effects"))
     label = kind["plain_label"] if not famous and "plain_label" in kind else kind["label"]
     return " · ".join(x for x in (label, item.get("base"), item.get("craft")) if x)
@@ -98,11 +98,15 @@ def quality_text(name, item, rules):
 
 
 def stats_entries(item, rules):
-    """Die Werte als (Name, Wert), mit den `modifies` und `sets` der Eigenschaften angewendet;
-    die Injury einer vielseitigen Waffe ist „18/20“."""
-    item = dict(item)
+    """Die Werte als (Name, Grundwert, Bonus): der Bonus ist, was die Eigenschaften daran ändern
+    (`sets` und `modifies`), sonst "". Die Injury einer vielseitigen Waffe ist „18/20“, ihr Bonus
+    gilt für beide. Ein Bonus auf den Protection-Wurf (`protection_roll`) steht als „+2“ unter
+    Protection, neben einer Änderung der Würfel („+1d“). Wie tools/build.py in tor2e-items."""
+    base, item = item, dict(item)
+    roll = 0
     for q in item.get("qualities", []):
         for effect in check.quality_effects(rules["qualities"][q], item):
+            roll += effect.get("protection_roll", 0)
             for stat, value in effect.get("sets", {}).items():
                 if stat in item:
                     item[stat] = value
@@ -112,20 +116,26 @@ def stats_entries(item, rules):
                         item[key] += change
     if "load" in item:
         item["load"] = max(0, item["load"])
+
+    def bonus(stat, unit=""):
+        change = item[stat] - base[stat]
+        return f"{change:+d}{unit}".replace("-", "−") if change else ""
+
     entries = []
-    if "damage" in item:
-        entries.append(("Damage", str(item["damage"])))
-    if "injury" in item:
-        injury = str(item["injury"])
-        if "injury_two_handed" in item:
-            injury += f"/{item['injury_two_handed']}"
-        entries.append(("Injury", injury))
-    if "protection" in item:
-        entries.append(("Protection", f"{item['protection']}d"))
-    if "parry" in item:
-        entries.append(("Parry", f"{item['parry']:+d}"))
-    if "load" in item:
-        entries.append(("Load", str(item["load"])))
+    if "damage" in base:
+        entries.append(("Damage", str(base["damage"]), bonus("damage")))
+    if "injury" in base:
+        injury = str(base["injury"])
+        if "injury_two_handed" in base:
+            injury += f"/{base['injury_two_handed']}"
+        entries.append(("Injury", injury, bonus("injury")))
+    if "protection" in base:
+        dice = [bonus("protection", "d"), f"{roll:+d}".replace("-", "−") if roll else ""]
+        entries.append(("Protection", f"{base['protection']}d", " ".join(x for x in dice if x)))
+    if "parry" in base:
+        entries.append(("Parry", f"{base['parry']:+d}", bonus("parry")))
+    if "load" in base:
+        entries.append(("Load", str(base["load"]), bonus("load")))
     return entries
 
 
@@ -148,10 +158,11 @@ def cards_tex():
         c = db["items"][key]
         up = [r"\fwcardname{" + tex_escape(c["name"]) + "}", r"\fwcardkind{" + it(kind_line(c, rules)) + "}"]
         stats = stats_entries(c, rules)
-        if stats:  # Namen wie Tabellenköpfe, die Werte darunter
-            heads = " & ".join(r"\fwstathead{" + tex_escape(label) + "}" for label, _ in stats)
-            values = " & ".join(tex_escape(value) for _, value in stats)
-            up.append(r"\fwcardstats{%d}{%s}{%s}{%s}" % (len(stats), heads, values, it(c.get("stats_note", ""))))
+        if stats:  # Namen wie Tabellenköpfe, darunter die Grundwerte und klein die Boni
+            heads = " & ".join(r"\fwstathead{" + tex_escape(label) + "}" for label, _, _ in stats)
+            values = " & ".join(tex_escape(value) for _, value, _ in stats)
+            bonuses = " & ".join(r"\fwstatbonus{" + tex_escape(b) + "}" for _, _, b in stats) if any(b for _, _, b in stats) else ""
+            up.append(r"\fwcardstats{%d}{%s}{%s}{%s}{%s}" % (len(stats), heads, values, bonuses, it(c.get("stats_note", ""))))
         if c.get("text"):
             up.append(r"\fwcardtext{" + it(c["text"]) + "}")
         # Einfache Rewards und freie Effekte: „Sofort“; bessere Rewards, Banes, Blessings: „Gabe der Wacht“
@@ -170,7 +181,8 @@ def cards_tex():
             up += [r"\item \textbf{" + label + ":} " + " · ".join(items) for label, items in bullets]
             up.append(r"\end{fwcardeffects}")
         footer = tex_escape(db["footer"]) if gabe else ""  # die Fußzeile erklärt die Gabe
-        return r"\fwcard{" + "\n".join(up) + "}{" + footer + "}"
+        icon = "[%s]" % rules["sources"][c["source"]]["icon"] if "source" in c else ""  # Herkunftszeichen
+        return r"\fwcard" + icon + "{" + "\n".join(up) + "}{" + footer + "}"
 
     # Sechs Karten je Seite; die Reihen (3 × 2 bzw. 2 × 3) bricht \fwcard in finsterwacht.sty um
     order = data["order"]
