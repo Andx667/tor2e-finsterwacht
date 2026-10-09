@@ -13,7 +13,8 @@ Druckfassung baut. Bei jedem Commit baut GitHub Actions die PDFs
 | --- | --- |
 | `src/finsterwacht.md` | Der Abenteuertext (Pandoc-Markdown) – hier wird geschrieben |
 | `src/cards.toml` | Die Gegenstandskarten (Gegenstände, Texte, Reihenfolge) |
-| `src/rules.toml` | Gegenstandsarten, Handwerkskunst und die Eigenschaften mit ihren Regeltexten (aus tor2e-items) |
+| `src/rules.toml` | Gegenstandsarten, Handwerkskunst und die Eigenschaften mit ihren Kartentexten (aus tor2e-items) |
+| `NOTICE.md` | Wem die Namen und Inhalte gehören und was die MIT-Lizenz abdeckt |
 | `assets/maps/` | Die gezeichneten Karten als JPG, Quellen als SVG in `svg/` |
 | `latex/finsterwacht.sty` | Das Layout: Ränder, Notizspalte, Kästen, Tabellen, Karten, Handouts |
 | `latex/finsterwacht.tex` | Gerüst der Blattfassung (einseitig gedacht, links gelocht) |
@@ -47,7 +48,7 @@ Druckfassung baut. Bei jedem Commit baut GitHub Actions die PDFs
 ## Version und Stand
 
 Version und Datum in der Fußzeile kommen aus git; daneben steht der Autorenhinweis
-(„by Andy Börner – MIT License“).
+(„by Andy Börner – inoffizielles Fanwerk“).
 
 - In der Fußzeile steht die Nummer des letzten Tags: nach `v2.1.1` also **Version 2.1.1**,
   auch für Commits danach und für uncommittete Änderungen.
@@ -114,6 +115,17 @@ Die PDFs liegen danach in `build/Die-Finsterwacht-TOR2e-DE.pdf` und
 (`…-v2.1.pdf`). Fehlt LuaLaTeX
 (`luaotfload`), nimmt das Skript ersatzweise XeLaTeX. Fehlen die deutschen Trennmuster,
 setzt es Flattersatz. Maßgeblich ist der CI-Build.
+
+## Lizenz und Rechte
+
+„Die Finsterwacht“ ist ein **inoffizielles Fanwerk**, nicht verbunden mit oder gebilligt von Middle-earth
+Enterprises, der Tolkien Estate, Sophisticated Games oder Free League Publishing. Die Namen aus Tolkiens Werken
+und die Regelbegriffe von *The One Ring™ Roleplaying Game* gehören ihren Inhabern und werden ohne Lizenz
+verwendet; siehe [NOTICE.md](NOTICE.md). Derselbe Hinweis steht am Ende des Abenteuertexts im PDF. Das Abenteuer
+darf nicht verkauft werden.
+
+Der Code, das Layout, die Karten und der eigene Text des Abenteuers stehen unter der MIT-Lizenz, siehe
+[LICENSE](LICENSE). Sie gilt nicht für die fremden Namen und Inhalte.
 
 ## Geschichte
 

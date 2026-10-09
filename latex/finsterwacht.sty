@@ -164,10 +164,21 @@
     \put(26,285.6){\color{fwhline}\linethickness{0.5pt}\line(1,0){170}}%
   \fi}
 
+% Autorenhinweis der Fußzeilen und der Rechtehinweis (siehe NOTICE.md)
+\newcommand\fwcredit{by Andy Börner – inoffizielles Fanwerk}
+\newcommand\fwnotice{{\par\vspace{6mm}\fontsize{7.5}{9.6}\selectfont\itshape\color{fwgrey}%
+  Inoffizielles Fanwerk, nicht verbunden mit oder gebilligt von Middle-earth Enterprises, der Tolkien Estate,
+  Sophisticated Games oder Free League Publishing (Fria Ligan AB). The One Ring, Middle-earth, The Lord of the Rings,
+  The Hobbit und die Namen der Figuren, Gegenstände, Ereignisse und Orte darin sind Marken der Middle-earth
+  Enterprises, LLC. The One Ring™ Roleplaying Game erscheint bei Free League Publishing unter Lizenz von
+  Sophisticated Games Ltd.; Regelbegriffe gehören den Verlagen. Sie werden hier ohne Lizenz und ohne Gewinnabsicht
+  verwendet; es wird kein Anspruch auf diese Rechte erhoben. Dieses Abenteuer darf nicht verkauft werden. Zum
+  Spielen sind die Regelwerke nötig.\par}}
+
 \newcommand\fw@pageno{\thepage\ / \pageref*{fw-lastnum}}
 \newcommand\fw@footer[3]{% links-x, mitte-x, rechts-x; Seitenzahl steht außen
   \put(#1,7){\makebox(0,0)[lb]{\fw@footerfont\iffw@left\fw@pageno\else Die Finsterwacht · TOR 2e\fi}}%
-  \put(#2,7){\makebox(0,0)[b]{\fontsize{7.5}{9}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand\ · by Andy Börner – MIT License}}%
+  \put(#2,7){\makebox(0,0)[b]{\fontsize{7.5}{9}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand\ · \fwcredit}}%
   \put(#3,7){\makebox(0,0)[rb]{\fw@footerfont\iffw@left Die Finsterwacht · TOR 2e\else\fw@pageno\fi}}}
 
 \newcommand\fw@bgportrait{%
@@ -184,7 +195,7 @@
 \newcommand\fw@bglandscape{%
   \fw@leftfalse
   \ifdefstring{\fwpagekind}{handout}{%
-    \put(285,5){\makebox(0,0)[rb]{\fontsize{6.5}{8}\selectfont\color{fwline}Version \fwversion\ · Stand \fwstand\ · by Andy Börner – MIT License}}%
+    \put(285,5){\makebox(0,0)[rb]{\fontsize{6.5}{8}\selectfont\color{fwline}Version \fwversion\ · Stand \fwstand\ · \fwcredit}}%
   }{\fw@footer{14}{148.5}{283}}}
 
 % Buchfassung: Querseite (297 × 210 mm) um 90° gedreht auf die Hochformatseite, Kopf nach
@@ -423,7 +434,7 @@
   {\fontsize{13}{18}\selectfont\itshape\color{fwgrey}#2\par}%
   \vfill
   {\fontsize{9}{12}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand\par
-   by Andy Börner – MIT License\par}%
+   \fwcredit\par}%
   \endgroup
   \clearpage\null\clearpage
   \gdef\fwpagekind{normal}}

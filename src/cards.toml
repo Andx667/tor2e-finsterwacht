@@ -23,7 +23,7 @@ immediate = ["Keen", "Fell", "Grievous", "Reinforced", "Close-fitting", "Cunning
 terms = [
   "Shadow weakness", "Eye Awareness", "Peril rating", "Success die", "Feat die", "Piercing Blow",
   "Core Rules", "Long-hafted axe", "Long sword", "Short sword", "Coat of mail", "Undertaking",
-  "Blessings", "Blessing", "Banes", "Bane", "Damage", "Injury", "Load", "Protection", "Parry",
+  "Magical success", "Blessings", "Blessing", "Banes", "Bane", "Damage", "Injury", "Load", "Protection", "Parry",
   "Hope", "Hate", "Shadow", "Awe", "Battle", "Valour", "Sword", "Bow", "Shield",
 ]
 
@@ -33,7 +33,6 @@ source = "finsterwacht"
 type = "weapon"
 proficiency = "swords"
 base = "Long sword"
-craft = "elbische Arbeit"
 craftsmanship = "Elven"
 damage = 5
 injury = 16
@@ -43,33 +42,29 @@ stats_note = ""
 text = "In Gondolin geschmiedet und von den Getreuen aus Númenor mitgebracht, weit älter als die Festung. Die Runen auf dem Stahl nannten ihren Namen: Narcrist, „Feuerspalter“."
 qualities = ["Keen", "Superior Fell", "Luminescence"]
 banes = ["Orks"]
-tags = ["finsterwacht"]
 
 [items.torhueter]
 name = "Der Torhüter"
 source = "finsterwacht"
 type = "shield"
 base = "Shield"
-craft = "númenórische Arbeit"
 craftsmanship = "Númenórean"
 parry = 2
 load = 4
 text = "Der Schild des Torwächters, in númenórischer Kunst geschmiedet und mit Turm und Stern bemalt."
 qualities = ["Cunning Make", "Superior Reinforced"]
 banes = ["Orks", "Trolle"]
-tags = ["finsterwacht"]
 
 [items.horn-der-finsterwacht]
 name = "Das Horn der Finsterwacht"
 source = "finsterwacht"
 type = "wonder"
-craft = "Arbeit der Dúnedain"
+craftsmanship = "Númenórean"
 text = "Ein silberbeschlagenes Horn, von den Dúnedain des Nordens gefertigt, das einst die Besatzung auf die Mauern rief."
 blessings = ["Awe", "Battle"]
 effects = [
   ["Ruf der Wacht", "einmal pro Nacht: Gegner mit Hate 3 oder weniger fliehen aus dem Kampf."],
 ]
-tags = ["finsterwacht"]
 
 [items.breschenwacht]
 name = "Die Breschenwacht"
@@ -77,7 +72,6 @@ source = "finsterwacht"
 type = "weapon"
 proficiency = "axes"
 base = "Long-hafted axe"
-craft = "númenórische Arbeit"
 craftsmanship = "Númenórean"
 damage = 6
 injury = 18
@@ -87,7 +81,6 @@ stats_note = ""
 text = "Eine langstielige Axt nach der Kunst der Dúnedain. Ihr Name stammte von der Bresche in der Mauer, die ihr Träger drei Nächte lang hielt."
 qualities = ["Fell", "Superior Grievous"]
 banes = ["Orks", "Trolle"]
-tags = ["finsterwacht"]
 
 [items.klinge-der-wacht]
 name = "Klinge der Wacht"
@@ -95,7 +88,6 @@ source = "finsterwacht"
 type = "weapon"
 proficiency = "swords"
 base = "Sword"
-craft = "númenórische Arbeit"
 craftsmanship = "Númenórean"
 damage = 4
 injury = 16
@@ -103,7 +95,6 @@ load = 2
 text = "Ein Schwert nach der Kunst der Dúnedain, „zum Verderben Angmars“ geschmiedet, mit Turm und Stern auf dem Knauf – die Schwester der zerbrochenen Klinge aus Fornost."
 qualities = ["Keen", "Superior Grievous"]
 banes = ["Orks", "Trolle"]
-tags = ["finsterwacht"]
 
 [items.kurzschwert-der-wacht]
 name = "Kurzschwert der Wacht"
@@ -111,7 +102,6 @@ source = "finsterwacht"
 type = "weapon"
 proficiency = "swords"
 base = "Short sword"
-craft = "númenórische Arbeit"
 craftsmanship = "Númenórean"
 damage = 3
 injury = 16
@@ -119,7 +109,6 @@ load = 1
 text = "Ein Kurzschwert nach der Kunst der Dúnedain, wie es die Wächter auf den Mauern im Gürtel trugen."
 qualities = ["Keen", "Superior Fell"]
 banes = ["Orks", "Trolle"]
-tags = ["finsterwacht"]
 
 [items.bogen-der-wacht]
 name = "Bogen der Wacht"
@@ -127,7 +116,6 @@ source = "finsterwacht"
 type = "weapon"
 proficiency = "bows"
 base = "Bow"
-craft = "númenórische Arbeit"
 craftsmanship = "Númenórean"
 damage = 3
 injury = 14
@@ -135,16 +123,14 @@ load = 2
 text = "Ein Eibenbogen von númenórischen Bogenmachern, mit einer Sehne, die nie ausfranste."
 qualities = ["Keen", "Superior Fell"]
 banes = ["Orks", "Trolle"]
-tags = ["finsterwacht"]
 
 [items.kettenhemd-der-wacht]
 name = "Kettenhemd der Wacht"
 source = "finsterwacht"
 type = "armour"
 base = "Coat of mail"
-craft = "númenórische Arbeit"
+craftsmanship = "Númenórean"
 protection = 4
 load = 12
 text = "Ein langes Hemd aus feinen númenórischen Ringen, leicht wie Leder und blank geblieben."
 qualities = ["Close-fitting", "Cunning Make"]
-tags = ["finsterwacht"]

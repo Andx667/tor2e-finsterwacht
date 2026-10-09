@@ -71,11 +71,13 @@ def version():
     return ver, stand, slug
 
 
+TEX_ESCAPES = {"\\": r"\textbackslash{}", "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#", "_": r"\_",
+               "{": r"\{", "}": r"\}", "~": r"\textasciitilde{}", "^": r"\textasciicircum{}"}
+
+
 def tex_escape(s):
-    for a, b in (("\\", r"\textbackslash{}"), ("&", r"\&"), ("%", r"\%"), ("$", r"\$"),
-                 ("#", r"\#"), ("_", r"\_"), ("{", r"\{"), ("}", r"\}")):
-        s = s.replace(a, b)
-    return s
+    # in einem Durchgang, damit die Klammern eines Ersatzes nicht noch einmal maskiert werden
+    return re.sub(r"[\\&%$#_{}~^]", lambda m: TEX_ESCAPES[m[0]], s)
 
 
 # ------------------------------------------------------------------ 3. Karten
@@ -87,7 +89,7 @@ def kind_line(item, rules):
     famous = (any(not rules["qualities"][q].get("basic") for q in item.get("qualities", []))
               or item.get("blessings") or item.get("effects"))
     label = kind["plain_label"] if not famous and "plain_label" in kind else kind["label"]
-    return " · ".join(x for x in (label, item.get("base"), item.get("craft")) if x)
+    return " · ".join(x for x in (label, item.get("base"), check.craft_label(item, rules)) if x)
 
 
 def quality_text(name, item, rules):
@@ -173,8 +175,8 @@ def cards_tex():
         plain += [tex_escape(a) + " (" + it(b) + ")" for a, b in c.get("effects", [])]
         if c.get("banes"):
             gabe.append(it("Bane: " + ", ".join(c["banes"])))
-        if c.get("blessings"):
-            gabe.append(it(("Blessings: " if len(c["blessings"]) > 1 else "Blessing: ") + ", ".join(c["blessings"])))
+        if c.get("blessings"):  # mit den Würfeln und dem Magical success der Gegenstandsart, wie in tor2e-items
+            gabe.append(it(": ".join(check.blessing_line(c, rules))))
         bullets = [(label, items) for label, items in (("", plain), ("Gabe der Wacht", gabe)) if items]
         if bullets:
             up.append(r"\begin{fwcardeffects}")
