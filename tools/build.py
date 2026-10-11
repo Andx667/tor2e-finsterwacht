@@ -191,7 +191,9 @@ def cards_tex():
     pages = [order[i:i + 6] for i in range(0, len(order), 6)]
     out = []
     for page in pages:
-        out.append(r"\fwcardspage{" + tex_escape(db["hint"]) + "}{%\n" + "\n".join(card(k) for k in page) + "}")
+        out.append(r"\fwcardspage{" + tex_escape(db["hint"]) + "}{%\n" + "\n".join(
+            r"\def\fwcardj{%d}\def\fwcardof{%d}%%" % (j, len(page)) + "\n" + card(k)  # for the shared cut lines
+            for j, k in enumerate(page)) + "}")
     return "\n\n".join(out) + "\n"
 
 

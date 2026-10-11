@@ -337,6 +337,11 @@
 \newcount\fw@cardn
 \newsavebox\fw@cardsbox
 \newif\iffw@cardsanchor
+% Platz der Karte auf der Seite (ab 0) und Zahl der Karten der Seite, von tools/build.py vor jede Karte gesetzt;
+% ohne sie zeichnet eine Karte alle vier Schnittlinien
+\providecommand\fwcardj{0}
+\providecommand\fwcardof{1}
+\newcommand\fw@cutright{\draw[fwline, line width=0.6pt, dash pattern=on 1.4pt off 1.4pt] (\fw@cw,0) -- (\fw@cw,\fw@ch);}
 % \fwcard{Inhalt oben}{Fußzeile} – nur innerhalb von \fwcardspage; bricht die Reihe selbst um
 \NewDocumentCommand\fwcard{O{}mm}{%
   % [Zeichen]: Herkunft der Karte, assets/icons/<Zeichen>.png klein in der rechten unteren Ecke
@@ -349,7 +354,13 @@
   \begin{tikzpicture}
     \useasboundingbox (0,0) rectangle (\fw@cw,\fw@ch);
     \fill[fwparch] (0,0) rectangle (\fw@cw,\fw@ch);
-    \draw[fwline, line width=0.6pt, dash pattern=on 1.4pt off 1.4pt] (0,0) rectangle (\fw@cw,\fw@ch);
+    % Schnittlinien: jede Karte zeichnet links und oben; rechts und unten nur, wo keine Karte anschließt,
+    % damit sich berührende Karten eine gemeinsame Linie haben
+    \draw[fwline, line width=0.6pt, dash pattern=on 1.4pt off 1.4pt] (0,0) -- (0,\fw@ch) -- (\fw@cw,\fw@ch);
+    \ifnum\numexpr\fw@cardn+1\relax=\fw@cardcols\relax\fw@cutright\else
+      \ifnum\numexpr\fwcardj+1\relax=\fwcardof\relax\fw@cutright\fi\fi
+    \ifnum\numexpr\fwcardj+\fw@cardcols\relax<\fwcardof\relax\else
+      \draw[fwline, line width=0.6pt, dash pattern=on 1.4pt off 1.4pt] (0,0) -- (\fw@cw,0);\fi
     \node[inner sep=0pt] at (0.5*\fw@cw,0.5*\fw@ch) {\usebox\fw@cardbox};
   \end{tikzpicture}%
   \global\advance\fw@cardn 1
