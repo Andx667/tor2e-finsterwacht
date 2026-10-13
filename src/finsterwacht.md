@@ -6,7 +6,7 @@ Die Gefährten folgen einer zerbrochenen Klinge von Bree zu den Ruinen von Forno
 
 **Stimmung:** Wehmut und Staunen. Jede Station zeigt den Gefährten, was das Nordkönigreich verloren hat, damit sich die Waffenkammer wie ein Erbe anfühlt und nicht wie Beute.
 
-**Umfang:** 2 bis 4 Sitzungen à etwa 4 Stunden (rund 6½–7½ Stunden ohne, 12–13 Stunden mit allen optionalen Teilen), eine einzelne *Adventuring Phase* ohne anschließende *Fellowship Phase*; das Abenteuer ist für sich allein spielbar. Als „Optional“ markierte Ereignisse und optionale Teile können gestrichen werden, ohne die Handlung zu brechen; streicht man alle, spart das etwa eine bis anderthalb Sitzungen.
+**Umfang:** 2 bis 4 Sitzungen à etwa 4 Stunden (rund 8 Stunden ohne, 12–13 Stunden mit allen optionalen Teilen). Der natürliche Schnitt bei zwei Sitzungen: Bree, Fornost und der Aufbruch zur Finsterwacht in der ersten, die Finsterwacht und die Schlacht in der zweiten, eine einzelne *Adventuring Phase* ohne anschließende *Fellowship Phase*; das Abenteuer ist für sich allein spielbar. Als „Optional“ markierte Ereignisse und optionale Teile können gestrichen werden, ohne die Handlung zu brechen; streicht man alle, spart das etwa eine bis anderthalb Sitzungen.
 
 **Regelwerk:** Regelbegriffe und Seitenzahlen beziehen sich auf die englische Ausgabe der *Core Rules* von *The One Ring, 2nd Edition*, dritte Auflage (third printing).
 
@@ -114,7 +114,7 @@ Wirf einen d6 oder wähle:
 
 1. Wölfe haben diesen Winter bei Archet Schafe gerissen, mehr als je zuvor. (Wahr: Der Norden regt sich.)
 2. In mondlosen Nächten wandern Lichter über den Hügel von Deadmen's Dike. (Wahr: siehe Teil 2.)
-3. „Die alten Könige haben ihr Gold oben im Norden vergraben, jedes Stück davon.“ (Größtenteils falsch, aber Schatzsucher sterben daran.)
+3. „Die alten Könige haben ihr Gold oben im Norden vergraben, jedes Stück davon.“ (Größtenteils falsch, aber Schatzsucher sterben daran. Einer, der von Deadmen's Dike heimkehrte, soll seither nicht mehr schlafen: ein erster Hinweis auf Hob Hayward, Teil 2.)
 4. Ein durchreisender Zwerg hat nach „Stahl, der nicht rostet“ gefragt und gut bezahlt. (Wahr: später ein möglicher Rivale oder Verbündeter.)
 5. Seit dem Herbst sieht man die Rangers öfter nach Norden reiten. (Wahr: Sie verfolgen die Orks.)
 6. Jemand im Pony stellt viele Fragen über Fremde. (Wahr: Malk.)
@@ -122,6 +122,8 @@ Wirf einen d6 oder wähle:
 ## Teil 2: Fornost Erain {#teil2}
 
 In den Ruinen müssen die Gefährten zwei Dinge finden: wo die Finsterwacht steht und wie man ihre Waffenkammer öffnet. Die Hinweise verteilen sich auf vier Orte; die Suche füllt etwa eine halbe Sitzung.
+
+**Hinweis für den Loremaster:** Was die Gefährten zum Weiterkommen brauchen, finden sie, sobald sie sich umsehen; Würfe und Vorgehen der Spieler liefern höchstens Zusätzliches. Erzähle Funde als Geschichte, nicht als Wurfergebnis.
 
 ### Die Reise über den Greenway (7 Tage)
 
@@ -136,7 +138,7 @@ Nutze diese als *Journey*-Ereignisse (der passende Ereignistyp steht in Klammern
 - **Der Meilenstein** (*Joyful Sight*): ein moosbewachsener Meilenstein der Könige, der noch immer die Wegstunden nach Fornost zeigt. Ein guter Ort, um über das verlorene Königreich zu sprechen.
 - **Frühjahrshochwasser** (*Mishap*): Ein Bach ist über die Ufer getreten, die alte Brücke ist fort.
 - **Der Zwergenhändler** (*Chance-meeting*): **Brór**, ein Zwerg aus den Blue Mountains auf dem Weg nach Norden zu den Ruinen, derselbe, der in Bree nach rostfreiem Stahl fragte. Er will Fornost selbst durchsuchen und bietet einen guten Preis für jede Klinge, die die Gefährten finden. Freundlich, aber ein Rivale um denselben Fund. Optional, dann kann Brór aber später nicht als Rivale oder Verbündeter zurückkehren.
-- **Orkspuren** (*Ill Choices*): eisenbeschlagene Füße, die nachts die Straße kreuzten, Richtung Nordosten. Mit einem erfolgreichen *Hunting*-Wurf zählt man 15 bis 20.
+- **Orkspuren** (*Ill Choices*): eisenbeschlagene Füße, die nachts die Straße kreuzten, Richtung Nordosten. Es war eine große Schar, 15 bis 20 Orks, und die Spuren sind erst einen Tag alt.
 - **Wölfe am Lager** (*Terrible Misfortune*): Ein hungriges Rudel umkreist das Feuer. Wer sie nicht mit Feuer und Lärm vertreibt, erleidet eine Wunde.
 - **Das leere Gehöft** (*Despair*): ein Haus der Dúnedain, das Dach eingestürzt, ein Kinderspielzeug im Herd.
 - **Halbarads Zeichen** (*Short Cut*): ein Wegzeichen der Rangers, in einen Baum geschnitten, das auf einen trockenen, verborgenen Pfad weist.
@@ -151,10 +153,12 @@ Die Bree-Leute nennen den Hügel Deadmen's Dike und sagen, hier gingen die Toten
 
 ### Orte in Fornost
 
-1. **Die Außenmauern – die Lichter.** Nachts wandern Laternen durch die Ruinen. Sie gehören vier Plünderern aus dem Bree-land unter **Wat Ferny**, die nach königlichem Gold graben. Man kann mit ihnen verhandeln, sie verscheuchen oder bekämpfen (wie Banditen behandeln). Wat hat am Nordhang „Orkspuren“ gesehen und will nicht hier sein, wenn sie kommen. Ein Licht, niedrig und bleich, gehört niemandem. Lass es unerklärt. Optional: Lass die Plünderer weg und behalte nur das bleiche Licht; die Orkspuren können mit einem *Explore*-Wurf gefunden werden.
-2. **Der Thronsaal Arveduis – der Reiter.** Eine lange Halle, deren Pfeiler bis unter die Decke mit Schnitzwerk bedeckt sind, in einer Kunst, die längst verloren ist. Am Kopfende steht der Thron, als hätten ihn die Jahrhunderte nicht berührt: schwarzer Marmor mit dem Bild eines einzelnen, vielstrahligen Sterns. Nur das hintere Ende ist eingestürzt; dort, am Rand des Schutts, fand Ned das Schwert. Tiefer unter dem Schutt liegt das Skelett von Thorondirs letztem Reiter, noch im Kettenhemd. Er erreichte Fornost lebend, verwundet, doch knapp zu spät: Die Stadt war gefallen, der König fort. Er starb hier, als das brennende Dach herabstürzte; die zerbrochene Klinge aus Bree war sein Schwert. An seinem Finger: ein Ring mit dem Zeichen von Turm und Stern, der später in der Finsterwacht wichtig wird (siehe Teil 3, Der Hauptmann an der Tür). In einer Bleiröhre an seinem Gürtel: der letzte Brief des Hauptmanns (siehe unten). Den Reiter unter dem Schutt zu finden erfordert einen *Scan*-Wurf.
-3. **Die Halle der Schriftrollen – die Karte.** Steinregale, die Schriftrollen längst verbrannt oder verrottet. An einer Wand ist noch eine eingemeißelte Karte der nördlichen Signalfeuer-Kette erhalten: drei Signalfeuer, die von Fornost nach Nordosten führen, und dahinter ein viertes Zeichen, mit Turm und Stern markiert. Wer sie abzeichnet, erhält auf der Reise zur Finsterwacht 1 zusätzlichen *Success die* auf den *Travel*-Wurf (siehe Teil 3).
-4. **Die Gräber der Könige.** Kalt, still, versiegelt. Gefährten, die nichts anrühren, spüren einen seltsamen Segen (1 *Hope* zurück). Wer ein Grab plündert, erhält 1 *Shadow*. Außerdem verwirken die Gefährten damit die Gabe der Wacht: Die besonderen Kräfte der Waffen in der Finsterwacht bleiben jenen verschlossen, die Arnor entehrt haben (Hausregel, Einzelheiten in Teil 3, Die Waffenkammer).
+1. **Die Außenmauern – die Lichter.** Nachts wandern Laternen durch die Ruinen. Sie gehören vier Plünderern aus dem Bree-land unter **Wat Ferny**, die nach königlichem Gold graben. Man kann mit ihnen verhandeln, sie verscheuchen oder bekämpfen (wie Banditen behandeln). Wat hat am Nordhang Orkspuren gesehen und will nicht hier sein, wenn sie kommen. Ein Licht, niedrig und bleich, gehört niemandem. Lass es unerklärt. Skarbaks Späher waren vor ein paar Tagen hier und haben an den Mauern Spuren hinterlassen: zertretenes Gras, abgebrochene Pfeilschäfte, eine kalte Feuerstelle. Sie haben die Ruine nur beobachtet und sind dann nach Nordosten weitergezogen, und Wats Männer erzählen dasselbe. Optional: Lass die Plünderer weg und behalte nur das bleiche Licht; die Spuren findet man dann trotzdem.
+
+   **Der Verfluchte.** Abseits der Lichter, in einem windschiefen Unterstand, hockt **Hob Hayward**, den Wats Männer fortgejagt haben. Er nahm einem Toten in den Mauern einen Siegelring ab, und seither schläft er nicht mehr, friert im Sonnenschein, und seine Hände sind schwarz wie Asche. Die anderen fürchten, sich anzustecken. Hob ist verängstigt und misstrauisch, doch wer freundlich mit ihm redet, dem erzählt er, dass es keine Strafe für Diebe sei, sondern ein Zeichen: Wer den Toten nimmt, was ihnen gehört, den lassen sie nicht mehr los. Legen die Gefährten den Ring zurück oder zeigen ihm, wie, wird er ruhiger. Der Fluch hat keine Spielwerte; er soll den Spielern zeigen, dass das Entehren von Toten Folgen hat, bevor sie vor den Gräbern der Könige (Ort 4) und später in der Finsterwacht vor der Entscheidung stehen.
+2. **Der Thronsaal Arveduis – der Reiter.** Eine lange Halle, deren Pfeiler bis unter die Decke mit Schnitzwerk bedeckt sind, in einer Kunst, die längst verloren ist. Am Kopfende steht der Thron, als hätten ihn die Jahrhunderte nicht berührt: schwarzer Marmor mit dem Bild eines einzelnen, vielstrahligen Sterns. Nur das hintere Ende ist eingestürzt; dort, am Rand des Schutts, fand Ned das Schwert. Tiefer unter dem Schutt liegt das Skelett von Thorondirs letztem Reiter, noch im Kettenhemd. Er erreichte Fornost lebend, verwundet, doch knapp zu spät: Die Stadt war gefallen, der König fort. Er starb hier, als das brennende Dach herabstürzte; die zerbrochene Klinge aus Bree war sein Schwert. An seinem Finger: ein Ring mit dem Zeichen von Turm und Stern, der später in der Finsterwacht wichtig wird (siehe Teil 3, Der Hauptmann an der Tür). In einer Bleiröhre an seinem Gürtel: der letzte Brief des Hauptmanns (siehe unten). Wer am Rand des Schutts sucht, wie Ned es beschreibt, findet den Reiter: Seine Hand mit dem Ring ragt unter den Steinen hervor.
+3. **Die Halle der Schriftrollen – die Karte.** Steinregale, die Schriftrollen längst verbrannt oder verrottet. An einer Wand ist noch eine eingemeißelte Karte der nördlichen Signalfeuer-Kette erhalten: drei Signalfeuer, die von Fornost nach Nordosten führen, und dahinter ein viertes Zeichen, mit Turm und Stern markiert. Die Karte sieht jeder, der die Halle betritt; sie abzuzeichnen dauert ein bis zwei Stunden. Wer sie abzeichnet, erhält auf der Reise zur Finsterwacht 1 zusätzlichen *Success die* auf den *Travel*-Wurf (siehe Teil 3). Das vierte Zeichen, der Turm unter einem einzelnen Stern, ist der Sitz des Hauptmanns der Wacht.
+4. **Die Gräber der Könige.** Kalt, still, versiegelt. Wer Hobs Geschichte gehört hat (Ort 1), weiß, was hier auf dem Spiel steht. Gefährten, die nichts anrühren, spüren einen seltsamen Segen (1 *Hope* zurück). Wer ein Grab plündert, erhält 1 *Shadow*. Außerdem verwirken die Gefährten damit die Gabe der Wacht: Die besonderen Kräfte der Waffen in der Finsterwacht bleiben jenen verschlossen, die Arnor entehrt haben (Hausregel, Einzelheiten in Teil 3, Die Waffenkammer).
 
 ### Thorondirs letzter Brief (Handout)
 
@@ -171,7 +175,7 @@ Die Worte, die die Tür öffnen, sind der **Eid der Wacht**: *„Für die Wacht,
 
 ### Mögliche Begegnung
 
-Wenn Malk in Bree entkommen ist oder nie gefasst wurde, beobachten zwei Ork-Späher die Ruine. Werden sie gesehen, fliehen sie nach Nordosten. Mit einem erfolgreichen *Hunting*-Wurf können die Gefährten ihrer Spur folgen, und sie führt in dieselbe Richtung wie die Signalfeuer-Karte. Optional.
+Wenn Malk in Bree entkommen ist oder nie gefasst wurde, beobachten zwei Ork-Späher die Ruine. Werden sie gesehen, fliehen sie nach Nordosten. Die Gefährten können ihrer Spur folgen, und sie führt in dieselbe Richtung wie die Signalfeuer-Karte. Optional.
 
 ## Teil 3: Die Finsterwacht {#teil3}
 
@@ -206,7 +210,7 @@ Die Finsterwacht steht auf einem Felssporn, der auf drei Seiten steil abfällt. 
 ### Orte in der Finsterwacht
 
 1. **Das zerbrochene Tor.** Die Torflügel sind fort; eine Bresche in der Mauer daneben ist der einzige andere Weg hinein. Beide Stellen sind in der Schlacht wichtig.
-2. **Der Burghof.** Gebeine von Menschen und Orks unter dem Gras, verrostete Speerspitzen, ein trockener Brunnen. Ein *Battle*-Wurf liest den letzten Kampf: Die Verteidiger zogen sich zum Bergfried zurück. Ein guter *Scan*-Wurf findet hinter Efeu an der Westmauer eine schmale, verschüttete Ausfallpforte; ein Pfad führt von dort die Klippe hinab (rot gestrichelt auf der Loremaster-Karte).
+2. **Der Burghof.** Gebeine von Menschen und Orks unter dem Gras, verrostete Speerspitzen, ein trockener Brunnen. Die Verteidiger zogen sich zum Bergfried zurück; die Spuren zeigen, wo die Orks durchbrachen. Wer die Westmauer abgeht, findet hinter Efeu eine schmale, verschüttete Ausfallpforte; ein Pfad führt von dort die Klippe hinab (rot gestrichelt auf der Loremaster-Karte). Findet niemand die Pforte, verrät Rhovan (Teil 4) sie, wenn die Mauern fallen.
 3. **Der Signalturm.** Er steht noch, seine Treppe halb zerbrochen. Die Feuerschale oben enthält noch die Asche des Feuers, mit dem die Besatzung Fornost warnte. Die Gefährten können Brennholz sammeln (ein halber Tag), um es zu entzünden. Brennt es, sieht man das Feuer vom nächsten Signalhügel aus, wo Halbarads Rangers wachen.
 4. **Der eingestürzte Bergfried.** Ein Haufen verbrannter Balken und Steine. Die Treppe freizuräumen dauert fast einen ganzen Tag (ein *Skill Endeavour*; *Athletics*- und *Craft*-Würfe, *Fatigue* bei Misserfolgen). Schlechte Würfe bedeuten hier, dass die Orks früher kommen.
 5. **Die tiefe Tür.** Am Fuß der Treppe steht eine schlichte Steintür mit Turm und Stern. Neben ihr sitzen Thorondirs Gebeine im Kettenhemd, an die Wand gelehnt, beide Hände fest um das Heft seines Schwertes Narcrist geschlossen. Die Luft ist kalt und still.
@@ -365,7 +369,7 @@ Zwischen den Wellen: eine kurze Rast und ein Moment der Gemeinschaft. Kürzere S
 
 ## Anhang: Wichtige NSCs {#anhang-nscs .nonotes}
 
-Elf Figuren tragen das Abenteuer; Skarbak, Malk und Brór können in späteren Abenteuern zurückkehren.
+Zwölf Figuren tragen das Abenteuer; Skarbak, Malk und Brór können in späteren Abenteuern zurückkehren.
 
 | Name | Wer sie sind | Erstes Treffen | Was sie wollen | Wie man sie spielt |
 | --- | --- | --- | --- | --- |
@@ -376,6 +380,7 @@ Elf Figuren tragen das Abenteuer; Skarbak, Malk und Brór können in späteren A
 | Halbarad | Ranger of the North | Teil 1 (bringt die Gefährten zu Gilraen), Teil 4 (Schlacht) | Den Norden vor den Orks schützen, die sich regen | Grimmig, wortkarg; prüft die Gefährten, bevor er ihnen traut; kommt im Morgengrauen, wenn das Signalfeuer brennt |
 | Brór | Zwergenhändler aus den Blue Mountains | Teil 1 (Gerücht), Teil 2 (unterwegs) | Rostfreien númenórischen Stahl, zu einem fairen Preis; optional: die Klinge seines Ahnherrn (Teil 2) | Höflich, gewieft, hartnäckig; Käufer und Rivale um denselben Fund |
 | Wat Ferny | Anführer von vier Plünderern aus dem Bree-land | Teil 2, Fornost bei Nacht | Königliches Gold, dann fort, bevor die Orks kommen | Gierig, aber feige; lässt mit sich handeln; weiß von den Orkspuren am Nordhang |
+| Hob Hayward | Verfluchter Plünderer, von Wat Fernys Männern fortgejagt | Teil 2, Fornost bei Nacht | Dass der Fluch aufhört; Ruhe | Verängstigt, misstrauisch, müde; zeigt, was es kostet, Toten zu nehmen |
 | Thorondir | Letzter Hauptmann der Finsterwacht, tot seit TA 1974 | Teil 3, an der tiefen Tür (seine Gebeine) | Dass die Waffenkammer nur an jene geht, die den Eid der Wacht sprechen | Stumm; ein Toter im Kettenhemd, der sein Schwert festhält, bis man ihm mit Achtung begegnet |
 | Skarbak | Ork-Häuptling vom Mount Gram | Teil 3 (Lager), Teil 4 (Welle 3) | Die Klingen finden und zerstören, bevor Menschen sie nutzen | Listig, grausam, vorsichtig; lässt andere zuerst sterben; flieht, wenn der Kampf kippt |
 | Der Hügeltroll | Troll aus den nördlichen Downs, von Skarbak getrieben | Teil 3 (Spuren), Teil 4 (Welle 3) | Fressen und zertrümmern | Langsam, riesig, dumm |
