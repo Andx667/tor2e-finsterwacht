@@ -111,13 +111,31 @@
     {\global\fwnotesfalse\newgeometry{top=16mm,bottom=18mm,left=26mm,right=14mm,nohead,nofoot}}}
 
 % ---------------------------------------------------------------- Titel und Kapitel
+% \fwtitle{Titel}{Untertitel}; \fwsubsep im Untertitel trennt mit „ · “ (Buch) oder bricht um (Blatt)
+\newcommand\fwsubsep{\ \textperiodcentered\ }
 \newcommand\fwtitle[2]{%
-  \noindent\begin{minipage}[b]{\dimexpr\linewidth-24mm\relax}%
-    {\fontsize{24}{27}\selectfont\bfseries\color{fwred}#1\par}%
-    \vspace{1mm}{\itshape\color{fwgrey}#2\par}%
-  \end{minipage}\hfill
-  \includegraphics[height=20mm]{assets/logo-print.png}\par
-  \vspace{2.5mm}{\color{fwred}\hrule height 1.2pt}\vspace{2mm}}
+  \iffw@book
+    \noindent\begin{minipage}[b]{\dimexpr\linewidth-24mm\relax}%
+      {\fontsize{24}{27}\selectfont\bfseries\color{fwred}#1\par}%
+      \vspace{1mm}{\itshape\color{fwgrey}#2\par}%
+    \end{minipage}\hfill
+    \includegraphics[height=20mm]{assets/logo-print.png}\par
+    \vspace{2.5mm}{\color{fwred}\hrule height 1.2pt}\vspace{2mm}%
+  \else
+    % Blattfassung: Titelband aus dem Bild (die Buchfassung zeigt es ganz auf dem Titelblatt);
+    % Titel im dunklen Himmel links, Siegel rechts oben neben dem Turm
+    \noindent\begin{tikzpicture}[inner sep=0pt]
+      \node[anchor=south west] (band) at (0,0)
+        {\includegraphics[width=\linewidth]{assets/finsterwacht-painting-strip.jpg}};
+      \node[anchor=north west,align=left,text width=72mm] at ([shift={(4mm,-4mm)}]band.north west)
+        {{\fontsize{24}{27}\selectfont\bfseries\color{fwparch}#1\par}%
+         \vspace{1.2mm}{\renewcommand\fwsubsep{\par}\itshape\color{fwparchdark}#2\par}};
+      \fill[fwparch] ([shift={(-13mm,-13mm)}]band.north east) circle[radius=10mm];
+      \node at ([shift={(-13mm,-13mm)}]band.north east)
+        {\includegraphics[height=18mm]{assets/logo-print.png}};
+    \end{tikzpicture}\par
+    \vspace{3mm}%
+  \fi}
 
 \newcommand\fw@heading[1]{%
   {\fontsize{15}{18}\selectfont\bfseries\color{fwred}#1\par}%
@@ -443,6 +461,8 @@
   {\fontsize{38}{44}\selectfont\bfseries\color{fwred}#1\par}%
   \vspace{6mm}{\color{fwred}\hrule height 1.2pt}\vspace{6mm}%
   {\fontsize{13}{18}\selectfont\itshape\color{fwgrey}#2\par}%
+  \vspace{12mm}%
+  \includegraphics[width=\linewidth]{assets/finsterwacht-painting.jpg}\par
   \vfill
   {\fontsize{9}{12}\selectfont\color{fwgrey}Version \fwversion\ · Stand \fwstand\par
    \fwcredit\par}%
