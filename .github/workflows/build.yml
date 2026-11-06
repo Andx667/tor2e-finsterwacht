@@ -30,7 +30,7 @@ jobs:
           apt-get install -y --no-install-recommends git pandoc python3 ca-certificates
 
       - name: Auschecken (mit Tags für die Versionsnummer)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -66,7 +66,7 @@ jobs:
 
       - name: Build-Log bei Fehlern ablegen
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-log
           path: build/*.log
