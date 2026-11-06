@@ -1,0 +1,16 @@
+# Hält die GitHub Actions im Build-Workflow aktuell.
+# Sonst gibt es nichts zu verfolgen: Der PDF-Build braucht nur die Python-Standardbibliothek
+# (Pillow und Playwright nutzen nur lokale Hilfsskripte, ohne requirements-Datei),
+# und das TeX-Live-Image läuft ohnehin auf :latest.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    # Alle Action-Updates in einem einzigen Pull Request bündeln
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: "CI"
