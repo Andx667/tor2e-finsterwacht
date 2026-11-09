@@ -17,6 +17,12 @@ Diese Namen und Begriffe werden hier ohne Lizenz für ein nicht kommerzielles Fa
 Anspruch auf diese Rechte erhoben, und nichts in diesem Repository räumt eine Lizenz daran ein. Das Abenteuer
 darf nicht verkauft werden. Zum Spielen sind die Regelwerke nötig.
 
+## Entstehung mit KI
+
+Dieses Abenteuer wurde mit Hilfe eines KI-Sprachmodells (Claude von Anthropic) geschrieben. Text, Bilder,
+Handouts, Layout und Code sind im Gespräch mit dem Modell entstanden; Idee, Vorgaben und Auswahl stammen vom
+Autor. Der Hinweis steht auch im PDF, am Ende des Textes.
+
 ## Was die MIT-Lizenz abdeckt
 
 Die [MIT-Lizenz](LICENSE) gilt für das, was vom Autor stammt: den Code (`tools/`, `filters/`, `latex/`, den

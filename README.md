@@ -116,6 +116,12 @@ Die PDFs liegen danach in `build/Die-Finsterwacht-TOR2e-DE.pdf` und
 (`luaotfload`), nimmt das Skript ersatzweise XeLaTeX. Fehlen die deutschen Trennmuster,
 setzt es Flattersatz. Maßgeblich ist der CI-Build.
 
+## Entstehung mit KI
+
+Dieses Abenteuer wurde mit Hilfe eines KI-Sprachmodells (Claude von Anthropic) geschrieben. Text, Bilder,
+Handouts, Layout und Code sind im Gespräch mit dem Modell entstanden; Idee, Vorgaben und Auswahl stammen vom
+Autor. Der Hinweis steht auch im PDF, am Ende des Textes.
+
 ## Lizenz und Rechte
 
 „Die Finsterwacht“ ist ein **inoffizielles Fanwerk**, nicht verbunden mit oder gebilligt von Middle-earth
