@@ -1,0 +1,59 @@
+% fwhelden.tex – Heldenbögen für die vorgefertigten Helden (Handout-Seiten, quer).
+% Wird am Ende der Layout-Datei (.sty) geladen; die Zeichnung jedes Bogens erzeugt tools/helden.py
+% nach build/helden.tex (TikZ, Koordinaten in mm, Ursprung links unten im Rahmen).
+% Braucht aus der .sty: \fw@landscape, \fw@landpic, \fw@bookmarks, \fwchorus und die Farben.
+%
+% Aufbau wie der Charakterbogen der Core Rules: Kopffelder; drei Spalten Strength, Heart, Wits mit
+% TN-Raute, Rating und dem abgeleiteten Wert, darunter ihre Skills; unter Strength die Combat
+% Proficiencies, unter Heart Rewards und Valour, unter Wits Virtues und Wisdom; unten War Gear
+% und Rüstung; rechts Endurance mit Load und Fatigue, Hope mit Shadow und Scars, Conditions,
+% Travelling Gear. Die Einträge stehen in „Tinte“ (TeX Gyre Chorus).
+
+\definecolor{fwhink}{HTML}{26356F}
+
+\tikzset{
+  fwh lab/.style={font=\fontsize{6.4}{7.4}\selectfont\scshape\addfontfeature{LetterSpace=4}, text=fwgrey, inner sep=0pt},
+  fwh title/.style={font=\fontsize{11.5}{13}\selectfont\bfseries\scshape\addfontfeature{LetterSpace=6}, text=fwred, inner sep=0pt},
+  fwh sub/.style={font=\fontsize{8.6}{10}\selectfont\bfseries\scshape\addfontfeature{LetterSpace=5}, text=fwred, inner sep=0pt},
+  fwh ink/.style={font=\fwchorus\fontsize{11}{12.5}\selectfont, text=fwhink, inner sep=0pt},
+  fwh inks/.style={font=\fwchorus\fontsize{9.6}{11}\selectfont, text=fwhink, inner sep=0pt},
+  fwh txt/.style={font=\fontsize{7.5}{9.3}\selectfont, text=fwink, inner sep=0pt, align=left},
+  fwh note/.style={font=\fontsize{6.6}{7.8}\selectfont\itshape, text=fwgrey, inner sep=0pt, align=left},
+  fwh name/.style={font=\fontsize{8.2}{9.6}\selectfont, text=fwink, inner sep=0pt},
+  fwh rule/.style={draw=fwred!35, line width=0.35pt},
+  fwh red/.style={draw=fwred, line width=0.6pt},
+  fwh thin/.style={draw=fwred, line width=0.4pt},
+}
+
+% \fwherogroup{Lesezeichen} – Gruppen-Lesezeichen für den ersten folgenden Bogen
+\gdef\fw@herogrp{}
+\newcommand\fwherogroup[1]{\gdef\fw@herogrp{#1}}
+
+\newsavebox\fw@herobox
+% \fwhero{label}{Lesezeichen}{TikZ-Befehle}
+\newcommand\fwhero[3]{%
+  \fw@landscape\gdef\fwpagekind{handout}%
+  \sbox\fw@herobox{\begin{tikzpicture}[x=1mm, y=1mm]
+    \fill[fwparch, rounded corners=2mm] (0,0) rectangle (271,176);
+    \draw[fwgold, line width=0.8pt, rounded corners=2mm] (0,0) rectangle (271,176);
+    \draw[fwred, line width=0.35pt, rounded corners=1.2mm] (2,2) rectangle (269,174);
+    #3
+  \end{tikzpicture}}%
+  \AddToShipoutPictureFG*{\setlength\unitlength{1mm}\fw@landpic{%
+    \put(148.5,104){\makebox(0,0){\usebox\fw@herobox}}%
+    \put(13,194.5){\makebox(0,0)[lb]{\fontsize{8}{10}\selectfont\scshape\addfontfeature{LetterSpace=12}\color{fwgrey}%
+      Heldenbogen \textperiodcentered\ \fwshorttitle}}}}%
+  \null\fw@bookmarks{\fw@herogrp}{#1}{Held: #2}\gdef\fw@herogrp{}}
+
+% Raute: \fwhdia{x}{y}{halbe Diagonale}{Inhalt}{Schriftgröße}
+\newcommand\fwhdia[5]{%
+  \draw[fwh red, fill=fwparch] (#1,#2+#3)--(#1+#3,#2)--(#1,#2-#3)--(#1-#3,#2)--cycle;
+  \node[fwh ink, font=\fwchorus\fontsize{#5}{#5}\selectfont] at (#1,#2-0.3) {#4};}
+% kleine Rang-Raute: \fwhpip{x}{y}{gefüllt 0|1}
+\newcommand\fwhpip[3]{%
+  \draw[fwh thin, fill=fwparch] (#1,#2+1.85)--(#1+1.85,#2)--(#1,#2-1.85)--(#1-1.85,#2)--cycle;
+  \ifnum#3=1 \fill[fwhink] (#1,#2) circle (1.05);\fi}
+% Kästchen: \fwhbox{x}{y}{angekreuzt 0|1}
+\newcommand\fwhbox[3]{%
+  \draw[fwh thin, fill=fwparch] (#1-1.3,#2-1.3) rectangle (#1+1.3,#2+1.3);
+  \ifnum#3=1 \fill[fwhink] (#1,#2) circle (0.9);\fi}

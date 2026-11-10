@@ -29,6 +29,7 @@ local TABLES = {
   ["Im Kampf"]  = { widths = { 0.24, 0.76 }, size = "small" },
   ["Name"]      = { widths = { 0.13, 0.17, 0.17, 0.24, 0.29 }, size = "small" },
   ["Volk"]      = { widths = { 0.16, 0.84 }, size = "small" },
+  ["Held"]      = { widths = { 0.14, 0.20, 0.30, 0.36 }, size = "small" },
 }
 
 local stringify = pandoc.utils.stringify

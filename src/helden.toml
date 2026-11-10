@@ -1,0 +1,100 @@
+# Vorgefertigte Helden für „Die Finsterwacht“. tools/helden.py prüft die Werte gegen die
+# Erschaffungsregeln der Core Rules und setzt daraus die Heldenbögen (build/helden.tex).
+#
+# Felder je Held:
+#   id, name, zeile (Unterzeile auf dem Bogen), alter, kultur, berufung (Calling)
+#   basis              nur bei Hausregel-Kulturen: die Kultur der Core Rules, deren Werte gelten
+#   tausch             Hausregel: Paare von Skills, die ihre Kulturwerte tauschen
+#   attribute          Strength, Heart, Wits (eine Zeile der Kulturtabelle)
+#   kings_of_men       Rangers: welches Attribut +1 bekommt
+#   favoured_kultur    der favorisierte Skill der Kultur; favoured_berufung: zwei aus dem Calling
+#   kampf              Combat Proficiencies der Kultur (eine auf 2, eine andere auf 1)
+#   erfahrung          Previous Experience: je Eintrag +1 auf den Skill (Kosten = neuer Rang, zusammen 10)
+#   merkmale           zwei Distinctive Features der Kultur (das dritte kommt vom Calling)
+#   tugend, prowess    Virtue (Prowess: auf welches Attribut)
+#   belohnung          Reward: { art, gegenstand }
+#   ausruestung        Waffen, Rüstung, Helm, Schild (Namen wie in den Core Rules)
+#   nuetzlich          Useful Items: { name, skill }
+#   kurz               kurzer Hintergrund für den Bogen (*kursiv*, **fett**)
+
+gruppe = "Vorgefertigte Helden"
+tn_basis = 18   # TN = 18 − Attribut (Option der Core Rules für kurze Spiele); 20 für die Grundregel
+patron = "Lady Gilraen"   # Patron aller Helden (Feld auf dem Bogen)
+
+[[helden]]
+id = "golasdir"
+name = "Golasdir"
+zeile = "Dúnadan des Nordens · aus den verborgenen Siedlungen im Angle"
+alter = "38"
+kultur = "Rangers of the North"
+berufung = "Captain"
+attribute = { Strength = 6, Heart = 5, Wits = 3 }
+kings_of_men = "Heart"
+favoured_kultur = "Lore"
+favoured_berufung = ["Battle", "Enhearten"]
+kampf = { Swords = 2, Bows = 1 }
+erfahrung = ["Enhearten", "Enhearten", "Battle", "Song", "Lore"]
+merkmale = ["Stern", "True-hearted"]
+tugend = "Hardiness"
+belohnung = { art = "Grievous", gegenstand = "Long sword" }
+ausruestung = ["Long sword", "Bow", "Mail-shirt"]
+nuetzlich = [{ name = "Liederbuch deiner Großmutter", skill = "Song" }]
+kurz = """Du reitest seit zehn Jahren mit Halbarads Rangers und sollst die Fremden zu Lady Gilraen bringen. Deine Großmutter hat dir die alten Lieder deines Volkes beigebracht, auch das von der Wacht im Norden. Dein junger Vetter **Rhovan** reitet in derselben Schar; du hast versprochen, auf ihn aufzupassen."""
+
+[[helden]]
+id = "merethil"
+name = "Merethil"
+zeile = "Elb aus Lindon · aus Mithlond an den Grey Havens"
+alter = "über tausend Jahre"
+kultur = "Elves of Lindon"
+berufung = "Scholar"
+attribute = { Strength = 4, Heart = 4, Wits = 6 }
+favoured_kultur = "Song"
+favoured_berufung = ["Lore", "Riddle"]
+kampf = { Bows = 2, Spears = 1 }
+erfahrung = ["Insight", "Insight", "Scan", "Travel", "Riddle", "Riddle", "Healing"]
+merkmale = ["Patient", "Keen-eyed"]
+tugend = "Nimbleness"
+belohnung = { art = "Keen", gegenstand = "Bow" }
+ausruestung = ["Bow", "Spear", "Leather corslet"]
+nuetzlich = [{ name = "Kleine Harfe aus Lindon", skill = "Song" }]
+kurz = """Du hast mit Círdans Heer vor Fornost gekämpft, als Arthedain fiel, und sammelst seither, was von Arnor geblieben ist. Auf dem Weg nach Rivendell hat Halbarad dich in Bree gebeten, alte Schrift zu lesen."""
+
+[[helden]]
+id = "frosti"
+name = "Frosti"
+zeile = "Zwerg aus Durins Volk · Steinmetz aus Thorins Hallen in den Blue Mountains"
+alter = "112"
+kultur = "Dwarves of Durin's Folk"
+berufung = "Champion"
+attribute = { Strength = 7, Heart = 3, Wits = 4 }
+favoured_kultur = "Craft"
+favoured_berufung = ["Athletics", "Awe"]
+kampf = { Axes = 2, Swords = 1 }
+erfahrung = ["Athletics", "Battle", "Awareness", "Craft", "Healing", "Insight"]
+merkmale = ["Proud", "Secretive"]
+tugend = "Prowess"
+prowess = "Strength"
+belohnung = { art = "Close-fitting", gegenstand = "Mail-shirt" }
+ausruestung = ["Long-hafted axe", "Mail-shirt", "Helm", "Shield"]
+nuetzlich = [{ name = "Steinmetzwerkzeug", skill = "Craft" }]
+kurz = """Steinmetz aus Thorins Hallen; du kennst die Zeichen, die die Schmiede deines Volkes in ihre Werke schlagen. Orks hasst du, seit sie deinen Bruder erschlagen haben. In Bree hast du gehört, dass ein anderer Zwerg nach „Stahl, der nicht rostet“ fragt."""
+
+[[helden]]
+id = "holly"
+name = "Holly Thistlewool"
+zeile = "Frau aus dem Bree-land · aus Staddle"
+alter = "24"
+kultur = "Men of Bree"
+berufung = "Treasure Hunter"
+attribute = { Strength = 4, Heart = 4, Wits = 6 }
+favoured_kultur = "Riddle"
+favoured_berufung = ["Scan", "Stealth"]
+kampf = { Bows = 2, Spears = 1 }
+erfahrung = ["Stealth", "Scan", "Awareness", "Athletics", "Hunting"]
+merkmale = ["Inquisitive", "Eager"]
+tugend = "Confidence"
+belohnung = { art = "Fell", gegenstand = "Bow" }
+ausruestung = ["Bow", "Short spear", "Leather shirt", "Dagger"]
+nuetzlich = [{ name = "Dietriche und Draht", skill = "Craft" }, { name = "Kapuzenmantel in Heidefarben", skill = "Stealth" }]
+kurz = """Du kennst jeden Weg im Bree-land. Dein Vetter **Ned Appledore** hat das Schwert gefunden, mit dem alles anfängt, und schläft seitdem schlecht. Du willst wissen, warum, und ob dort noch mehr liegt."""

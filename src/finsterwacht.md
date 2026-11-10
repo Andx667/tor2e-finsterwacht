@@ -367,6 +367,28 @@ Zwischen den Wellen: eine kurze Rast und ein Moment der Gemeinschaft. Kürzere S
 - **Das Signalfeuer brannte:** Halbarad und fünf Rangers reiten beim ersten Licht die Rampe herauf und beenden den Kampf.
 - **Es läuft schlecht:** Flucht durch die Ausfallpforte mit dem, was die Gefährten tragen können.
 
+## Anhang: Vorgefertigte Helden {#anhang-helden .nonotes}
+
+Vier Helden für Spieler ohne eigene Figur. Sie sind nach den Erschaffungsregeln der *Core Rules* gebaut (Kultur, *Calling*, 10 Punkte *Previous Experience*, ein *Reward*, eine *Virtue*), kennen sich schon und reiten zusammen für Halbarad. Ihre Bögen stehen bei den Handouts; sie verraten den Spielern nichts, was sie nicht wissen sollen. Die TNs auf den Bögen sind 18 − Attribut statt 20 − Attribut, die Option der *Core Rules* für kurze Spiele; wer mit der Grundregel spielt, rechnet auf jedem Bogen 2 dazu.
+
+| Held | Kultur und *Calling* | Stark in | Aufhänger im Abenteuer |
+| --- | --- | --- | --- |
+| Golasdir | *Rangers of the North*, *Captain* | *Battle*, *Enhearten*, *Lore*; Langschwert | Der Dúnadan-Held aus Teil 2: Er kennt den Eid aus einem Lied. Rhovan ist sein Vetter |
+| Merethil | *Elves of Lindon*, *Scholar* | *Lore*, *Riddle*, *Insight*, *Healing*; Bogen | Kämpfte 1975 vor Fornost; liest Tengwar und Karten, pflegt Rhovan |
+| Frosti | *Dwarves of Durin's Folk*, *Champion* | *Craft*, *Athletics*, *Awe*; Langstielaxt, Schild | Räumt den Bergfried; Rivale Brórs, erkennt Zwergenzeichen |
+| Holly Thistlewool | *Men of Bree*, *Treasure Hunter* | *Scan*, *Stealth*, *Riddle*; Bogen | Ned Appledores Base; die Versuchung an den Gräbern der Könige |
+
+**Hinweis für den Loremaster:** Golasdirs Bogen nennt nur ein Lied von der Wacht, nicht seine Worte. Lies die Inschrift der Klinge in Teil 1 vor wie sonst auch; sobald sein Spieler sie mit dem Lied verbindet oder jemand vor der tiefen Tür nach dem Eid fragt, kennt Golasdir den Kehrreim ohne Wurf (Teil 2, Thorondirs letzter Brief).
+
+### Wie die Helden ins Abenteuer greifen
+
+- **Teil 1:** Halbarad hat die Gefährten schon für Wegschutz bezahlt; so hat Gilraen von ihnen gehört. Ned redet mit seiner Base Holly offener als mit Fremden, und Holly ist die Erste, der Malks Fragen auffallen (Gerücht 6).
+- **Teil 2:** Merethil kennt Fornost aus der Zeit, als es stand, und kann die Gräber der Könige als solche erkennen, bevor jemand sie anrührt. Hollys *Dragon-sickness* ist die Versuchung, um die es dort geht. Spiele sie offen an, entscheiden muss die Spielerin.
+- **Teil 3:** Frosti ist der natürliche Anführer beim Räumen des Bergfrieds (*Craft*). Mit „Brórs Motiv“ findet er das Zeichen des Thrási auf den Klingen ohne Wurf; Brór und er sind dann Rivalen, die sich gegenseitig nichts gönnen und doch dasselbe wollen.
+- **Teil 4:** Rhovan ist Golasdirs Vetter. Das ist ein weiterer Grund zu bleiben, und Golasdirs *Lure of Power* bekommt eine Probe: Er will entscheiden, wer auf welche Mauer geht.
+
+**Mit drei Spielern:** Lass Holly oder Frosti weg. Ohne Holly übernimmt Merethil den *Look-out*; ohne Frosti dauert das Räumen des Bergfrieds länger, und Skarbak kommt eher. Entferne nach dem Schlachtbogen je Welle einen Gegner.
+
 ## Anhang: Wichtige NSCs {#anhang-nscs .nonotes}
 
 Zwölf Figuren tragen das Abenteuer; Skarbak, Malk und Brór können in späteren Abenteuern zurückkehren.
