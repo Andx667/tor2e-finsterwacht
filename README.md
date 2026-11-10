@@ -12,6 +12,9 @@ Druckfassung baut. Bei jedem Commit baut GitHub Actions die PDFs
 | Pfad | Inhalt |
 | --- | --- |
 | `src/finsterwacht.md` | Der Abenteuertext (Pandoc-Markdown) – hier wird geschrieben |
+| `src/helden.toml` | Die vorgefertigten Helden (Werte und Texte der Heldenbögen) |
+| `tools/helden.py` | Prüft die Helden gegen die Erschaffungsregeln und setzt die Heldenbögen |
+| `latex/fwhelden.tex` | Layout der Heldenbögen (quer, bei den Handouts) |
 | `src/cards.toml` | Die Gegenstandskarten (Gegenstände, Texte, Reihenfolge) |
 | `src/rules.toml` | Gegenstandsarten, Handwerkskunst und die Eigenschaften mit ihren Kartentexten (aus tor2e-items) |
 | `NOTICE.md` | Wem die Namen und Inhalte gehören und was die MIT-Lizenz abdeckt |

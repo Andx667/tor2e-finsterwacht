@@ -301,11 +301,13 @@
     \fw@idx{Schlachtbogen}{anhang-schlacht}
     \fw@idx{Wichtige NSCs}{anhang-nscs}
     \fw@idx{Gegenstandskarten}{cards}
+    \fw@idx{Vorgefertigte Helden}{anhang-helden}
     \fw@idx{Loremaster-Karten}{lm-fornost}
     \fw@idx{Handouts}{h-fornost}
     {\leftskip=3mm\fontsize{8.8}{13}\selectfont\color{fwgrey}%
      \fw@idxsub{Fornost}{h-fornost} · \fw@idxsub{Brief}{h-brief} ·
-     \fw@idxsub{Signalfeuer}{h-signal} · \fw@idxsub{Finsterwacht}{h-finster}\par}
+     \fw@idxsub{Signalfeuer}{h-signal} · \fw@idxsub{Finsterwacht}{h-finster} ·
+     \fw@idxsub{Heldenbögen}{held-golasdir}\par}
   \end{minipage}\par
   \endgroup}
 
@@ -475,5 +477,9 @@
   \@tempcntb=\@tempcnta \divide\@tempcntb 4 \multiply\@tempcntb 4
   \ifnum\@tempcnta>\@tempcntb \null\clearpage\expandafter\fw@fill\fi}
 \newcommand\fwfillsheets{\clearpage\gdef\fwpagekind{fill}\fw@fill}
+
+% ---------------------------------------------------------------- Heldenbögen
+\providecommand\fwshorttitle{Die Finsterwacht}
+\input{fwhelden.tex}
 
 \endinput

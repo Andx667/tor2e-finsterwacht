@@ -7,7 +7,8 @@
 Schritte:
   1. Version und Stand aus git (letztes Tag v*, Commit-Datum) -> build/version.tex
   2. src/finsterwacht.md -> build/body.tex (pandoc + filters/finsterwacht.lua)
-  3. src/cards.toml (geprüft mit tools/check.py gegen src/rules.toml) -> build/cards.tex
+  3. src/cards.toml (geprüft mit tools/check.py gegen src/rules.toml) -> build/cards.tex,
+     src/helden.toml (geprüft mit tools/helden.py) -> build/helden.tex (Heldenbögen)
   4. LuaLaTeX (latexmk) -> build/Die-Finsterwacht-TOR2e-DE.pdf (Blattfassung, gelocht)
      und build/Die-Finsterwacht-TOR2e-DE-Buch.pdf (Buchfassung zum Binden)
   5. Kopie mit Version im Namen -> build/Die-Finsterwacht-TOR2e-DE-v2.0.pdf
@@ -216,6 +217,7 @@ def main():
 
     with open(os.path.join(BUILD, "cards.tex"), "w", encoding="utf-8") as f:
         f.write(cards_tex())
+    run([sys.executable, "tools/helden.py"], env=env)
 
     env["TEXINPUTS"] = os.path.join(ROOT, "latex") + "//" + os.pathsep + env.get("TEXINPUTS", "")
     tex = ["-interaction=nonstopmode", "-halt-on-error", "-file-line-error"]
