@@ -11,12 +11,16 @@ Bögen nicht von Hand nachgerechnet werden müssen:
     Spiele); Prowess: −1 auf ein TN, Kings of Men: +1 auf ein Attribut
   * Endurance, Hope, Parry aus den Kulturwerten unten, dazu Hardiness, Confidence, Nimbleness
   * Skills = Kulturwerte (ggf. mit den Tauschpaaren der Hausregel) + Previous Experience;
-    die Previous Experience muss genau 10 Punkte kosten (Skill: neuer Rang, Combat: doppelt)
+    die Previous Experience muss genau 10 Punkte kosten (Skill-Rang 1/2/3/4: 1/2/3/5 Punkte,
+    Combat-Rang 1/2/3: 2/4/6 Punkte)
+  * Attribute aus einer Zeile der Kulturtabelle, Distinctive Features aus der Liste der Kultur,
+    Standard of Living für Kettenhemd, Kettenpanzer, Schild und Großen Schild; Treasure zu Beginn
   * Load aus der Ausrüstung (Redoubtable: Rüstung und Helm halb, aufgerundet), Belohnung
     und Schild in Damage, Injury und Parry eingerechnet
 
-Die Kulturwerte unten sind aus den Core Rules (Kapitel 2) abgeschrieben. Vor dem Druck einmal
-gegen das Buch prüfen, wenn sich dort etwas ändert (Revised Core Rules).
+Die Kulturwerte unten sind aus den Core Rules (Third Printing, Kapitel 3) abgeschrieben und mit Errata
+und FAQ abgeglichen (FAQ: Redoubtable halbiert die Load erst nach Cunning Make). Dieselben Werte stehen im
+Heldenbuch (github.com/Andx667/tor2e-helden, src/rules.toml).
 
 Benötigt: Python 3.11+.
 """
@@ -49,9 +53,11 @@ def sk(*vals):
 CULTURES = {
     "Bardings": dict(
         mods=(20, 8, 12),
-        skills=sk(1, 1, 1, 2, 1, 1, 2, 1, 2, 0, 2, 2, 3, 0, 1, 1, 0, 1),
-        favoured=["Battle", "Persuade"],
+        skills=sk(1, 1, 0, 2, 1, 1, 2, 1, 2, 0, 2, 2, 3, 0, 1, 1, 0, 1),
+        favoured=["Enhearten", "Athletics"],
         profs2=["Bows", "Swords"],
+        rows=[(5, 7, 2), (4, 7, 3), (5, 6, 3), (4, 6, 4), (5, 5, 4), (6, 6, 2)],
+        features=["Bold", "Eager", "Fair", "Fierce", "Generous", "Proud", "Tall", "Wilful"],
         blessings=[("Stout-hearted", "Deine *Valour*-Würfe sind *favoured*.")],
     ),
     "Dwarves of Durin's Folk": dict(
@@ -59,6 +65,8 @@ CULTURES = {
         skills=sk(2, 1, 0, 0, 1, 2, 0, 3, 0, 0, 1, 1, 0, 0, 3, 2, 2, 1),
         favoured=["Craft", "Travel"],
         profs2=["Axes", "Swords"],
+        rows=[(7, 2, 5), (7, 3, 4), (6, 3, 5), (6, 4, 4), (5, 4, 5), (6, 2, 6)],
+        features=["Cunning", "Fierce", "Lordly", "Proud", "Secretive", "Stern", "Wary", "Wilful"],
         blessings=[("Redoubtable", "Rüstung und Helm zählen nur halb zur *Load* (schon eingerechnet).")],
         redoubtable=True,
     ),
@@ -67,21 +75,37 @@ CULTURES = {
         skills=sk(2, 2, 2, 0, 2, 2, 1, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0, 3),
         favoured=["Lore", "Song"],
         profs2=["Bows", "Spears"],
+        rows=[(5, 2, 7), (4, 3, 7), (5, 3, 6), (4, 4, 6), (5, 4, 5), (6, 2, 6)],
+        features=["Fair", "Keen-eyed", "Lordly", "Merry", "Patient", "Subtle", "Swift", "Wary"],
         blessings=[("Elven-skill", "1 *Hope*: ein *Magical success* bei einem Skill-Wurf, solange du nicht *Miserable* bist."),
                    ("The Long Defeat", "*Shadow* schüttelst du schwerer ab als die Sterblichen.")],
     ),
+    "Hobbits of the Shire": dict(
+        mods=(18, 10, 12),
+        skills=sk(0, 0, 2, 0, 2, 1, 0, 0, 2, 1, 2, 0, 2, 3, 0, 0, 3, 0),
+        favoured=["Courtesy", "Stealth"],
+        profs2=["Bows", "Swords"],
+        rows=[(3, 6, 5), (3, 7, 4), (2, 7, 5), (4, 6, 4), (4, 5, 5), (2, 6, 6)],
+        features=["Eager", "Fair-spoken", "Faithful", "Honourable", "Inquisitive", "Keen-eyed", "Merry", "Rustic"],
+        blessings=[("Hobbit-sense", "*Wisdom*-Würfe *favoured*; (1d) auf *Shadow Tests* gegen *Greed*."),
+                   ("Halflings", "Nur kleine Waffen (*Core Rules* S. 38), kein Great shield.")],
+    ),
     "Men of Bree": dict(
         mods=(20, 10, 10),
-        skills=sk(0, 1, 1, 1, 1, 2, 1, 1, 2, 0, 3, 0, 2, 1, 1, 1, 2, 0),
-        favoured=["Courtesy", "Riddle"],
-        profs2=["Axes", "Bows", "Spears"],
+        skills=sk(0, 1, 1, 1, 1, 2, 2, 1, 2, 0, 3, 0, 2, 1, 1, 1, 2, 0),
+        favoured=["Insight", "Riddle"],
+        profs2=["Axes", "Spears"],
+        rows=[(2, 5, 7), (3, 4, 7), (3, 5, 6), (4, 4, 6), (4, 5, 5), (2, 6, 6)],
+        features=["Cunning", "Fair-spoken", "Faithful", "Generous", "Inquisitive", "Patient", "Rustic", "True-hearted"],
         blessings=[("Bree-blood", "Deine Gemeinschaft hat 1 *Fellowship*-Punkt mehr.")],
     ),
     "Rangers of the North": dict(
         mods=(20, 6, 14),
-        skills=sk(1, 2, 2, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 1, 2, 0, 2),
+        skills=sk(1, 2, 2, 2, 0, 0, 0, 2, 0, 2, 0, 2, 0, 2, 1, 2, 0, 2),
         favoured=["Hunting", "Lore"],
-        profs2=["Bows", "Spears", "Swords"],
+        profs2=["Spears", "Swords"],
+        rows=[(7, 5, 2), (7, 4, 3), (6, 5, 3), (6, 4, 4), (5, 5, 4), (6, 6, 2)],
+        features=["Bold", "Honourable", "Secretive", "Stern", "Subtle", "Swift", "Tall", "True-hearted"],
         blessings=[("Kings of Men", "+1 auf *{kings}* (schon eingerechnet)."),
                    ("Allegiance of the Dúnedain", "In der *Fellowship Phase* erholst du weniger *Hope* (*Core Rules*).")],
         kings=True,
@@ -125,7 +149,7 @@ HELMS = {"Helm": (1, 4)}
 SHIELDS = {"Buckler": (1, 2), "Shield": (2, 4), "Great shield": (3, 6)}
 REWARDS = {
     "Close-fitting": ("armour", "+2 auf *Protection*-Würfe"),
-    "Cunning Make": ("armour", "*Load* −2"),
+    "Cunning Make": ("gear", "*Load* −2"),
     "Fell": ("weapon", "*Injury* +2, eingerechnet"),
     "Grievous": ("weapon", "*Damage* +1, eingerechnet"),
     "Keen": ("weapon", "*Piercing Blow* schon bei 9"),
@@ -138,6 +162,14 @@ GEAR_DE = {
     "Mail-shirt": "Kettenhemd", "Coat of mail": "Kettenpanzer", "Helm": "Helm", "Buckler": "Faustschild",
     "Shield": "Schild", "Great shield": "Großer Schild",
 }
+
+
+# Previous Experience (Core Rules S. 46): Kosten je erreichtem Rang
+SKILL_COSTS = [1, 2, 3, 5]
+# Standard of Living (S. 72, 100): Treasure zu Beginn und Mindeststand für schwere Rüstung und Schilde
+TREASURE = {"Frugal": 0, "Common": 30, "Prosperous": 90}
+LIVING_ORDER = ["Poor", "Frugal", "Common", "Prosperous", "Rich", "Very Rich"]
+NEEDS_LIVING = {"Mail-shirt": "Common", "Coat of mail": "Prosperous", "Shield": "Common", "Great shield": "Prosperous"}
 
 
 class Problem(Exception):
@@ -160,6 +192,8 @@ def compute(h, tn_basis=20):
     cfav, cfeat, cpath = CALLINGS[h["berufung"]]
 
     attrs = {a: h["attribute"][a] for a in ATTRS}
+    if tuple(attrs[a] for a in ATTRS) not in cul["rows"]:
+        fail(f"Attribute {'/'.join(str(attrs[a]) for a in ATTRS)} stehen in keiner Zeile der Tabelle von {base}")
     if cul.get("kings"):
         k = h.get("kings_of_men")
         if k not in ATTRS:
@@ -180,7 +214,9 @@ def compute(h, tn_basis=20):
         if s not in skills:
             fail(f"Previous Experience: unbekannter Skill „{s}“")
         skills[s] += 1
-        cost += skills[s]
+        if skills[s] > len(SKILL_COSTS):
+            fail(f"{s} {skills[s]}: höher als {len(SKILL_COSTS)} geht es bei der Erschaffung nicht")
+        cost += SKILL_COSTS[skills[s] - 1]
     profs = dict(h["kampf"])
     ranks = sorted(profs.values())
     if ranks != [1, 2] or not set(profs) <= set(PROFS):
@@ -193,8 +229,6 @@ def compute(h, tn_basis=20):
         cost += 2 * profs[p]
     if cost != 10:
         fail(f"Previous Experience kostet {cost} statt 10 Punkte")
-    if max(skills.values()) > 4:
-        fail("Skill über 4 bei der Erschaffung")
 
     fav_c = h["favoured_kultur"]
     if fav_c not in cul["favoured"]:
@@ -219,7 +253,8 @@ def compute(h, tn_basis=20):
     kind = REWARDS[rw["art"]][0]
     target = rw["gegenstand"]
     if kind == "weapon" and target not in WEAPONS or kind == "shield" and target not in SHIELDS \
-            or kind == "armour" and target not in {**ARMOUR, **HELMS, **SHIELDS}:
+            or kind == "armour" and target not in {**ARMOUR, **HELMS} \
+            or kind == "gear" and target not in {**ARMOUR, **HELMS, **SHIELDS}:
         fail(f"{rw['art']} passt nicht zu {target}")
 
     gear, load, shield = [], 0, 0
@@ -261,6 +296,13 @@ def compute(h, tn_basis=20):
             fail("leeres Merkmal")
     if len(h["merkmale"]) != 2:
         fail("zwei Distinctive Features aus der Kultur")
+    for m in h["merkmale"]:
+        if m not in cul["features"]:
+            fail(f"Distinctive Feature „{m}“ gehört nicht zu {base} ({', '.join(cul['features'])})")
+    for g in h["ausruestung"]:
+        need = NEEDS_LIVING.get(g)
+        if need and LIVING_ORDER.index(LIVING[base]) < LIVING_ORDER.index(need):
+            fail(f"{g} braucht mindestens den Standard of Living {need} ({base}: {LIVING[base]})")
     if h["tugend"] not in VIRTUES:
         fail(f"unbekannte Tugend „{h['tugend']}“")
     return dict(attrs=attrs, tn=tn, skills=skills, favoured=favoured, profs=profs, endurance=endurance,
@@ -290,7 +332,7 @@ def it(s):
 
 
 LIVING = {"Bardings": "Prosperous", "Dwarves of Durin's Folk": "Prosperous", "Elves of Lindon": "Frugal",
-          "Men of Bree": "Common", "Rangers of the North": "Frugal"}
+          "Hobbits of the Shire": "Common", "Men of Bree": "Common", "Rangers of the North": "Frugal"}
 TWO_HANDED_ONLY = {"Bow"}
 
 
@@ -334,7 +376,7 @@ def sheet(h, v, patron=""):
     out += [node(146, 145, "fwh inks", esc(v["feature"])), rule(144, 192, 143.6)]
     out += field(144, 172, 138, "Flaws", "")
     out += [node(175, 138, "fwh lab", "Treasure"), r"\draw[fwh thin] (185,136.6) rectangle (192,141.6);",
-            node(188.5, 137.7, "fwh inks", "0", anchor="base")]
+            node(188.5, 137.7, "fwh inks", str(TREASURE[LIVING[base]]), anchor="base")]
     if h.get("basis"):
         out.append(node(6, 133.4, "fwh note", r"%s: Werte wie \emph{%s} (Hausregel)" % (esc(h["kultur"]), esc(h["basis"]))))
 
