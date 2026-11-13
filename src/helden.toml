@@ -37,7 +37,7 @@ erfahrung = ["Enhearten", "Enhearten", "Battle", "Song", "Lore"]
 merkmale = ["Stern", "True-hearted"]
 tugend = "Hardiness"
 belohnung = { art = "Grievous", gegenstand = "Long sword" }
-ausruestung = ["Long sword", "Bow", "Mail-shirt"]
+ausruestung = ["Long sword", "Bow", "Leather corslet"]
 nuetzlich = [{ name = "Liederbuch deiner Großmutter", skill = "Song" }]
 kurz = """Du reitest seit zehn Jahren mit Halbarads Rangers und sollst die Fremden zu Lady Gilraen bringen. Deine Großmutter hat dir die alten Lieder deines Volkes beigebracht, auch das von der Wacht im Norden. Dein junger Vetter **Rhovan** reitet in derselben Schar; du hast versprochen, auf ihn aufzupassen."""
 
@@ -90,9 +90,9 @@ berufung = "Treasure Hunter"
 attribute = { Strength = 4, Heart = 4, Wits = 6 }
 favoured_kultur = "Riddle"
 favoured_berufung = ["Scan", "Stealth"]
-kampf = { Bows = 2, Spears = 1 }
+kampf = { Spears = 2, Bows = 1 }
 erfahrung = ["Stealth", "Scan", "Awareness", "Athletics", "Hunting"]
-merkmale = ["Inquisitive", "Eager"]
+merkmale = ["Inquisitive", "Cunning"]
 tugend = "Confidence"
 belohnung = { art = "Fell", gegenstand = "Bow" }
 ausruestung = ["Bow", "Short spear", "Leather shirt", "Dagger"]
